@@ -57,11 +57,13 @@ main {
     display: flex;
     padding: 35px 0;
     border-radius: 30px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 #button_left {
     width: 5%;
     margin: auto;
+    cursor: pointer;
 }
 
 #button_left img {
@@ -81,6 +83,7 @@ main {
     color: #FFE57D;
     font-family: simply_rounded;
     font-weight: normal;
+    font-size: 22px;
 }
 
 #image_name p {
@@ -88,6 +91,7 @@ main {
     margin-top: 10px;
     color: #f1f1f1;
     font-family: cocogoose;
+    font-size: 20px;
 }
 
 #image_name div {
@@ -98,7 +102,8 @@ main {
 }
 
 #image_name div img {
-    background-color: antiquewhite;
+    width: 175px;
+    height: 175px;
     border-radius: 100%;
     margin: auto;
 }
@@ -106,14 +111,19 @@ main {
 #text {
     width: 70%;
     margin: auto;
-    font-size: 25px;
+}
+
+#text p {
+    font-size: 2.4vw;
     color: #f1f1f1;
     font-family: cocogoose;
+    margin-left: 10px;
 }
 
 #button_right {
     width: 5%;
     margin: auto;
+    cursor: pointer;
 }
 
 #button_right img {
@@ -135,17 +145,78 @@ footer {
 /*Responsivo Laptop*/
 
 @media only screen and (max-width:1280px) {
+    #box {
+        padding: 15px 0;
+    }
 
+    #image_name h3 {
+        font-size: 1.9vw;
+    }
+    
+    #image_name p {
+        font-size: 1.7vw;
+    }
+
+    #image_name div img {
+        width: 15vw;
+        height: auto;
+    }
 }
 
 /*Responsivo Tablet*/
 
 @media only screen and (max-width:768px) {
 
+    #depoimentos h1 {
+        font-size: 35px;
+    }
+
+    #box {
+        padding: 15px 0;
+    }
+
+    #image_name {
+        width: 30%;
+    }
+
+    #image_name h3 {
+        font-size: 2.5vw;
+    }
+    
+    #image_name p {
+        font-size: 2.3vw;
+    }
+
+    #text {
+        width: 60%;
+    }
+
+    #text p {
+        font-size: 2.9vw;
+    }
 }
 
 /*Responsivo Celular*/
 
 @media only screen and (max-width:480px) {
+    #box {
+        width: 90%;
+        padding: 10px 0;
+    }
 
+    #image_name div img {
+        width: 20vw;
+    }
+
+    #image_name h3 {
+        font-size: 3vw;
+    }
+    
+    #image_name p {
+        font-size: 2.8vw;
+    }
+
+    #text p {
+        font-size: 3.4vw;
+    }
 }
