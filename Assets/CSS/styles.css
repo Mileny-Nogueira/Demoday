@@ -1,0 +1,39 @@
+/*CSS Reset*/
+
+* {
+    margin: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+/*Início do Main*/
+
+/*Área de Pagamentos*/
+
+#pagamentos {
+    position: relative;
+    width: 100%;
+    height: 2500px;
+    background-color: aqua;
+}
+
+/*Início do Responsivo*/
+
+
+/*Responsivo Laptop*/
+
+@media only screen and (max-width:1280px) {
+
+}
+
+/*Responsivo Tablet*/
+
+@media only screen and (max-width:768px) {
+
+}
+
+/*Responsivo Celular*/
+
+@media only screen and (max-width:480px) {
+
+}
