@@ -8,13 +8,75 @@
 
 /*Início do Main*/
 
+main {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 /*Área de Pagamentos*/
 
 #pagamentos {
     position: relative;
     width: 100%;
-    height: 2500px;
+    height: 5px;
     background-color: aqua;
+}
+
+#depoimentos {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: coral;
+}
+
+#depoimentos h1 {
+    text-align: center;
+}
+
+#box {
+    width: 80%;
+    margin: auto;
+    height: 300px;
+    background-color: chartreuse;
+    display: flex;
+}
+
+#button_left {
+    width: 10%;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+#button_left img {
+    display: flex;
+    margin: auto;
+}
+
+#image_name {
+    width: 25%;
+}
+
+#text {
+    width: 55%;
+}
+
+#button_right {
+    width: 10%;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+#button_right img {
+    display: flex;
+    margin: auto;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: bisque;
+    display: flex;
 }
 
 /*Início do Responsivo*/
