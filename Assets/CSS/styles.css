@@ -28,6 +28,18 @@ main {
 
 /*Seção de Pagamentos*/
 
+#planos {
+    width: 100%;
+    height: auto;
+}
+
+#planos_h1 {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 500;
+    font-family: simply_rounded;
+    margin-bottom: 50px;
+} 
 #pagamentos {
     position: relative;
     width: 100%;
@@ -103,6 +115,34 @@ main {
     margin-top: 15px;
 }
 
+.part3 {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.part3 div {
+    margin-top: 45px;
+    display: flex;
+}
+
+.part3 label {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.disponivel img {
+    width: 35px;
+    height: 28px;
+}
+
+.nao_disponivel img {
+    width: 35px;
+    height: 35px;
+}
+
 /*Seção dos Depoimentos*/
 
 #depoimentos {
@@ -116,7 +156,7 @@ main {
     text-align: center;
     font-weight: 500;
     font-family: simply_rounded;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 #box {
