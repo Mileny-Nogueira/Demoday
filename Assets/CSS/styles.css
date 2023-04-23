@@ -33,8 +33,9 @@ a {
 /*Seção de Pagamentos*/
 
 #planos {
-    width: 100%;
+    width: 80%;
     height: auto;
+    margin: auto;
 }
 
 #planos_h1 {
@@ -55,7 +56,7 @@ a {
 }
 
 .line1 {
-    width: 28%;
+    width: 35%;
     height: auto;
     border-radius: 25px;
     color: #434343;
@@ -200,7 +201,7 @@ a {
     height: auto;
     background-color: #8C52FF;
     display: flex;
-    padding: 35px 0;
+    padding: 20px 0;
     border-radius: 30px;
     box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
 }
@@ -300,7 +301,7 @@ footer {
     /*Seção de Pagamentos*/
 
     .line1 {
-        width: 35%;
+        width: 42%;
     }
 
     /*Seção dos Depoimentos*/
@@ -329,12 +330,16 @@ footer {
 
      /*Seção de Pagamentos*/
 
+     #planos {
+        width: 97%;
+     }
+
      #planos_h1 {
         font-size: 40px;
      }
 
     .line1 {
-        width: 42%;
+        width: 45%;
     }
 
     .line1 h2 {
@@ -394,6 +399,10 @@ footer {
 @media only screen and (max-width:480px) {
 
     /*Seção de Pagamentos*/
+
+    #planos {
+        width: 100%;
+     }
 
     #pagamentos {
         flex-direction: column;
