@@ -18,6 +18,11 @@
     src: url(../Fonts/cocogoose_classic/Cocogoose-Classic-Medium-trial.ttf);
 }
 
+@font-face {
+    font-family: cocogoose_bold;
+    src: url(../Fonts/cocogoose_classic/Cocogoose-Classic-ExtraBold-trial.ttf);
+}
+
 /*Início do Main*/
 
 main {
@@ -284,11 +289,118 @@ a {
     transform: scale(1.1, 1.1);
 }
 
+/*Footer*/
+
 footer {
     width: 100%;
-    height: 250px;
+    height: auto;
     background-color: bisque;
     display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+}
+
+footer h3 {
+    font-size: 25px;
+    font-family: cocogoose_bold;
+    margin-bottom: 5px;
+}
+
+footer a {
+    font-size: 20px;
+    font-family: cocogoose;
+    color: #353535
+}
+
+footer li {
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+#footer_superior {
+    width: 100%;
+    height: 225px;
+    background-color: #FFE57D;
+    display: flex;
+    flex-direction: row;
+}
+
+#footer_logo {
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer_logo img {
+    width: 22vw;
+}
+
+#quem_somos {
+    width: 17%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#quem_somos ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato {
+    width: 17%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#nosso_aplicativo {
+    width: 17%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#nosso_aplicativo div {
+    display: flex;
+    flex-direction: column;
+}
+
+#certificados {
+    width: 17%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#redes_sociais {
+    width: 100%;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+#redes_sociais a {
+    margin-right: 8px;
+}
+
+#footer_inferior {
+    width: 100%;
+    height: auto;
+    background-color: #F7B55D;
+}
+
+#footer_inferior h4 {
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    color: #fff;
 }
 
 /*Início do Responsivo*/
