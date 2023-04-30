@@ -70,6 +70,9 @@ header{
     justify-content: space-between;
 }
 
+header > img{
+    margin-left: 85px;
+}
 /*MENU HAMBURGUER*/
 .menu-lines{
     width: 35px;
@@ -184,6 +187,7 @@ header .nav-list{
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    margin-bottom: 50px;
 }
 
 #conteudoFerramenta{
@@ -224,6 +228,65 @@ header .nav-list{
     box-shadow: 5px 10px #005abbc0;
 }
 
+/*DESTAQUES*/
+
+#destaques{
+    margin-bottom: 50px;
+}
+
+#destaques h1{
+    width: 240px;
+    font-size: 40px;
+    color: #005BBB;
+    font-family: cocogoose_bold;
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+#bottomLine{
+    width: 60%;
+    height: 3px;
+    margin: 0 0 50px 50px;
+    background-image: linear-gradient(to right, #005BBB 0, #005BBB 30%, #AAA 0, #AAA 70%);
+}
+
+#posts{
+    display: flex;
+    justify-content: space-around;
+}
+
+#posts div{
+    height: 400px;
+    width: 400px;
+    border-radius: 25px;
+    display: flex;
+    align-items: end;
+}
+
+#posts div h3{
+    padding: 30px;
+    color: #FFF;
+    font-family: cocogoose;
+    font-size: 25px;
+}
+
+#img01{
+    background: url("../Images/post1.png") center;
+    filter:grayscale(0.4);
+    background-size: cover;
+}
+
+#img02{
+    background: url("../Images/post2.png") center;
+    filter:grayscale(0.4);
+    background-size: cover;
+}
+
+#img03{
+    background: url("../Images/post3.png") center;
+    filter:grayscale(0.4);
+    background-size: cover;
+}
 /*Seção de Pagamentos*/
 
 #planos {
