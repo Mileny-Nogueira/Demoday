@@ -34,6 +34,7 @@ main {
     position: relative;
     width: 100%;
     height: auto;
+    padding-top: 50px;
 }
 
 a {
@@ -159,6 +160,55 @@ header .nav-list{
     border: none;
     margin: 0 3px;
 }
+
+/*SEÇÃO DA APRESENTAÇÃO DA FERRAMENTA*/
+#sobreFerramenta{
+    width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+#conteudoFerramenta{
+    margin: 0 50px 0 50px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#conteudoFerramenta h1{
+    font-size: 60px;
+    font-family: simply_rounded;
+    color: #005BBB;
+    margin: 15px 0 15px 0;
+    width: 350px;
+}
+
+#conteudoFerramenta p{
+    font-size: 35px;
+    color: #434343;
+    font-family: cocogoose;
+    width: 600px;
+    margin-bottom: 15px;
+}
+
+#conteudoFerramenta a{
+    padding: 12px 0 12px 0;
+    border-radius: 15px;
+    width: 350px;
+    background-color: #25B8FC;
+    border: 3px dashed #005BBB;
+    text-align: center;
+    font-size: 30px;
+    font-family: cocogoose_bold;
+    text-transform: uppercase;
+    box-shadow: 5px 10px #005abbc0;
+}
+
 /*Seção de Pagamentos*/
 
 #planos {
