@@ -23,6 +23,11 @@
     src: url(../Fonts/cocogoose_classic/Cocogoose-Classic-ExtraBold-trial.ttf);
 }
 
+@font-face {
+    font-family: inter;
+    src: url(../Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
 /*Início do Main*/
 
 main {
@@ -38,7 +43,7 @@ a {
 /*Seção de Pagamentos*/
 
 #planos {
-    width: 80%;
+    width: 75%;
     height: auto;
     margin: auto;
 }
@@ -68,7 +73,11 @@ a {
 }
 
 #comum {
-    border: 2px solid #FFE57D;
+    border: 5px solid #005BBB;
+}
+
+#comum h2 {
+    color: #005BBB;
 }
 
 .line1 h2 {
@@ -76,18 +85,22 @@ a {
     font-size: 38px;
     margin-top: 15px;
     font-weight: normal;
-    font-family: arial;
+    font-family: simply_rounded;
 }
 
 .line1 p {
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
     margin-top: 20px;
-    font-family: arial;
+    font-family: cocogoose;
 }
 
 #diferenciado {
-    border: 2px solid #8C52FF;
+    border: 5px solid #FF9800;
+}
+
+#diferenciado h2 {
+    color: #FF9800;
 }
 
 .part1 {
@@ -95,7 +108,11 @@ a {
     height: auto;
     margin: auto;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid #005BBB;
+}
+
+#diferenciado .part1 {
+    border-bottom: 1px solid #FBB821;
 }
 
 .part2 {
@@ -103,7 +120,11 @@ a {
     height: auto;
     margin: auto;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid #005BBB;
+}
+
+#diferenciado .part2 {
+    border-bottom: 1px solid #FBB821;
 }
 
 .part2 div {
@@ -115,13 +136,27 @@ a {
 
 .part2 h1 {
     font-size: 40px;
-    font-family: arial;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 45px;
+    font-family: inter;
 }
 
-.part2 p {
+#comum h1 {
+    color: #005BBB;
+}
+
+#diferenciado h1 {
+    color: #FBB821;
+}
+
+#comum .part2 p {
     margin-top: 15px;
+    color: #005BBB;
+}
+
+#diferenciado .part2 p {
+    margin-top: 15px;
+    color: #FBB821;
 }
 
 .part3 {
@@ -138,6 +173,7 @@ a {
 
 .part3 label {
     font-size: 22px;
+    font-family: cocogoose;
     padding-left: 15px;
 }
 
@@ -164,7 +200,6 @@ a {
 .part4 a {
     width: 90%;
     height: 50px;
-    border: 1px solid #000000;
     border-radius: 20px;
     font-family: simply_rounded;
     font-size: 22px;
@@ -175,12 +210,12 @@ a {
 }
 
 #comecar {
-    background-color: #FFE57D;
-    color: #000000;
+    background-color: #005BBB;
+    color: #fff;
 }
 
 #acesse_agora {
-    background-color: #8C52FF;
+    background-color: #FF9800;
     color: #fff;
 }
 
@@ -204,7 +239,7 @@ a {
     width: 75%;
     margin: auto;
     height: auto;
-    background-color: #8C52FF;
+    background-color: #01ADDD;
     display: flex;
     padding: 20px 0;
     border-radius: 30px;
@@ -232,7 +267,7 @@ a {
 #image_name h3 {
     text-align: center;
     margin-top: 15px;
-    color: #FFE57D;
+    color: #FBB821;
     font-family: simply_rounded;
     font-weight: normal;
     font-size: 22px;
@@ -312,6 +347,10 @@ footer a {
     color: #353535
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
+
 footer li {
     list-style: none;
     margin: 10px 0 0 0;
@@ -319,15 +358,14 @@ footer li {
 
 #footer_superior {
     width: 100%;
-    height: 225px;
-    background-color: #FFE57D;
+    height: 215px;
+    background-color: #B3E5FC;
     display: flex;
     flex-direction: row;
 }
 
 #footer_logo {
     width: 32%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -393,14 +431,19 @@ footer li {
 #footer_inferior {
     width: 100%;
     height: auto;
-    background-color: #F7B55D;
+    background-color: #005BBB;
 }
 
 #footer_inferior h4 {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: cocogoose;
     padding: 10px 0;
     color: #fff;
+}
+
+#footer_inferior span {
+    font-family: arial;
 }
 
 /*Início do Responsivo*/
