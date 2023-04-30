@@ -48,10 +48,10 @@
         width: 25%;
     }
 
-    .topicos {
-        width: 18.75%;
-        margin: 0%;
+    .secoes {
+        width: 37.5%;
     }
+
 }
 
 /*Responsivo Tablet*/
@@ -129,13 +129,31 @@
         flex-direction: column;
     }
 
+    #footer_logo {
+        width: 75%;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+
+    #footer_logo img {
+        width: 35vw;
+    }
+
+    .secoes {
+        width: 90%;
+        margin: auto;
+        justify-content: space-evenly;
+        padding: 15px 0;
+    }
+
     .topicos {
-        width: 50%;
+        width: 35%;
     }
 
-    #redes_sociais {
-
+    #footer_inferior h4 {
+        font-size: 18px
     }
+
 }
 
 /*Responsivo Celular*/
