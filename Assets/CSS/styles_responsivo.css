@@ -29,6 +29,25 @@
         width: 15vw;
         height: auto;
     }
+
+    /*Footer*/
+    
+    #footer_superior {
+        padding: 15px 0;
+    }
+
+    footer h3 {
+        font-size: 22px;
+    }
+
+    #footer_logo{
+        width: 25%;
+    }
+
+    .topicos {
+        width: 18.75%;
+        margin: 0%;
+    }
 }
 
 /*Responsivo Tablet*/
