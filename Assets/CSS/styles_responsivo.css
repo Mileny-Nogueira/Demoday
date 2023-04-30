@@ -7,6 +7,10 @@
 
     /*Seção de Pagamentos*/
 
+    #planos {
+        width: 80%;
+     }
+
     .line1 {
         width: 42%;
     }
