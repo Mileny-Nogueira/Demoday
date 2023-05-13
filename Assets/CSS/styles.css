@@ -188,10 +188,11 @@ header .nav-list{
     align-items: center;
     justify-content: left;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 #conteudoFerramenta{
-    margin: 0 50px 0 50px;
+    margin: 0 50px 0 100px;
     height: 650px;
     display: flex;
     flex-direction: column;
@@ -252,7 +253,8 @@ header .nav-list{
 
 #posts{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #posts div{
