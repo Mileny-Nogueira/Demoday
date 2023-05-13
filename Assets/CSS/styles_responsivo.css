@@ -7,6 +7,10 @@
 
     /*Seção de Pagamentos*/
 
+    #planos {
+        width: 80%;
+     }
+
     .line1 {
         width: 42%;
     }
@@ -44,10 +48,10 @@
         width: 25%;
     }
 
-    .topicos {
-        width: 18.75%;
-        margin: 0%;
+    .secoes {
+        width: 37.5%;
     }
+
 }
 
 /*Responsivo Tablet*/
@@ -125,9 +129,31 @@
         flex-direction: column;
     }
 
-    .topicos {
-        width: 50%;
+    #footer_logo {
+        width: 75%;
+        margin: auto;
+        padding-bottom: 25px;
     }
+
+    #footer_logo img {
+        width: 35vw;
+    }
+
+    .secoes {
+        width: 90%;
+        margin: auto;
+        justify-content: space-evenly;
+        padding: 15px 0;
+    }
+
+    .topicos {
+        width: 35%;
+    }
+
+    #footer_inferior h4 {
+        font-size: 18px
+    }
+
 }
 
 /*Responsivo Celular*/
@@ -191,5 +217,47 @@
 
     #text p {
         font-size: 3.4vw;
+    }
+
+    /*Footer*/
+
+    footer h3 {
+        font-size: 29px;
+    }
+
+    footer a {
+        font-size: 25px;
+    }
+
+    
+    footer li {
+        margin: 15px 0 0 0;
+    }
+
+    #footer_logo {
+        width: 80%;
+    }
+
+    #footer_logo img {
+        width: 50vw;
+    }
+
+    .secoes {
+        width: 80%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .topicos {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    #redes_sociais a {
+        margin-right: 15px;
+    }
+
+    #redes_sociais a img {
+        width: 35px;
     }
 }
