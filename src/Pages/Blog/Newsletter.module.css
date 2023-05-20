@@ -1,0 +1,71 @@
+#newsletter {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    border-top: 2px solid #C3C3C3;
+    border-bottom: 2px solid #C3C3C3;
+    background: linear-gradient(90deg, rgba(0, 91, 187, 0.25) 0%, rgba(154, 222, 241, 0.1) 79.75%), #FFFFFF;
+    font-family: cocogoose;
+}
+
+#newsletter article {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    padding: 2% 0;
+}
+
+.newsletter_options {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.newsletter_options h1 {
+    font-size: 40px;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+}
+
+.newsletter_options h3 {
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.newsletter_options h5 {
+    font-size: 25px;
+}
+
+.input_type1 {
+    width: 100%;
+    font-size: 20px;
+    font-family: inter;
+    border: 2px solid #939393;
+    border-radius: 50px;
+    text-indent: 2%;
+    padding: 5px 0;
+    margin-bottom: 2%;
+}
+
+#input_type2 {
+    width: 50%;
+    margin-left: 50%;
+    font-size: 18px;
+    font-family: cocogoose_bold;
+    background-color: #005BBB;
+    color: #FFF;
+    border-radius: 50px;
+    padding: 8px 0 6px 0;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#input_type2:hover {
+    opacity: 80%;
+}

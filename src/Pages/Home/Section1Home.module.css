@@ -1,0 +1,113 @@
+#section1Home {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+
+#home_div {
+    width: 98%;
+    height: 100%;
+    display: flex;
+}
+
+.main_div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_div img {
+    width: 90%;
+}
+
+#img_celular2 {
+    display: none;
+}
+
+.main_div h1{
+    font-size: 55px;
+    font-family: simply_rounded;
+    color: #005BBB;
+    margin: 50px 0 40px 0;
+}
+
+.main_div p {
+    font-size: 30px;
+    color: #434343;
+    font-family: cocogoose;
+    margin-bottom: 15px;
+}
+
+.main_div button {
+    padding: 12px 0 12px 0;
+    margin-top: 45px;
+    border-radius: 15px; 
+    border: 2px dotted #000;
+  
+    width: 350px;
+    background-color: #25B8FC;
+    text-align: center;
+    font-size: 30px;
+    font-family: cocogoose_bold;
+    text-transform: uppercase;
+    box-shadow: 5px 10px #005abbc0;
+    transition: 0.2s ease-in-out;
+}
+
+.main_div button:hover {
+    transform: translate(5px, 10px);
+    box-shadow: none;
+}
+
+/*Responsivo*/
+
+@media (min-width: 536px) and (max-width: 1100px) {
+
+    #img_celular1{
+        display: none;
+    }
+
+    #img_celular2{
+        display: flex;
+        align-self: center; 
+    }
+
+    .main_div {
+        padding: 15px 0;
+    }
+
+    .main_div h1{
+        width: auto;
+        font-size: 50px;
+        margin: 40px 0 30px 0;
+    }
+
+    .main_div button {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #section1Home {
+        width: 85%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    #home_div {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main_div {
+        width: 95%;
+        align-items: center;
+    }
+
+    .main_div img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,62 @@
+#destaques{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 5%;
+}
+
+#destaques h1{
+    font-size: 40px;
+    color: #005BBB;
+    font-family: cocogoose_bold;
+    text-transform: uppercase;
+    margin-left: 55px;
+}
+
+#bottomLine{
+    width: 65%;
+    height: 3px;
+    margin: 0 0 50px 50px;
+    background-image: linear-gradient(to right, #005BBB 0, #005BBB 30%, #AAA 0, #AAA 70%);
+}
+
+#posts{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#posts div{
+    height: 350px;
+    width: 375px;
+    display: flex;
+    align-items: flex-end;
+    margin: 10px 0;
+}
+
+#posts div h3{
+    padding: 30px;
+    color: #FFF;
+    font-family: cocogoose;
+    font-size: 28px;
+}
+
+.posts_img{
+    filter:grayscale(0.4);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.posts_img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    filter: brightness(50%);
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.posts_img:hover img {
+    filter: brightness(85%);
+}
