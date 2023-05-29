@@ -34,11 +34,11 @@ function FooterBlog() {
                     <ul>
                         <li>Fale conosco</li>
                         <li>Trabalhe conosco</li>
-                        <li>Ouvidoria</li>
+                        <li>FAQ</li>
                     </ul>
                 </div>
                 <div className={style.footer_options}>
-                    <h5>Nosso Aplicativo</h5>
+                    <h5>Nosso <br/> Aplicativo</h5>
                     <ul>
                         <img src={apple_store} alt="Clique para acessar o nosso app na apple store" className={style.aplicativo} />
                         <img src={google_play} alt="Clique para acessar o nosso app na google play" className={style.aplicativo} />

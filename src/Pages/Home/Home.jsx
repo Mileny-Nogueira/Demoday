@@ -10,7 +10,7 @@ import FooterBlog from './FooterBlog';
 function Home() {
     return (
         <main id={style.home}>
-            <HeaderBlog header_color='rgba(241, 241, 241, 0.95)' menu_color='rgba(241, 241, 241, 0.95)' />
+            <HeaderBlog header_color='rgba(228, 239, 255, 0.95)' menu_color='rgba(228, 239, 255, 0.95)' />
             <Section1Home />
             <Section2Home />
             <Planos />

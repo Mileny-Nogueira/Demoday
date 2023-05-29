@@ -1,3 +1,11 @@
+@keyframes effect_planos {
+
+    from {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+}
+
 /*Seção de Pagamentos*/
 
 #planos {
@@ -31,11 +39,11 @@
 }
 
 #comum {
-    border: 5px solid #005BBB;
+    border: 5px solid #008AFF;
 }
 
 #comum h2 {
-    color: #005BBB;
+    color: #008AFF;
 }
 
 .line1 h2 {
@@ -66,7 +74,7 @@
     height: auto;
     margin: auto;
     padding-bottom: 25px;
-    border-bottom: 1px solid #005BBB;
+    border-bottom: 1px solid #008AFF;
 }
 
 #diferenciado .part1 {
@@ -78,7 +86,7 @@
     height: auto;
     margin: auto;
     padding-bottom: 25px;
-    border-bottom: 1px solid #005BBB;
+    border-bottom: 1px solid #008AFF;
 }
 
 #diferenciado .part2 {
@@ -100,7 +108,7 @@
 }
 
 #comum h1 {
-    color: #005BBB;
+    color: #008AFF;
 }
 
 #diferenciado h1 {
@@ -109,7 +117,7 @@
 
 #comum .part2 p {
     margin-top: 10px;
-    color: #005BBB;
+    color: #008AFF;
 }
 
 #diferenciado .part2 p {
@@ -168,10 +176,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: perspective(1px) translateZ(0);
+    cursor: pointer;
+}
+
+.part4 button:hover {
+    animation-name: effect_planos;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
 }
 
 #comecar {
-    background-color: #005BBB;
+    background-color: #008AFF;
     color: #fff;
 }
 

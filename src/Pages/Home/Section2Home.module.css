@@ -1,5 +1,5 @@
 #destaques{
-    width: 95%;
+    width: 92%;
     margin: auto;
     margin-bottom: 50px;
     margin-top: 5%;
@@ -7,17 +7,17 @@
 
 #destaques h1{
     font-size: 40px;
-    color: #005BBB;
+    color: #008AFF;
     font-family: cocogoose_bold;
     text-transform: uppercase;
-    margin-left: 55px;
+    margin-left: 1%;
 }
 
-#bottomLine{
-    width: 65%;
+#bottomLine {
+    width: 70%;
     height: 3px;
-    margin: 0 0 50px 50px;
-    background-image: linear-gradient(to right, #005BBB 0, #005BBB 30%, #AAA 0, #AAA 70%);
+    margin: 0 0 50px;
+    background: linear-gradient(to right, #008AFF 0, #008AFF 30%, #AAA 0, #AAA 70%);
 }
 
 #posts{
@@ -59,4 +59,94 @@
 
 .posts_img:hover img {
     filter: brightness(85%);
+}
+
+@media only screen and (max-width: 1280px) {
+
+    #destaques {
+        width: 95%;
+    }
+
+    #destaques h1 {
+        font-size: 35px;
+        margin-left: 0.5%;
+        margin-left: 25px;
+    }
+
+    #bottomLine {
+        width: 650px;
+        height: 3px;
+        margin: 0 0 50px 25px;
+        background: linear-gradient(to right, #008AFF 0, #008AFF 33%, #AAA 0, #AAA 67%);
+    }
+    
+    #posts div {
+        width: 310px;
+        height: 290px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+    #bottomLine {
+        width: 500px;
+        height: 3px;
+        margin: 0 0 50px 25px;
+        background: linear-gradient(to right, #008AFF 0, #008AFF 42%, #AAA 0, #AAA 58%);
+    }
+
+    #posts div {
+        width: 260px;
+        height: 245px;
+    }
+
+    #posts div h3{
+        padding: 15px;
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #destaques h1 {
+        font-size: 30px;
+    }
+
+    #bottomLine {
+        width: 350px;
+        height: 3px;
+        margin: 0 0 50px 25px;
+        background: linear-gradient(to right, #008AFF 0, #008AFF 50%, #AAA 0, #AAA 50%);
+    }
+
+    #posts div {
+        width: 220px;
+        height: 205px;
+    }
+
+    #posts div h3{
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    #destaques h1 {
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    #bottomLine {
+        width: 300px;
+        height: 3px;
+        margin: auto;
+        margin-bottom: 35px;
+        background: linear-gradient(to right, #AAA 0, #008AFF 82%, #AAA 0, #AAA 15%);
+    }
+
+    #posts div {
+        width: 250px;
+        height: 235px;
+    }
 }
