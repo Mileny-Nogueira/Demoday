@@ -1,3 +1,5 @@
+import { Nav } from 'react-bootstrap';
+
 import style from './FooterBlog.module.css';
 
 import logo from '../../Images/logo.png';
@@ -25,7 +27,7 @@ function FooterBlog() {
                     <ul>
                         <li>Institucional</li>
                         <li>Notícias e eventos</li>
-                        <li>Política e privacidade</li>
+                        <Nav.Link href='/PoliticaPrivacidade' style={{textDecoration: 'none'}}><li>Política e privacidade</li></Nav.Link>
                         <li>Como doar</li>
                     </ul>
                 </div>

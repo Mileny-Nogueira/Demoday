@@ -35,7 +35,7 @@ function HeaderBlog(props) {
                         <Nav.Link href='/' style={{textDecoration: 'none'}}><li>Home</li></Nav.Link>
                         <Nav.Link href='/Blog' style={{textDecoration: 'none'}}><li>Blog</li></Nav.Link>
                         <li>Cadastro</li>
-                        <li>Login</li>
+                        <Nav.Link href='/LoginCadastro' style={{textDecoration: 'none'}}><li>Login</li></Nav.Link>
                         <li>Demo</li> 
                     </div>
                 </ul>
