@@ -27,14 +27,14 @@ function FooterBlog() {
                     <ul>
                         <li>Institucional</li>
                         <li>Notícias e eventos</li>
-                        <Nav.Link href='/PoliticaPrivacidade' style={{textDecoration: 'none'}}><li>Política e privacidade</li></Nav.Link>
+                        <Nav.Link href='/PoliticaPrivacidade' style={{textDecoration: 'none', color: 'black', }}><li>Política e privacidade</li></Nav.Link>
                         <li>Como doar</li>
                     </ul>
                 </div>
                 <div className={style.footer_options}>
                     <h5>Contato</h5>
                     <ul>
-                        <li>Fale conosco</li>
+                        <Nav.Link href='/Contato' style={{textDecoration: 'none', color: 'black'}}><li>Fale Conosco</li></Nav.Link>
                         <li>Trabalhe conosco</li>
                         <li>FAQ</li>
                     </ul>

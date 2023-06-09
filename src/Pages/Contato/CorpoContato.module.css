@@ -1,0 +1,86 @@
+#CorpoContato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form{
+    width: 380px;
+    height: 400px;
+    background-color: rgba(217, 217, 217, 20%);
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding: 20px;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+}
+
+h1{
+    font-size: 25px;
+    color: #008AFF;
+    font-family: Simply Rounded;
+    margin-bottom: 10px;
+}
+
+input, textarea{
+    width: 80%;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    font-family: cocogoose;
+    font-size: 15px;
+    color: #000;
+}
+
+form button{
+    color: #F1F1F1;
+    font-family: cocogoose_bold;
+    text-transform: uppercase;
+    padding: 12px 40px 12px 55px;
+    background: url(../../Images/enviar.png) no-repeat;
+    background-position: center left;
+    border-radius: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: ease .3s;
+}
+
+textarea:focus, input:focus{
+    border: 2px solid #1E1E1E;
+    box-shadow: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+form button:hover{
+    background: url(../../Images/enviar1.png) no-repeat;
+    padding: 12px 40px 12px 55px;
+    background-position: center left;
+    border-radius: 50px;
+    transition: ease .3s;
+}
+form button:active{
+    background-color: #002255;
+}
+
+#imagemContato{
+    animation: imagem 4s ease alternate infinite;
+    margin-bottom: 50px;
+}
+
+@keyframes imagem {
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1.15);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 800px){
+   #imagemContato{
+        display: none;
+   }
+}
