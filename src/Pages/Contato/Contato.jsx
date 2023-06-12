@@ -1,5 +1,6 @@
 import style from './Contato.module.css';
 import HeaderBlog from '../Home/HeaderBlog';
+import logo from '../../Images/logo.png';
 import FooterBlog from '../Home/FooterBlog';
 import CorpoContato from './CorpoContato'
 import React from 'react';
@@ -7,9 +8,9 @@ import React from 'react';
 function Contato() {
     return (
         <section id={style.Contato}>
-            <HeaderBlog header_color='rgba(228, 239, 255, 0.95)' menu_color='rgba(228, 239, 255, 0.95)' />
+            <HeaderBlog header_color='rgba(228, 239, 255, 0.95)' header_img={logo} />
             <CorpoContato />
-            <FooterBlog />
+            <FooterBlog footer_img={logo} />
         </section>
     )
 }

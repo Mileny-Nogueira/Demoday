@@ -2,7 +2,6 @@ import { Nav } from 'react-bootstrap';
 
 import style from './FooterBlog.module.css';
 
-import logo from '../../Images/logo.png';
 import apple_store from '../../Images/App_store.png';
 import google_play from '../../Images/Google_play.png';
 import instagram from '../../Images/Instagram.png';
@@ -15,12 +14,12 @@ const OpenInNewTab = url => {
     window.open(url, '_blank', 'noopener, noreferrer')
 }
 
-function FooterBlog() {
+function FooterBlog(props) {
     return (
         <footer>
             <nav id={style.footer_superior}>
                 <div id={style.logo}>
-                    <img src={logo} alt="logo da pecto blog" />
+                    <img src={props.footer_img} alt="logo da pecto blog" />
                 </div>
                 <div className={style.footer_options}>
                     <h5>Quem Somos</h5>
@@ -28,7 +27,6 @@ function FooterBlog() {
                         <li>Institucional</li>
                         <li>Notícias e eventos</li>
                         <Nav.Link href='/PoliticaPrivacidade' style={{textDecoration: 'none', color: 'black', }}><li>Política e privacidade</li></Nav.Link>
-                        <li>Como doar</li>
                     </ul>
                 </div>
                 <div className={style.footer_options}>
@@ -51,11 +49,11 @@ function FooterBlog() {
                     <ul>
                         <li>Colocar os certificados</li>
                         <div>
-                            <img src={instagram} alt="Clique para acessar o nosso Instagram" title='Instagram' onClick={() => OpenInNewTab('https://www.instagram.com/matheus_foxtrot')} />
+                            <img src={instagram} alt="Clique para acessar o nosso Instagram" title='Instagram' onClick={() => OpenInNewTab('https://www.instagram.com/pectooficial/')} />
                             <img src={whatsapp} alt="Clique para acessar o nosso Whatsapp" title='Whatsapp' />
                             <img src={facebook} alt="Clique para acessar o nosso Facebook" title='Facebook' />
                             <img src={twitter} alt="Clique para acessar o nosso Twitter" title='Twitter' />
-                            <img src={linkedin} alt="Clique para acessar o nosso Linkedin" title='Linkedin' />
+                            <img src={linkedin} alt="Clique para acessar o nosso Linkedin" title='Linkedin' onClick={() => OpenInNewTab('https://www.linkedin.com/company/pectoco/')} />
                         </div>
                     </ul>
                 </div>

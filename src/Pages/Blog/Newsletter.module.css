@@ -69,3 +69,100 @@
 #input_type2:hover {
     opacity: 80%;
 }
+
+@media only screen and (max-width: 1280px) {
+
+    #newsletter article {
+        width: 85%;
+    }
+
+    .newsletter_options h1 {
+        font-size: 35px;
+    }
+
+    .newsletter_options h3 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .newsletter_options h5 {
+        font-size: 22px;
+    }
+
+    .input_type1 {
+        font-size: 16px;
+    }
+
+    #input_type2 {
+        width: 70%;
+        margin-left: 30%;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #newsletter article {
+        width: 90%;
+        padding: 5% 0;
+    }
+
+    .newsletter_options h1 {
+        font-size: 30px;
+    }
+
+    .newsletter_options h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .newsletter_options h5 {
+        font-size: 18px;
+    }
+
+    .input_type1 {
+        font-size: 14px;
+    }
+
+    #input_type2 {
+        width: 80%;
+        margin-left: 20%;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+
+    #newsletter article {
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .newsletter_options {
+        width: 90%;
+    }
+
+    .newsletter_options h1 {
+        font-size: 32px;
+    }
+
+    .newsletter_options h3 {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .newsletter_options h5 {
+        font-size: 20px;
+    }
+
+    .input_type1 {
+        font-size: 15px;
+    }
+
+    #input_type2 {
+        width: 100%;
+        margin-left: 0%;
+        font-size: 15px;
+    }
+}

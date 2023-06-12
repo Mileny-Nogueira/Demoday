@@ -48,3 +48,55 @@
     border-radius: 5px;
     background-color: #FFF;
 }
+
+/*Responsivo*/
+
+@media only screen and (min-width: 1500px) {
+
+    #section1 {
+        height: calc(600px + 15vh);
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+    #section1 div {
+        width: 55%;
+        margin-bottom: 8%;
+    }
+
+    #section1 div h1 {
+        font-size: 30px;
+        padding: 5px 20px 2px 20px;
+    }
+
+    #section1 div p {
+        font-size: 22px;
+    }
+
+    #section1 div button {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    #section1 {
+        height: 500px;
+    }
+
+    #section1 div {
+        width: 75%;
+    }
+
+    #section1 div h1 {
+        font-size: 25px;
+    }
+
+    #section1 div p {
+        font-size: 20px;
+    }
+
+    #section1 div button {
+        font-size: 22px;
+    }
+}

@@ -11,12 +11,9 @@
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
-#header_blog > img{
-    margin-left: 85px;
-}
-
 #logo_blog2 {
-    width: 19%;
+    width: auto;
+    height: 65px;
 }
 
 /*MENU HAMBURGUER*/
@@ -24,7 +21,7 @@
 .menu_lines{
     width: 35px;
     height: 35px;
-    margin-left: 50px;
+    margin-left: 35px;
 }
 
 .menu_lines span{
@@ -44,7 +41,7 @@
     height: 35px;
     opacity: 0;
     top: 22px;
-    left: 50px;
+    left: 35px;
 }
 
 .menu_faketrigger:checked~.menu_lines span:nth-child(1){
@@ -64,7 +61,7 @@
 #menu{
     position: absolute;
     display: none;
-    height: 75vh;
+    height: 70vh;
     width: 250px;
     top: 100%;
     left: 0;
@@ -84,7 +81,7 @@
 }
 
 #menu > div img{
-    width: 100%;
+    width: 85%;
     margin: auto;
 }
 
@@ -108,11 +105,11 @@
 
 /*FIM DO MENU*/
 
-.acessibilidade{
-    margin-right: 50px;
+.acessibilidade {
+    width: 60px;
 }
 
-.acessibilidade button{
+/* .acessibilidade button{
     cursor: pointer;
     display: grid;
     place-items: center;
@@ -123,4 +120,62 @@
     border-radius: 50px;
     border: none;
     margin: 0 3px;
+} */
+
+/*Responsivo*/
+
+@media only screen and (max-width: 1280px) {
+
+    #logo_blog2 {
+        height: 60px;
+    }
+
+    .menu_lines {
+        margin-left: 28px;
+    }
+
+    .menu_faketrigger {
+        margin-left: 0px;
+    }
+
+    #menu {
+        width: 200px;
+        height: 400px;
+    }
+
+    #menu > div img {
+        width: 100%;
+    }
+
+    #menu li {
+        width: 170px;
+        padding: 15px 0;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #header_blog {
+        height: 60px;
+    }
+
+    #logo_blog2 {
+        height: 12vw;
+        margin: auto;
+    }
+
+    #menu {
+        width: 185px;
+        height: 380px;
+    }
+
+    #menu li {
+        width: 150px;
+        padding: 15px 0;
+        font-size: 20px;
+    }
+
+    .acessibilidade {
+        width: 55px;
+    }
 }

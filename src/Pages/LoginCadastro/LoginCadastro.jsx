@@ -1,66 +1,130 @@
+import React, { useState, useRef, useEffect } from 'react';
+import VMasker from 'vanilla-masker';
+
 import style from './LoginCadastro.module.css';
 
 import login_img from '../../Images/login.png';
+import login_user from '../../Images/Login_user.png';
+import login_password from '../../Images/Login_password.png';
+import login_submit from '../../Images/Login_submit.png';
+import google_login from '../../Images/Google_login.png';
+import facebook_login from '../../Images/Facebook_login.png';
 
-function LoginCadastro() {
+const LoginCadastro = () => {
+
+    /*Animação container::before*/
+
+    const [isSignUpMode, setIsSignUpMode] = useState(false);
+
+
+    const handleSignUpClick = () => {
+        setIsSignUpMode(true);
+    }
+
+    const handleSignInClick = () => {
+        setIsSignUpMode(false);
+    }
+
+
+    /*Script CPF*/
+
+    const cpfInputRef = useRef(null);
+
+    useEffect(() => {
+        VMasker(cpfInputRef.current).maskPattern("999.999.999-99");
+    }, [])
+
+
+    /*Script para ser possível mudar o 'placeholder' do input type="date"*/
+
+    const handleFocus = (event) => {
+        event.target.type = 'date';
+    }
+
+    const handleBlur = (event) => {
+        event.target.type = 'text';
+    }
+
+
+    /*Estrutura da página*/
+
     return (
         <section id={style.login_cadastro}>
-            <div className={style.container}>
+            <div className={` ${isSignUpMode ? style.sign_up_mode : '' } ` + style.container}>
                 <div className={style.signin_signup}>
                     <form action="#" className={style.sign_in_form}>
                         <img src={login_img} alt="Imagem de login" />
                         <h2 className={style.title}>Login</h2>
                         <div className={style.input_field}>
-                            <input type='email' placeholder='E-mail' />
+                            <img src={login_user} alt="Clique para adicionar o seu e-mail" />
+                            <input type='email' required placeholder='E-mail:' />
                         </div>
                         <div className={style.input_field}>
-                            <input type="password" required placeholder='Senha' />
+                            <img src={login_password} alt="Clique para adicionar a sua senha" />
+                            <input type="password" required placeholder='Senha:' />
                         </div>
                         <div className={style.remember}>
                             <span className={style.span}>Esqueceu sua senha?</span>
                         </div>
-                        <input type="submit" id={style.submit} value='Entrar' className={style.entrar} />
-                        <div className={style.support}></div>
+                        <div className={style.input_submit}>
+                            <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
+                            <input type="submit" id={style.submit} value='Entrar' className={style.botao5} />
+                        </div>
                         <div className={style.remember2}>
-                            <span className={style.span}>_____ ou _____</span>
+                            <span className={style.span}>________ ou ________</span>
                         </div>
 
-                        <div className={style.login_footer}></div>
-
                         <div className={style.social_media}>
-                            {/* colocar redes sociais - imagens */}
+                            <img src={google_login} alt="Clique para fazer login pelo google" className={style.social_icon} />
+                            <img src={facebook_login} alt="Clique para fazer login pelo facebook" className={style.social_icon} />
                         </div>
                     </form>
 
-                    <form action="#" className={style.sign_in_form2}>
+                    <form action="#" className={style.sign_up_form2}>
                         <h2 className={style.title2}>Cadastro</h2>
                         <div className={style.input_field2}>
-                            <input type="text" placeholder='Nome completo' />
+                            <input type="text" placeholder='Nome completo:' required />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="email" required placeholder='E-mail' />
+                            <input type="email" placeholder='E-mail:' required />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="number" required placeholder='CPF' />
+                            <input type="text" required placeholder='CPF:' ref={cpfInputRef} />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="password" required placeholder='Senha' />
+                            <input type="text" required placeholder='Data de Nascimento:' onFocus={handleFocus} onBlur={handleBlur} />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="password" required placeholder='Confirmar senha' />
+                            <input type="password" required placeholder='Senha:' />
+                        </div>
+                        <div className={style.input_field2}>
+                            <input type="password" required placeholder='Confirmar senha:' />
                         </div>
                         <div className={style.support}>
                             <div className={style.remember3}>
                                 <span className={style.yes}>
-                                    <input type="checkbox" name='opcao1' value='Sim' />
+                                    <input type="checkbox" name='opcao1' value='Sim' required />
                                 </span>
                                 <span className={style.span}>
                                     Li e concordo com os termos e serviços
                                 </span>
                             </div>
-                            <input type="submit" value='Cadastre-se' />
+                            <input type="submit" value='Cadastre-se' className={style.botao6} />
                         </div>
                     </form>
+                </div>
+            </div>
+
+            <div className={style.botao}>
+                <div className={style.botao2}>
+                    <div className={style.botao3}>
+                        <button className={style.botao4} id={style.signin_button} onClick={handleSignInClick}>Login</button>
+                    </div>
+                </div>
+                <div className={style.painel + style.right_panel}>
+                    <div className={style.content}>
+                        <button className={style.botao4} id={style.signup_button} onClick={handleSignUpClick}>Cadastro</button>
+                    </div>
                 </div>
             </div>
         </section>

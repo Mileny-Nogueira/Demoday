@@ -19,6 +19,14 @@
     }
 }
 
+/*Responsivo*/
+
+@media only screen and (min-width: 1500px) {
+    #Contato {
+        margin-top: 2%;
+    }
+}
+
 @media screen and (min-width: 320px) and (max-width: 800px){
     #Contato{
         padding-top: 50px;

@@ -4,7 +4,7 @@ footer {
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #9ADEF1;
+    background-color: #E4EFFF;
     margin-top: 50px;
 }
 
@@ -23,7 +23,7 @@ footer {
 }
 
 #logo img {
-    width: 25vw;
+    width: 22vw;
 }
 
 .footer_options {
