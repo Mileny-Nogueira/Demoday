@@ -154,13 +154,27 @@
         font-size: 40px;
     }
 
+    #section3Home_inferior {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #section3Home_inferior #part1, #section3Home_inferior #part2 {
+        width: 90%;
+        margin: auto;
+    }
+
+    #section3Home_inferior #part1 {
+        gap: 10px;
+    }
+
     #section3Home_inferior #part1 div p {
         width: 85%;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #section3Home_inferior #part1 div p span {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #section3Home_inferior #part2 img {
@@ -179,22 +193,12 @@
         text-align: left;
     }
 
-    #section3Home_inferior {
-        flex-direction: column;
-        gap: 25px;
+    #section3Home_topo #balao2 {
+        display: none;
     }
 
     #section3Home_inferior #part1, #section3Home_inferior #part2 {
         width: 95%;
-        margin: auto;
-    }
-
-    #section3Home_inferior #part1 {
-        gap: 10px;
-    }
-
-    #section3Home_topo #balao2 {
-        display: none;
     }
 
     #section3Home_inferior #part1 div p {

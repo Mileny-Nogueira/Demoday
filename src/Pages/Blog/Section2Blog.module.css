@@ -11,19 +11,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #000000;
     transition: ease-in 0.2s;
     cursor: pointer;
-}
-
-.row_element:hover {
-    background-color: #AAA;
 }
 
 .row_element img {
     position: absolute;
     width: 100%;
     height: 260px;
+    filter: brightness(60%);
+    transition: all 0.3s;
+}
+
+.row_element:hover img {
+    filter: brightness(90%);
 }
 
 .row_element p {

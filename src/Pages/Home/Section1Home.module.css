@@ -2,6 +2,9 @@
     position: relative;
     width: 100%;
     height: auto;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
     margin-top: 5%;
 }
 
@@ -102,6 +105,10 @@
 
 @media only screen and (max-width: 768px) {
 
+    #section1Home {
+        min-height: none;
+    }
+    
     #section1Home {
         width: 90%;
         margin: auto;

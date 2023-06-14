@@ -64,14 +64,14 @@ const LoginCadastro = () => {
                             <input type="password" required placeholder='Senha:' />
                         </div>
                         <div className={style.remember}>
-                            <span className={style.span}>Esqueceu sua senha?</span>
+                            <span>Esqueceu sua senha?</span>
                         </div>
                         <div className={style.input_submit}>
                             <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
                             <input type="submit" id={style.submit} value='Entrar' className={style.botao5} />
                         </div>
                         <div className={style.remember2}>
-                            <span className={style.span}>________ ou ________</span>
+                            <hr />
                         </div>
 
                         <div className={style.social_media}>
@@ -102,12 +102,10 @@ const LoginCadastro = () => {
                         </div>
                         <div className={style.support}>
                             <div className={style.remember3}>
-                                <span className={style.yes}>
-                                    <input type="checkbox" name='opcao1' value='Sim' required />
+                                <span>
+                                    <input type="checkbox" name='opcao1' value='sim' required />
                                 </span>
-                                <span className={style.span}>
-                                    Li e concordo com os termos e serviços
-                                </span>
+                                <p>Li e concordo com os <span>termos </span> e <span>serviços</span></p>
                             </div>
                             <input type="submit" value='Cadastre-se' className={style.botao6} />
                         </div>
