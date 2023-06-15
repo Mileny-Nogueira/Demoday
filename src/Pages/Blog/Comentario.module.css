@@ -75,3 +75,56 @@
 #comentario_part2 img {
     width: 85%;
 }
+
+/*Responsivo*/
+
+@media only screen and (max-width: 1050px) {
+
+    #comentario_section {
+        flex-direction: row !important;
+    }
+
+    #comentario_part1 h1 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #comentario_part1 {
+        width: 80%;
+    }
+
+    #comentario_part2 {
+        width: 20%;
+    }
+
+    #comentario_submit {
+        font: 25px cocogoose;
+        padding: 8px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    #comentario_part1 {
+        width: 100%;
+    }
+
+    #comentario_part2 {
+        display: none;
+    }
+
+    #comentario_part1 h1 {
+        font-size: 30px;
+    }
+
+    #comentario_part1 p {
+        font: 20px cocogoose;
+    }
+
+    #comentario_submit {
+        font: 20px cocogoose;
+        padding: 5px 0;
+    }
+}

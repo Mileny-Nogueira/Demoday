@@ -2,12 +2,6 @@ import style from './MainMateria.module.css';
 
 import Comentario from '../Blog/Comentario';
 
-import instagram from '../../Images/Instagram.png';
-import whatsapp from '../../Images/Whatsapp.png';
-import facebook from '../../Images/Facebook.png';
-import twitter from '../../Images/Twitter.png';
-import linkedin from '../../Images/Linkedin.png';
-
 function MainMateria(props) {
     return (
         <main id={style.main_materia}>
@@ -15,7 +9,7 @@ function MainMateria(props) {
                 <div id={style.materia_part1}>
                     <div className={style.materia_topo}>
                         <h1>{props.titulo_materia}</h1>
-                        <h2>{props.tema_materia}</h2>
+                        <h2 style={{backgroundColor: props.tema_cor}}>{props.tema_materia}</h2>
                     </div>
                     <img src={props.materia_img} alt={props.materia_alt} />
                     <span>{props.publicacao_materia} | Pecto</span>
@@ -23,13 +17,8 @@ function MainMateria(props) {
                 </div>
                 <div id={style.materia_part2}>
                     <div className={style.materia_topo}>
-                        <h1>Redes Sociais</h1>
                         <div>
-                            <img src={instagram} alt="Clique para acessar o nosso Instagram" />
-                            <img src={whatsapp} alt="Clique para acessar o nosso Whatsapp" />
-                            <img src={facebook} alt="Clique para acessar o nosso Facebook" />
-                            <img src={twitter} alt="Clique para acessar o nosso Twitter" />
-                            <img src={linkedin} alt="Clique para acessar o nosso Linkedin" />
+                            <input type="search" placeholder='Procurar' />
                         </div>
                     </div>
                 </div>
