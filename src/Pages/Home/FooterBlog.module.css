@@ -5,7 +5,6 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #E4EFFF;
-    margin-top: 50px;
 }
 
 #footer_superior {
