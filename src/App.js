@@ -8,6 +8,7 @@ import Materia4 from './Pages/Materias/Materia4';
 import PoliticaPrivacidade from './Pages/PoliticaPrivacidade/PoliticaPrivacidade';
 import Contato from './Pages/Contato/Contato';
 import Institucional from  './Pages/Institucional/Institucional'
+import Demo from './Pages/Demo/Demo';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/PoliticaPrivacidade' element={<PoliticaPrivacidade />} />
           <Route path='/Contato' element={<Contato />} />
           <Route path='/Institucional' element={<Institucional />} />
+          <Route path='/Demo' element={<Demo />} />
         </Routes>
       </Router>
     </div>

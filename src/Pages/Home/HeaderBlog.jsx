@@ -2,11 +2,9 @@ import React, { useRef } from 'react';
 import { Nav } from 'react-bootstrap';
 import style from './HeaderBlog.module.css';
 
-// import daltonicos from '../../Images/daltonicos.png';
-// import letra_maior from '../../Images/letramaior.png';
-// import acessibilidade from '../../Images/acessibilidade.png';
-
 const HeaderBlog = (props) => {
+
+    //Efeito do Menu da Header
 
     const menuRef = useRef(null);
 
@@ -35,15 +33,13 @@ const HeaderBlog = (props) => {
                         <Nav.Link href='/Blog' style={{textDecoration: 'none'}}><li>Blog</li></Nav.Link>
                         <li>Cadastro</li>
                         <Nav.Link href='/LoginCadastro' style={{textDecoration: 'none'}}><li>Login</li></Nav.Link>
-                        <li>Demo</li> 
+                        <Nav.Link href='/Demo' style={{textDecoration: 'none'}}><li>Demo</li></Nav.Link>
                     </div>
                 </ul>
             </nav>
             <img src={props.header_img} alt="logo" id={style.logo_blog2} />
             <div className={style.acessibilidade}>
-                {/* <button><img src={daltonicos} alt="ícone para pessoas daltônicas" /></button>
-                <button><img src={letra_maior} alt="ícone para aumentar a letra" /></button>
-                <button><img src={acessibilidade} alt="ícone para acessibilidade" /></button> */}
+                {/*Acessibilidade Geral*/}
             </div>
         </header>
     )

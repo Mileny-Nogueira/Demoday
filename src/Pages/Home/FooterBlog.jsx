@@ -25,7 +25,6 @@ function FooterBlog(props) {
                     <h5>Quem Somos</h5>
                     <ul>
                         <Nav.Link href='/Institucional' style={{textDecoration: 'none', color: 'black'}}><li>Institucional</li></Nav.Link>
-                        <li>Institucional</li>
                         <li>Notícias e eventos</li>
                         <Nav.Link href='/PoliticaPrivacidade' style={{textDecoration: 'none', color: 'black'}}><li>Política e privacidade</li></Nav.Link>
                     </ul>
