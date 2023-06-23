@@ -1,6 +1,17 @@
 //Variáveis
 
-$menulateral_color: #222729;
+$color1: #FFF; //Menu lateral e outros
+$color2: #000; //Texto e outros
+
+//Mixin - 'Funções' SCSS
+
+@mixin title_font {
+    font-size: 35px;
+    font-weight: normal;
+    text-align: left;
+    color: $color2;
+    font-family: simply_rounded;
+}
 
 //Estilizações
 
@@ -8,7 +19,10 @@ $menulateral_color: #222729;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+    transition: margin-left 0.5s ease;
 }
+
+//Menu lateral
 
 .menu_lateral {
     backface-visibility: hidden;
@@ -16,15 +30,20 @@ $menulateral_color: #222729;
     transition: transform 0.5s ease;
     -webkit-overflow-scrolling: touch;
     display: block;
-    height: 100%;
     left: 0;
     overflow-y: auto;
     position: fixed;
     top: 0;
     width: 275px;
-    z-index: 1000;
-    background: $menulateral_color;
-    box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
+    z-index: 99;
+    background: $color1;
+    box-shadow: inset -0.25em 0 0.25em 0 rgba(200, 200, 200, 0.125);
+
+    #logo {
+        width: 80%;
+        display: flex;
+        margin: auto;
+    }
 }
 
 //Classes que serão adicionadas na condição da Header e da Main (style.main)
@@ -35,22 +54,91 @@ $menulateral_color: #222729;
 }
 
 .visible2 {
-    transform: translateX(275px);
-    transition: transform 0.5s ease;
+    margin-left: 275px;
+    transition: margin-left 0.5s ease;
 }
+
+//Header
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: $color1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 99;
+
+    nav {
+        width: 94%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+
+    #menu {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #f00;
+        background-color: $color1;
+    }
+
+    #nav_right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 25px;
+
+        input[type = "search"] {
+            width: 200px;
+            font: 22px cocogoose;
+            text-indent: 10px;
+            background-color: #FAFAFA;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            padding: 2px 0 0.5px 0;
+        }
+
+        #conta {
+            width: 40px;
+        }
+    }
+}
+
+//Parte principal
 
 #main {
     width: 100%;
-    height: 500px;
-    background-image: url(../../Images/imgDevs.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 1000px;
+    background-color: $color1;
     transition: transform 0.5s ease;
 }
 
-#menu {
-    width: 50px;
-    height: 50px;
-    background-color: $menulateral_color;
+//Formalidade
+::-webkit-scrollbar{
+    display: none;
+}
+
+#formalidade {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding-top: 85px;
+    overflow: scroll;
+    overflow-y:hidden;
+    scroll-snap-type: x mandatory;
+
+    h2 {
+        @include title_font();
+        margin-bottom: 10px;
+    }
+
+    div {
+        display: flex;
+        column-gap: 25px;
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
 }

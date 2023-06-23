@@ -7,7 +7,8 @@ import Blog from './Pages/Blog/Blog';
 import Materia4 from './Pages/Materias/Materia4';
 import PoliticaPrivacidade from './Pages/PoliticaPrivacidade/PoliticaPrivacidade';
 import Contato from './Pages/Contato/Contato';
-import Institucional from  './Pages/Institucional/Institucional'
+import Institucional from  './Pages/Institucional/Institucional';
+import Faq from './Pages/Faq/Faq';
 import Demo from './Pages/Demo/Demo';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/PoliticaPrivacidade' element={<PoliticaPrivacidade />} />
           <Route path='/Contato' element={<Contato />} />
           <Route path='/Institucional' element={<Institucional />} />
+          <Route path='/Faq' element={<Faq />} />
           <Route path='/Demo' element={<Demo />} />
         </Routes>
       </Router>

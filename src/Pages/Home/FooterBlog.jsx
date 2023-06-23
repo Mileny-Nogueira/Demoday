@@ -34,7 +34,7 @@ function FooterBlog(props) {
                     <ul>
                         <Nav.Link href='/Contato' style={{textDecoration: 'none', color: 'black'}}><li>Fale Conosco</li></Nav.Link>
                         <li>Trabalhe conosco</li>
-                        <li>FAQ</li>
+                        <Nav.Link href='/Faq' style={{textDecoration: 'none', color: 'black'}}><li>FAQ</li></Nav.Link>
                     </ul>
                 </div>
                 <div className={style.footer_options}>
