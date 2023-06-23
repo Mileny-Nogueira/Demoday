@@ -4,9 +4,10 @@ function Section1PeP() {
     return (
         <div id={style.section1} >
             <h3>atenção!</h3>
-            <p>Este é um aviso importante referente às políticas e privacidade do nosso site. Ao acessar e utilizar nossos serviços, você está concordando com os termos exemplificados abaixo:
+            <p>Este é um aviso importante referente às políticas e privacidade do nosso site. <br />
+             Ao acessar e utilizar nossos serviços, você está concordando com os termos exemplificados abaixo: <br />
 
-                Coleta de informações: Em algumas situações, podemos coletar informações pessoais dos usuários, como nome, endereço de e-mail, país e data de nascimento. Essas informações são coletadas com o objetivo de melhorar nossos serviços e garantir uma experiência mais personalizada para cada usuário.
+                Coleta de informações: Em algumas situações, podemos coletar informações pessoais dos usuários, como nome, <br /> endereço de e-mail, país e data de nascimento. Essas informações são coletadas com o objetivo de melhorar nossos <br /> serviços e garantir uma experiência mais personalizada para cada usuário.
 
                 Cookies: Nosso site utiliza cookies para aprimorar a navegação e personalizar o conteúdo mostrado aos usuários. Esses cookies são coletados automaticamente enquanto o usuário navega pelo site, mas podem ser desativados nas configurações do navegador.
 
@@ -19,12 +20,7 @@ function Section1PeP() {
                 Atenciosamente,<br />
 
                 Equipe Pecto</p>
-            <div id={style.opções}>
-                <details>
-                    <summary>Eureca na pepeca da Rebeca</summary>
-                    <p>Ah, é a vida</p>
-                </details>
-            </div>
+            
         </div>
     )
 }
