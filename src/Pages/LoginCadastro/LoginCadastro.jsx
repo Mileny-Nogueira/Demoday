@@ -10,6 +10,14 @@ import login_submit from '../../Images/Login_submit.png';
 import google_login from '../../Images/Google_login.png';
 import facebook_login from '../../Images/Facebook_login.png';
 
+function NovaConta() {
+    useEffect(() => {
+        axios
+        
+    })
+}
+
+
 const LoginCadastro = () => {
 
     /*Animação container::before*/
