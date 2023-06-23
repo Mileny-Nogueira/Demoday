@@ -22,6 +22,7 @@
     width: 35px;
     height: 35px;
     margin-left: 35px;
+    cursor: pointer;
 }
 
 .menu_lines span{
@@ -35,12 +36,13 @@
 }
 
 .menu_faketrigger{
+    cursor: pointer;
     position: absolute;
     z-index: 1000;
     width: 35px;
     height: 35px;
     opacity: 0;
-    top: 22px;
+    top: 1px;
     left: 35px;
 }
 
