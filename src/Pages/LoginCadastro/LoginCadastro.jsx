@@ -48,7 +48,7 @@ const LoginCadastro = () => {
   const NovaConta = () => {
     useEffect(() => {
         axios
-        .get('http://localhost:8080/usuarios')
+        .get('https://localhost:8080/usuarios')
         .then(response => {
             // Manipule a resposta da API aqui
                 console.log(response.data);
