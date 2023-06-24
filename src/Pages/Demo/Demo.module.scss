@@ -22,6 +22,11 @@ $color2: #000; //Texto e outros
     transition: margin-left 0.5s ease;
 }
 
+.main {
+    width: 100%;
+    transition: margin-left 0.5s ease;
+}
+
 //Menu lateral
 
 .menu_lateral {
@@ -44,18 +49,56 @@ $color2: #000; //Texto e outros
         display: flex;
         margin: auto;
     }
+
+    ul {
+        list-style: none;
+
+        div {
+            width: 80%;
+            margin: auto;
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            column-gap: 20%;
+            align-items: center;
+            transition: all 0.3s;
+            border: 0.5px solid $color2;
+            border-radius: 10px;
+            cursor: pointer;
+    
+            img {
+                width: 45px;
+            }
+    
+            p {
+                font: 20px simply_rounded;
+            }
+        }
+
+        div:hover {
+            transform: scale(1.03, 1.03);
+        }
+    }
 }
 
 //Classes que serão adicionadas na condição da Header e da Main (style.main)
 
 .visible {
+    margin-left: 275px;
+    transition: margin-left 0.5s ease;
+}
+
+.visible2 {
     transform: translateX(0px);
     transition: transform 0.5s ease;
 }
 
-.visible2 {
-    margin-left: 275px;
-    transition: margin-left 0.5s ease;
+//Parte principal
+
+#section_main {
+    width: 100%;
+    height: 1000px;
+    background-color: $color1;
 }
 
 //Header
@@ -67,6 +110,7 @@ $color2: #000; //Texto e outros
     height: auto;
     background-color: $color1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease;
     z-index: 99;
 
     nav {
@@ -105,15 +149,6 @@ $color2: #000; //Texto e outros
             width: 40px;
         }
     }
-}
-
-//Parte principal
-
-#main {
-    width: 100%;
-    height: 1000px;
-    background-color: $color1;
-    transition: transform 0.5s ease;
 }
 
 //Formalidade

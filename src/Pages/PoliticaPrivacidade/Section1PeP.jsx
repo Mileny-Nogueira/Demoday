@@ -3,7 +3,7 @@ import style from './Section1PeP.module.css';
 function Section1PeP() {
     return (
         <div id={style.section1} >
-            <h3>atenção!</h3>
+            <h3>ATENÇÃO!</h3>
             <p>Este é um aviso importante referente às políticas e privacidade do nosso site. <br />
              Ao acessar e utilizar nossos serviços, você está concordando com os termos exemplificados abaixo: <br />
 
