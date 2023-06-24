@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import VMasker from 'vanilla-masker';
-
+import axios from 'axios';
 import style from './LoginCadastro.module.css';
 
 import login_img from '../../Images/login.png';
@@ -13,8 +14,58 @@ import facebook_login from '../../Images/Facebook_login.png';
 function NovaConta() {
     useEffect(() => {
         axios
+        .get('http://localhost:8080/usuarios')
+        .then(response => {
+            // Manipule a resposta da API aqui
+                console.log(response.data);
+            })
+            .catch(error => {
+            // Trate os erros da requisição aqui
+                console.error(error);
+            });
+    }, []);
+
+    const [nome, setNome] = useState("");
+    const [email, setEmail] = useState("");
+    const [cpf, setCpf] = useState("");
+    const [nascimento, setNascimento] = useState("");
+    const [senha, setSenha] = useState("");
+    const [confirmarSenha, setConfirmarSenha] = useState("");
+
+    const navigate = useNavigate();
+
+    const sendData = () => {
+        if (senha !== confirmarSenha) {
+            alert("A senha e a confirmação de senha não correspondem.")
+            return; 
+        }
+
+        const newUser = {
+          nome: nome,
+          email: email,
+          cpf: cpf,
+          nascimento: nascimento,
+          senha: senha
+        };
         
-    })
+        axios
+            .post('http://localhost:8080/usuarios', newUser)
+            .then(response => {
+                setCpf("");
+                setNome("");
+                setSobreNome("");
+                setEmail("");
+                setNascimento("");
+                setSenha("");
+                setConfirmarSenha("");
+
+                alert("Conta criada com sucesso!");
+                navigate('/LoginCadastro'); // Redirecionar para a página de login
+            })
+            .catch(error => {
+                console.error(error);
+            });
+      };
 }
 
 
@@ -91,22 +142,22 @@ const LoginCadastro = () => {
                     <form action="#" className={style.sign_up_form2}>
                         <h2 className={style.title2}>Cadastro</h2>
                         <div className={style.input_field2}>
-                            <input type="text" placeholder='Nome completo:' required />
+                            <input type="text" value={nome} onChange={(texto)=>setNome(texto.target.value)} placeholder='Nome completo:' required />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="email" placeholder='E-mail:' required />
+                            <input type="email" value={email} onChange={(texto)=>setEmail(texto.target.value)}placeholder='E-mail:' required />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="text" required placeholder='CPF:' ref={cpfInputRef} />
+                            <input type="text" value={cpf} onChange={(texto)=>setCpf(texto.target.value)} required placeholder='CPF:' ref={cpfInputRef} />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="text" required placeholder='Data de Nascimento:' onFocus={handleFocus} onBlur={handleBlur} />
+                            <input type="text" value={nascimento} onChange={(texto)=>setNascimento(texto.target.value)} required placeholder='Data de Nascimento:' onFocus={handleFocus} onBlur={handleBlur} />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="password" required placeholder='Senha:' />
+                            <input type="password" value={senha} onChange={(texto)=>setSenha(texto.target.value)} required placeholder='Senha:' />
                         </div>
                         <div className={style.input_field2}>
-                            <input type="password" required placeholder='Confirmar senha:' />
+                            <input type="password" value={confirmarSenha} onChange={texto => setConfirmarSenha(texto.target.value)} required placeholder='Confirmar senha:' />
                         </div>
                         <div className={style.support}>
                             <div className={style.remember3}>
