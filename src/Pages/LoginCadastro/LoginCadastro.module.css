@@ -378,8 +378,6 @@
 
 @media only screen and (max-width: 768px) {
 
-   
-
     .container {
         min-width: 90%;
         max-height: none;
@@ -391,10 +389,15 @@
     #login_cadastro form {
         width: 75%;
     }
+}
 
-    .sign_up_mode::before {
-        top: 0;
-        transform: translateX(100%);
-       
+@media only screen and (max-width: 480px) {
+
+    .container {
+        min-width: 95%;
+    }
+
+    #login_cadastro form {
+        width: 85%;
     }
 }

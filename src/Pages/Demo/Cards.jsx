@@ -11,7 +11,7 @@ function Cards(props) {
     //Cards
 
     return (
-        <div id={style.cards} style={{background: props.card_color}} onClick={handleClick}>
+        <div id={style.cards} style={{background: props.card_color}} onClick={handleClick} title={props.card_alt}>
             <img src={props.card_img} alt={props.card_alt} />
             <h3>{props.card_text}</h3>
         </div>

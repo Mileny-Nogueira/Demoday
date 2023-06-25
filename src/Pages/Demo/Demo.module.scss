@@ -3,6 +3,7 @@
 $color1: #FFF; //Menu lateral e outros
 $color2: #000; //Texto e outros
 
+
 //Mixin - 'Funções' SCSS
 
 @mixin title_font {
@@ -13,13 +14,29 @@ $color2: #000; //Texto e outros
     font-family: simply_rounded;
 }
 
+//Animações
+
+//Animação do Background do Menu Central
+
+@keyframes efeito_menu_central {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 300%;
+    }
+}
+
+
 //Estilizações
 
 #demo {
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     overflow-x: hidden;
     transition: margin-left 0.5s ease;
+    padding-bottom: 8%;
 }
 
 .main {
@@ -40,6 +57,7 @@ $color2: #000; //Texto e outros
     position: fixed;
     top: 0;
     width: 275px;
+    min-height: 100%;
     z-index: 99;
     background: $color1;
     box-shadow: inset -0.25em 0 0.25em 0 rgba(200, 200, 200, 0.125);
@@ -97,7 +115,7 @@ $color2: #000; //Texto e outros
 
 #section_main {
     width: 100%;
-    height: 1000px;
+    height: auto;
     background-color: $color1;
 }
 
@@ -125,8 +143,15 @@ $color2: #000; //Texto e outros
     #menu {
         width: 50px;
         height: 50px;
-        border: 1px solid #f00;
+        border-radius: 100%;
         background-color: $color1;
+        margin-left: 10px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    #menu:hover {
+        background-color: rgba(200, 200, 200, 0.5);
     }
 
     #nav_right {
@@ -135,35 +160,65 @@ $color2: #000; //Texto e outros
         align-items: center;
         column-gap: 25px;
 
-        input[type = "search"] {
-            width: 200px;
-            font: 22px cocogoose;
-            text-indent: 10px;
-            background-color: #FAFAFA;
-            border: 1px solid #CCC;
-            border-radius: 5px;
-            padding: 2px 0 0.5px 0;
-        }
-
         #conta {
             width: 40px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            background-color: #FAFAFA;
+            border: 1px solid #CCC;
+            border-radius: 10px;
+            box-sizing: border-box;
+
+
+            input[type = "search"] {
+                width: 185px;
+                font: 22px cocogoose;
+                background-color: #FAFAFA;
+                text-indent: 10px;
+                border-radius: 10px;
+                padding: 2px 0 0.5px 0;
+            }
+
+            input[type = "search"]:focus {
+                box-shadow: 0 0 0 0;
+                border: 0 none;
+                outline: 0;
+            }
+
+            input[type = "search"]::-webkit-search-cancel-button {
+                display: none;
+            }
+
+            img {
+                width: 35px;
+            }
         }
     }
 }
 
-//Formalidade
-::-webkit-scrollbar{
-    display: none;
+//Menu central
+
+#menu_central {
+    width: 90%;
+    height: 450px;
+    margin: auto;
+    border-radius: 25px;
+    background: linear-gradient(90deg, rgba(0, 138, 255, 0.10) 0%, rgba(255, 152, 0, 0.10) 100%);
+    background-size: 400% 100%;
+    margin-top: 100px;
+    animation: efeito_menu_central 25s linear alternate infinite;
 }
 
-#formalidade {
+//Formalidade, Desejos e Sentimentos
+
+#formalidade, #desejos, #sentimentos {
     width: 90%;
     height: auto;
     margin: auto;
-    padding-top: 85px;
-    overflow: scroll;
-    overflow-y:hidden;
-    scroll-snap-type: x mandatory;
+    padding-top: 75px;
 
     h2 {
         @include title_font();
@@ -174,6 +229,14 @@ $color2: #000; //Texto e outros
         display: flex;
         column-gap: 25px;
         justify-content: space-between;
-        padding: 10px 10px;
+        overflow: scroll;
+        overflow-y:hidden;
+        scroll-snap-type: x mandatory;
+        padding: 15px 10px;
+    }
+
+    div::-webkit-scrollbar {
+        display: none;
     }
 }
+
