@@ -97,9 +97,9 @@ const LoginCadastro = () => {
           setNascimento('');
           setSenha('');
           setConfirmarSenha('');
-
+          
           alert("Conta criada com sucesso!");
-          navigate('/Demo'); // Redirecionamento após cadastro
+          // navigate('/Demo'); // Redirecionamento após cadastro
         })
         .catch((error) => {
             console.error(error);
