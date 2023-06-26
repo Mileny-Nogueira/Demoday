@@ -11,24 +11,6 @@ import login_submit from '../../Images/Login_submit.png';
 import google_login from '../../Images/Google_login.png';
 import facebook_login from '../../Images/Facebook_login.png';
 
-// React Hook Form
-import { useForm } from "react-hook-form"
-import { yupResolver } from "@hookform/resolvers/yup"
-
-// Yup
-import * as yup from "yup"
-
-
-const schema = yup
-  .object({
-    nome: yup.string().required(),
-    email: yup.string().required(),
-    cpf: yup.string().required(),
-    senha: yup.string().required(),
-    confirmarSenha: yup.number().positive().integer().required(),
-  })
-  .required()
-
 const LoginCadastro = () => {
   /* Animação container::before */
 
@@ -50,7 +32,7 @@ const LoginCadastro = () => {
     VMasker(cpfInputRef.current).maskPattern('999.999.999-99');
   }, []);
 
-  /* Script para ser possível mudar o 'placeholder' do input type="date" 
+  /* Script para ser possível mudar o 'placeholder' do input type="date" */
 
   const handleFocus = (event) => {
     event.target.type = 'date';
@@ -59,7 +41,6 @@ const LoginCadastro = () => {
   const handleBlur = (event) => {
     event.target.type = 'text';
   };
-  */
 
   /* Handle form submission and create a new user */
 
@@ -117,11 +98,11 @@ const LoginCadastro = () => {
           setConfirmarSenha('');
           
           alert("Conta criada com sucesso!");
-          // navigate('/Demo'); // Redirecionamento após cadastro
         })
         .catch((error) => {
             console.error(error);
         });
+        handleSignInClick();
     };
 
     /* Estrutura da página */
@@ -209,18 +190,31 @@ const LoginCadastro = () => {
             <h2 className={style.title}>Login</h2>
             <div className={style.input_field}>
               <img src={login_user} alt="Clique para adicionar o seu e-mail" />
-              <input type="email" required placeholder="E-mail:" />
+              <input 
+              type="email" 
+              required 
+              placeholder="E-mail:" 
+              />
             </div>
             <div className={style.input_field}>
               <img src={login_password} alt="Clique para adicionar a sua senha" />
-              <input type="password" required placeholder="Senha:" />
+              <input 
+              type="password" 
+              required 
+              placeholder="Senha:" 
+              />
             </div>
             <div className={style.remember}>
               <span>Esqueceu sua senha?</span>
             </div>
             <div className={style.input_submit}>
               <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
-              <input type="submit" id={style.submit} value="Entrar" className={style.botao5} />
+              <input 
+              type="submit" 
+              id={style.submit} 
+              value="Entrar" 
+              className={style.botao5} 
+              />
             </div>
             <div className={style.remember2}>
               <hr />
