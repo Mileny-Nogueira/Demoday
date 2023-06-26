@@ -11,6 +11,24 @@ import login_submit from '../../Images/Login_submit.png';
 import google_login from '../../Images/Google_login.png';
 import facebook_login from '../../Images/Facebook_login.png';
 
+// React Hook Form
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+
+// Yup
+import * as yup from "yup"
+
+
+const schema = yup
+  .object({
+    nome: yup.string().required(),
+    email: yup.string().required(),
+    cpf: yup.string().required(),
+    senha: yup.string().required(),
+    confirmarSenha: yup.number().positive().integer().required(),
+  })
+  .required()
+
 const LoginCadastro = () => {
   /* Animação container::before */
 
@@ -177,11 +195,6 @@ const LoginCadastro = () => {
           onClick={enviarDados}>
             Cadastre-se
           </button>
-        {erroCadastro && (
-            <div className={style.error_message}>
-            <p>{erroCadastro}</p>
-            </div>
-        )}
         </div>
       </form>
     );
