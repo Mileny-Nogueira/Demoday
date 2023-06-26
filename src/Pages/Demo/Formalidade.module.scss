@@ -1,0 +1,42 @@
+//Variáveis
+
+$color1: #FFF; //Menu lateral e outros
+$color2: #000; //Texto e outros
+
+
+//Mixin - 'Funções' SCSS
+
+@mixin title_font {
+    font-size: 35px;
+    font-weight: normal;
+    text-align: left;
+    color: $color2;
+    font-family: simply_rounded;
+}
+
+
+//Estilizações
+
+
+//Formalidade, Desejos e Sentimentos
+
+#formalidade {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding-top: 75px;
+
+    h2 {
+        @include title_font();
+        margin-bottom: 10px;
+    }
+
+    div {
+        display: flex;
+        column-gap: 25px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        padding: 15px 10px;
+    }
+}

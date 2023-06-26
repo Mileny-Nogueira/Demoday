@@ -4,6 +4,7 @@
     height: 230px;
     min-width: 170px;
     min-height: 230px;
+    gap: 0 !important;
     display: flex;
     flex-direction: column;
     justify-content: space-around !important;
@@ -14,7 +15,7 @@
     cursor: pointer;
 
     img {
-        width: 80%;
+        height: 55%;
         align-self: center;
     }
 

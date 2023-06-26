@@ -14,20 +14,6 @@ $color2: #000; //Texto e outros
     font-family: simply_rounded;
 }
 
-//Animações
-
-//Animação do Background do Menu Central
-
-@keyframes efeito_menu_central {
-    0% {
-        background-position: 0%;
-    }
-
-    100% {
-        background-position: 300%;
-    }
-}
-
 
 //Estilizações
 
@@ -36,7 +22,7 @@ $color2: #000; //Texto e outros
     height: auto;
     overflow-x: hidden;
     transition: margin-left 0.5s ease;
-    padding-bottom: 8%;
+    padding-bottom: 5%;
 }
 
 .main {
@@ -89,7 +75,8 @@ $color2: #000; //Texto e outros
             }
     
             p {
-                font: 20px simply_rounded;
+                @include title_font();
+                font-size: 20px !important;
             }
         }
 
@@ -203,40 +190,74 @@ $color2: #000; //Texto e outros
 
 #menu_central {
     width: 90%;
-    height: 450px;
+    height: 500px;
     margin: auto;
     border-radius: 25px;
-    background: linear-gradient(90deg, rgba(0, 138, 255, 0.10) 0%, rgba(255, 152, 0, 0.10) 100%);
-    background-size: 400% 100%;
+    background: url('../../Images/Menina\ PCD_demo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin-top: 100px;
-    animation: efeito_menu_central 25s linear alternate infinite;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
-//Formalidade, Desejos e Sentimentos
-
-#formalidade, #desejos, #sentimentos {
-    width: 90%;
-    height: auto;
-    margin: auto;
-    padding-top: 75px;
+    img {
+        width: 25%;
+        top: 15px;
+    }
 
     h2 {
         @include title_font();
-        margin-bottom: 10px;
+        font-size: 45px !important;
+        bottom: 35px;
     }
 
-    div {
-        display: flex;
-        column-gap: 25px;
-        justify-content: space-between;
-        overflow: scroll;
-        overflow-y:hidden;
-        scroll-snap-type: x mandatory;
-        padding: 15px 10px;
-    }
-
-    div::-webkit-scrollbar {
-        display: none;
+    h3 {
+        @include title_font();
+        position: absolute;
+        right: 22px;
+        top: 15px;
     }
 }
 
+#escolher_menu {
+    width: 75%;
+    margin: auto;
+    background: linear-gradient(90deg, rgba(0, 138, 255, 0.50) 0%, rgba(255, 152, 0, 0.50) 100%);
+    margin-top: 70px;
+    border-radius: 35px;
+
+    div {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        padding: 0;
+      
+
+        .menu_opcoes {
+            width: 25%;
+            font-size: 25px;
+            font-family: simply_rounded;
+            text-align: center;
+            text-decoration: none;
+            color: $color2;
+            padding: 10px 0;
+            z-index: 3;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        span {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: #343434;
+            border-radius: 35px;
+            z-index: 2;
+            transition: all 0.5s;
+        }
+    }
+
+}
