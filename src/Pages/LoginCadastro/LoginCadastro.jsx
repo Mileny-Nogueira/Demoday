@@ -48,7 +48,7 @@ const LoginCadastro = () => {
   const NovaConta = () => {
     useEffect(() => {
         axios
-        .get('https://localhost:8080/usuarios')
+        .get('http://localhost:8080/usuarios')
         .then(response => {
             // Manipule a resposta da API aqui
                 console.log(response.data);
@@ -97,9 +97,9 @@ const LoginCadastro = () => {
           setNascimento('');
           setSenha('');
           setConfirmarSenha('');
-
+          
           alert("Conta criada com sucesso!");
-          navigate('/Demo'); // Redirecionamento após cadastro
+          // navigate('/Demo'); // Redirecionamento após cadastro
         })
         .catch((error) => {
             console.error(error);
