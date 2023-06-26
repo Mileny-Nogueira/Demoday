@@ -45,3 +45,12 @@ $color2: #000; //Texto e outros
         display: none;
     }
 }
+
+
+//Reponsividade
+
+@media only screen and (max-width: 480px) {
+    #formalidade, #desejos, #sentimentos {
+        width: 95%;
+    }
+}

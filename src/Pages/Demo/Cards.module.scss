@@ -28,3 +28,50 @@
 #cards:hover {
     transform: scale(1.04, 1.04);
 }
+
+
+//Responsividade
+
+@media only screen and (max-width: 768px) {
+
+    #cards {
+        width: 155px;
+        height: 215px;
+        min-width: 155px;
+        min-height: 215px;
+
+        h3 {
+            font-size: 22px;
+        }
+    }
+}
+
+@media only screen and (max-width: 585px) {
+
+    #cards {
+        width: 140px;
+        height: 200px;
+        min-width: 140px;
+        min-height: 200px;
+
+        
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    #cards {
+        width: 130px;
+        height: 190px;
+        min-width: 130px;
+        min-height: 190px;
+
+        
+        h3 {
+            font-size: 18px;
+        }
+    }
+}

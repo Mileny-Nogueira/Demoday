@@ -259,5 +259,51 @@ $color2: #000; //Texto e outros
             transition: all 0.5s;
         }
     }
+}
 
+
+//Responsividade
+
+@media only screen and (max-width: 768px) {
+
+    #escolher_menu {
+    
+        div {
+
+            .menu_opcoes {
+                width: 25%;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 585px) {
+
+    #escolher_menu {
+        width: 80%;
+        
+        div {
+
+            .menu_opcoes {
+                width: 25%;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    #escolher_menu {
+        width: 95%;
+    
+        div {
+
+            .menu_opcoes {
+                width: 25%;
+                font-size: 3.7vw;
+            }
+        }
+    }
 }
