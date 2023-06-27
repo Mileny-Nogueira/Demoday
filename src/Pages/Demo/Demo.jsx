@@ -5,6 +5,7 @@ import style from './Demo.module.scss';
 import HomeDemo from './HomeDemo';
 import Formalidade from './Formalidade';
 import Desejos from './Desejos';
+import Sentimentos from './Sentimentos';
 
 
 //Imagens das Cards
@@ -72,6 +73,20 @@ import dor_img from './Images/Sentimentos/Dor.png';
 import duvida_img from './Images/Sentimentos/Duvida.png';
 import calma_img from './Images/Sentimentos/Calmo.png';
 
+import ansiosa_img from './Images/Sentimentos/Ansiedade.png';
+import alegre_img from './Images/Sentimentos/alegre.png';
+import gostei_img from './Images/Sentimentos/Gostei.png';
+import quero_img from './Images/Sentimentos/quero.png';
+import satisfeita_img from './Images/Sentimentos/satisfeito.png';
+import confianca_img from './Images/Sentimentos/Confiança.png';
+
+import ciumes_img from './Images/Sentimentos/ciumes.png';
+import empatia_img from './Images/Sentimentos/empatia.png';
+import animada_img from './Images/Sentimentos/animado.png';
+import relaxada_img from './Images/Sentimentos/Relaxado.png';
+import paciencia_img from './Images/Sentimentos/Paciencia.png';
+import nervosa_img from './Images/Sentimentos/nervoso.png';
+
 
 //Áudios das Cards
 
@@ -137,6 +152,20 @@ import curiosa_audio from './Audios/Sentimentos - Emoções/Curiosa.m4a';
 import dor_audio from './Audios/Sentimentos - Emoções/Dor.m4a';
 import duvida_audio from './Audios/Sentimentos - Emoções/Dúvida.m4a';
 import calma_audio from './Audios/Sentimentos - Emoções/Calma.m4a';
+
+import ansiosa_audio from './Audios/Sentimentos - Emoções/Ansiosa.m4a';
+import alegre_audio from './Audios/Sentimentos - Emoções/Alegre.m4a';
+import gostei_audio from './Audios/Sentimentos - Emoções/Gostei.m4a';
+import quero_audio from './Audios/Sentimentos - Emoções/Quero.m4a';
+import satisfeita_audio from './Audios/Sentimentos - Emoções/Satisfeita.m4a';
+import confianca_audio from './Audios/Sentimentos - Emoções/Confiança.m4a';
+
+import ciumes_audio from './Audios/Sentimentos - Emoções/Ciúmes.m4a';
+import empatia_audio from './Audios/Sentimentos - Emoções/Empatia.m4a';
+import animada_audio from './Audios/Sentimentos - Emoções/Animada.m4a';
+import relaxada_audio from './Audios/Sentimentos - Emoções/Relaxada.m4a';
+import paciencia_audio from './Audios/Sentimentos - Emoções/Paciência.m4a';
+import nervosa_audio from './Audios/Sentimentos - Emoções/Nervoso.m4a'; //Mileny, trocar áudio
 
 
 //Imagens gerais da página
@@ -218,7 +247,7 @@ const Demo = () => {
         { card_img: parabens_img, card_alt: 'Parabéns', card_text: 'Parabéns', card_audio: parabens_audio },
         { card_img: bonita_img, card_alt: 'Bonito ou Bonita', card_text: 'Bonito(a)', card_audio: bonita_audio },
 
-        { card_img: por_que_img, card_alt: 'Por Que', card_text: 'Por Que', card_audio: por_que_audio },
+        { card_img: por_que_img, card_alt: 'Por Que?', card_text: 'Por Que?', card_audio: por_que_audio },
         { card_img: aceito_img, card_alt: 'Aceito', card_text: 'Aceito', card_audio: aceito_audio },
         { card_img: nao_sei_img, card_alt: 'Não Sei', card_text: 'Não Sei', card_audio: nao_sei_audio },
         { card_img: espere_img, card_alt: 'Espere', card_text: 'Espere', card_audio: espere_audio },
@@ -258,6 +287,31 @@ const Demo = () => {
         { card_img: descansar_img, card_alt: 'Descansar', card_text: 'Descansar', card_audio: descansar_audio },
     ]
 
+    //Sentimentos - Página própria
+
+    const cardsSentimento2 = [
+        { card_img: triste_img, card_alt: 'Triste', card_text: 'Triste', card_audio: triste_audio },
+        { card_img: nojo_img, card_alt: 'Nojo', card_text: 'Nojo', card_audio: nojo_audio },
+        { card_img: curiosa_img, card_alt: 'Curioso ou Curiosa', card_text: 'Curioso(a)', card_audio: curiosa_audio },
+        { card_img: dor_img, card_alt: 'Dor', card_text: 'Dor', card_audio: dor_audio },
+        { card_img: duvida_img, card_alt: 'Dúvida', card_text: 'Dúvida', card_audio: duvida_audio },
+        { card_img: calma_img, card_alt: 'Calma ou Calmo', card_text: 'Calmo(a)', card_audio: calma_audio },
+
+        { card_img: ansiosa_img, card_alt: 'Ansioso ou Ansiosa', card_text: 'Ansioso (a)', card_audio: ansiosa_audio },
+        { card_img: alegre_img, card_alt: 'Alegre', card_text: 'Alegre', card_audio: alegre_audio },
+        { card_img: gostei_img, card_alt: 'Gostei', card_text: 'Gostei', card_audio: gostei_audio },
+        { card_img: quero_img, card_alt: 'Quero', card_text: 'Quero', card_audio: quero_audio },
+        { card_img: satisfeita_img, card_alt: 'Satisfeito ou Satisfeita', card_text: 'Satisfeito(a)', card_audio: satisfeita_audio },
+        { card_img: confianca_img, card_alt: 'Confiança', card_text: 'Confiança', card_audio: confianca_audio },
+
+        { card_img: ciumes_img, card_alt: 'Ciúmes', card_text: 'Ciúmes', card_audio: ciumes_audio },
+        { card_img: empatia_img, card_alt: 'Empatia', card_text: 'Empatia', card_audio: empatia_audio },
+        { card_img: animada_img, card_alt: 'Animado ou Animada', card_text: 'Animado(a)', card_audio: animada_audio },
+        { card_img: relaxada_img, card_alt: 'Relaxado ou Relaxada', card_text: 'Relaxado(a)', card_audio: relaxada_audio },
+        { card_img: paciencia_img, card_alt: 'Paciência', card_text: 'Paciência', card_audio: paciencia_audio },
+        { card_img: nervosa_img, card_alt: 'Nervoso ou Nervosa', card_text: 'Nervoso(a)', card_audio: nervosa_audio },
+    ]
+
 
     //Código para tornar a barra de busca funcional
 
@@ -295,6 +349,12 @@ const Demo = () => {
     //Buscar cards - Desejos - Página própria
 
     const filteredCardsDesejos2 = cardsDesejos2.filter((card) =>
+        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+    //Buscar cards - Sentimentos - Emoções - Página própria
+
+    const filteredCardsSentimentos2 = cardsSentimento2.filter((card) =>
         card.card_alt.toLowerCase().includes(searchText.toLowerCase())
     );
 
@@ -338,7 +398,7 @@ const Demo = () => {
             break;
 
         case 'Sentimentos':
-            componentToRender = <HomeDemo filteredCardsFormalidade={filteredCardsFormalidade} filteredCardsDesejos={filteredCardsDesejos} filteredCardsSentimentos={filteredCardsSentimentos} />
+            componentToRender = <Sentimentos filteredCardsSentimentos2={filteredCardsSentimentos2} />
             break;
 
         default:

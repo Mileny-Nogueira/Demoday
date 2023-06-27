@@ -1,6 +1,16 @@
 import style from './MainMateria.module.css';
 
 import Comentario from '../Blog/Comentario';
+import Section2Blog from '../Blog/Section2Blog';
+
+import Blog_PCD1 from '../../Images/Blog_PCD1.png'
+import Blog_PCD2 from '../../Images/Blog_PCD2.png';
+import Blog_PCD3 from '../../Images/Blog_PCD3.png';
+import Menina_PCD1 from '../../Images/Menina PCD_img1(2).png';
+import Menina_PCD2 from '../../Images/Menina PCD_img2.png';
+import crianças from '../../Images/crianças.jpeg';
+
+import lupa from '../../Images/Search_lupa.png';
 
 function MainMateria(props) {
     return (
@@ -19,7 +29,11 @@ function MainMateria(props) {
                     <div className={style.materia_topo}>
                         <div>
                             <input type="search" placeholder='Procurar' />
+                            <img src={lupa} alt="Pesquisar pelo blog" className={style.lupa} />
                         </div>
+                    </div>
+                    <div>
+                        <Section2Blog blog_img={Blog_PCD1} blog_alt='Conclusão' />
                     </div>
                 </div>
             </section>

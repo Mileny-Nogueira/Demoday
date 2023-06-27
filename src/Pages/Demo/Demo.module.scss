@@ -227,6 +227,7 @@ $color2: #000; //Texto e outros
     margin: auto;
     background: linear-gradient(90deg, rgba(0, 138, 255, 0.50) 0%, rgba(255, 152, 0, 0.50) 100%);
     margin-top: 70px;
+    border: 1px solid #CCC;
     border-radius: 35px;
 
     div {
@@ -266,6 +267,28 @@ $color2: #000; //Texto e outros
 
 @media only screen and (max-width: 768px) {
 
+    //Menu central
+
+    #menu_central {
+        width: 90%;
+
+        img {
+            width: 30%;
+            top: 15px;
+        }
+
+        h2 {
+            font-size: 32px !important;
+            bottom: 25px;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+    }
+
+    //Escolher Menu
+
     #escolher_menu {
     
         div {
@@ -280,9 +303,42 @@ $color2: #000; //Texto e outros
 
 @media only screen and (max-width: 585px) {
 
+    //Header
+
+    #header {
+
+        nav {
+            width: 96%;
+        }
+    }
+
+    //Menu central
+
+    #menu_central {
+        width: 90%;
+
+        img {
+            width: 40%;
+            top: 5px;
+        }
+
+        h2 {
+            font-size: 25px !important;
+            bottom: 10px;
+        }
+
+        h3 {
+            font-size: 25px;
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+    //Escolher Menu
+
     #escolher_menu {
-        width: 80%;
-        
+        width: 90%;
+
         div {
 
             .menu_opcoes {
@@ -294,6 +350,35 @@ $color2: #000; //Texto e outros
 }
 
 @media only screen and (max-width: 480px) {
+
+     //Menu central
+
+     #menu_central {
+        width: 95%;
+        height: 500px;
+        border-radius: 25px;
+
+        img {
+            width: 42%;
+            margin-right: auto;
+            left: 10px;
+            top: 10px;
+        }
+
+        h2 {
+            font-size: 6vw !important;
+            bottom: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 25px;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    
+    //Escolher Menu
 
     #escolher_menu {
         width: 95%;
