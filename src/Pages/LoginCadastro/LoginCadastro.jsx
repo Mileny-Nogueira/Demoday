@@ -77,8 +77,11 @@ const LoginCadastro = () => {
       if (senha !== confirmarSenha) {
         alert('As senhas não correspondem');
         return;
+      } else if (cpf.trim() === '') {
+        alert('Por favor, preencha o campo CPF.');
+        return;
       }
-
+      
       const novoUsuario = {
         nome: nome,
         email: email,
@@ -128,6 +131,7 @@ const LoginCadastro = () => {
         <div className={style.input_field2}>
           <input
             type="text"
+            cpfInputRef
             value={cpf}
             onChange={(texto) => setCpf(texto.target.value)}
             placeholder="CPF:"
@@ -136,10 +140,12 @@ const LoginCadastro = () => {
         </div>
         <div className={style.input_field2}>
           <input
-            type="date"
+            type="text"
             value={nascimento}
             onChange={(texto) => setNascimento(texto.target.value)}
             placeholder="Data de Nascimento:"
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
         </div>
         <div className={style.input_field2}>
