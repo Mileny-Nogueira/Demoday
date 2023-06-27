@@ -68,8 +68,7 @@ const LoginCadastro = () => {
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
 
-    const [erroCadastro, setErroCadastro] = useState(null);
-
+    const [erroCadastro, setErroCadastro] = useState('');
 
     const navigate = useNavigate();
 
@@ -110,15 +109,19 @@ const LoginCadastro = () => {
 
     /* Estrutura da página */
     return (
-      <form action="#" className={style.sign_up_form2}>
+      <form
+      action="#" 
+      className={style.sign_up_form2}
+      >
         <h2 className={style.title2}>Cadastro</h2>
         <div className={style.input_field2}>
           <input
             type="text"
             value={nome}
-            onChange={(texto) => setNome(texto.target.value)}
+            onChange={(texto) => setNome(texto.target.value) }
             placeholder="Nome completo:"
           />
+          <div class="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -127,26 +130,28 @@ const LoginCadastro = () => {
             onChange={(texto) => setEmail(texto.target.value)}
             placeholder="E-mail:"
           />
+          <div class="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
-            type="text"
-            cpfInputRef
+            type="num"
             value={cpf}
             onChange={(texto) => setCpf(texto.target.value)}
             placeholder="CPF:"
             ref={cpfInputRef}
           />
+          <div class="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
-            type="text"
+            type="date"
             value={nascimento}
             onChange={(texto) => setNascimento(texto.target.value)}
             placeholder="Data de Nascimento:"
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
+          <div class="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -155,6 +160,7 @@ const LoginCadastro = () => {
             onChange={(texto) => setSenha(texto.target.value)}
             placeholder="Senha:"
           />
+          <div class="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -163,6 +169,7 @@ const LoginCadastro = () => {
             onChange={(texto) => setConfirmarSenha(texto.target.value)}
             placeholder="Confirmar senha:"
           />
+          <div class="error"></div>
         </div>
         <div className={style.support}>
           <div className={style.remember3}>
