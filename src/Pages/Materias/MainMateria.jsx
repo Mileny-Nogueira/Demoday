@@ -9,7 +9,7 @@ function MainMateria(props) {
                 <div id={style.materia_part1}>
                     <div className={style.materia_topo}>
                         <h1>{props.titulo_materia}</h1>
-                        <h2 style={{backgroundColor: props.tema_cor}}>{props.tema_materia}</h2>
+                        <h2 style={{backgroundColor: props.tema_cor, color: props.corFonte}}>{props.tema_materia}</h2>
                     </div>
                     <img src={props.materia_img} alt={props.materia_alt} />
                     <span>{props.publicacao_materia} | Pecto</span>

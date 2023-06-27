@@ -11,15 +11,15 @@ function Section2Home() {
             <div id={style.bottomLine}></div>
             <div id={style.posts}>
                 <div className={style.posts_img}>
-                    <h3>A importância da tecnologia</h3>
+                    <h3>Fala e comunicação</h3>
                     <img src={post1} alt="Clique para ver o primeiro post" />
                 </div>
                 <div className={style.posts_img}>
-                    <h3>Ferramenta para comunicação</h3>
+                    <h3>Tecnologia como uma ferramenta de inclusão para PCD</h3>
                     <img src={post2} alt="Clique para ver o segundo post" />
                 </div>
                 <div className={style.posts_img}>
-                    <h3>Diversidade nas escolas</h3>
+                    <h3>PCDs ainda enfrentam difícil inclusão educação pública</h3>
                     <img src={post3} alt="Clique para ver o terceiro post" />
                 </div>
             </div>

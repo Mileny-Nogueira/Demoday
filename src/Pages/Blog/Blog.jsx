@@ -21,9 +21,9 @@ function Blog() {
             <HeaderBlog header_color='rgba(255, 255, 255, 0.95)' header_img={logo_blog} />
             <Section1Blog />
             <section id={style.section_blog}>
-                <Nav.Link href='/Materia4' style={{textDecoration: 'none'}}><Section2Blog blog_img={Blog_PCD1} alt='Acesso a publicação 1' background_color='#005BBB' text_color='#FFF' blog_theme="Tema" blog_title='Exemplo de título de matéria' /></Nav.Link>
-                <Nav.Link href='/Materia4' style={{textDecoration: 'none'}}><Section2Blog blog_img={Blog_PCD2} alt='Acesso a publicação 2' background_color='#005BBB' text_color='#FFF' blog_theme="Tema" blog_title='Exemplo de título de matéria' /></Nav.Link>
-                <Nav.Link href='/Materia4' style={{textDecoration: 'none'}}><Section2Blog blog_img={Blog_PCD3} alt='Acesso a publicação 3' background_color='#005BBB' text_color='#FFF' blog_theme="Tema" blog_title='Exemplo de título de matéria' /></Nav.Link>
+                <Nav.Link href='/Materia1' style={{textDecoration: 'none'}}><Section2Blog blog_img={Blog_PCD1} alt='Acesso a publicação 1' background_color='#005BBB' text_color='#FFF' blog_theme="Inclusão" blog_title='PCDs ainda enfrentam difícil inclusão educação pública' /></Nav.Link>
+                <Nav.Link href='/Materia2' style={{textDecoration: 'none'}}><Section2Blog blog_img={Blog_PCD2} alt='Acesso a publicação 2' background_color='#005BBB' text_color='#FFF' blog_theme="Tecnologia" blog_title='Tecnologia como uma ferramenta de inclusão para PCD' /></Nav.Link>
+                <Nav.Link href='/Materia3' style={{textDecoration: 'none'}}><Section2Blog blog_img={Blog_PCD3} alt='Acesso a publicação 3' background_color='#005BBB' text_color='#FFF' blog_theme="Comunicação" blog_title='Fala e comunicação' /></Nav.Link>
                 <Nav.Link href='/Materia4' style={{textDecoration: 'none'}}><Section2Blog blog_img={Menina_PCD1} alt='Acesso a publicação 4' background_color='#FF9800' text_color='#000' blog_theme='Comportamento' blog_title='Dificuldades enfrentadas por pais de crianças com deficiência' /></Nav.Link>
                 <Nav.Link href='/Materia4' style={{textDecoration: 'none'}}><Section2Blog blog_img={Menina_PCD2} alt='Acesso a publicação 5' background_color='#FF9800' text_color='#000' blog_theme="Tema" blog_title='Exemplo de título de matéria' /></Nav.Link>
                 <Nav.Link href='/Materia4' style={{textDecoration: 'none'}}><Section2Blog /></Nav.Link>
