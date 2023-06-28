@@ -8,7 +8,7 @@ function Section1() {
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p></p>
+                        <p>Hitalo brocha</p>
                     </details>
                  </div>
         </div>
