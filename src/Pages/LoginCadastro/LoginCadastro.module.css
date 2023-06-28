@@ -312,6 +312,12 @@
     transform:translateX(0);
 }
 
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 /*Responsivo*/
 
 @media only screen and (max-width: 1280px) {

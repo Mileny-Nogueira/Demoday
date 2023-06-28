@@ -45,43 +45,106 @@ const LoginCadastro = () => {
     const [nascimento, setNascimento] = useState('');
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
-    const [erroCadastro, setErroCadastro] = useState('');
+
+    const [termosAceitos, setTermosAceitos] = useState(false);
+    const [validacaoBackend, setValidacaoBackend] = useState(false);
+    /* erros */
+    const [erros, setErros] = useState({});
 
     const navigate = useNavigate();
 
-    const enviarDados = () => {
+    const enviarDados = (event) => {
+      event.preventDefault();
+
+      setErros({});
+
+      if (!nome.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          nome: 'O campo nome é obrigatório.',
+      }))}
+  
+      if (!email.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          email: 'O campo email é obrigatório.',
+      }))}
+  
+      if (!cpf.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          cpf: 'O campo CPF é obrigatório.',
+        }))}
+  
+      if (!nascimento.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          nascimento: 'O campo data de nascimento é obrigatório.',
+        }))}
+  
+      if (!senha.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          senha: 'O campo senha é obrigatório.',
+        }))}
+
+      if (!confirmarSenha.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          confirmarSenha: 'Confirme sua senha.',
+        }))}
+
       if (senha !== confirmarSenha) {
-        alert('As senhas não correspondem');
-        return;
-      } else if (cpf.trim() === '') {
-        alert('Por favor, preencha o campo CPF.');
-        return;
-      }
+        setErros((prevErros) => ({
+          ...prevErros,
+          confirmarSenha: 'As senhas não correspondem.'
+        }))}
 
-      const novoUsuario = {
-        nome: nome,
-        email: email,
-        cpf: cpf,
-        nascimento: nascimento,
-        senha: senha,
-      };
+      if (
+        nome.trim() &&
+        email.trim() &&
+        cpf.trim() &&
+        nascimento.trim() &&
+        senha.trim() &&
+        senha === confirmarSenha && termosAceitos
+      ) {
+        const novoUsuario = {
+          nome: nome,
+          email: email,
+          cpf: cpf,
+          nascimento: nascimento,
+          senha: senha,
+        };
 
-      axios
-        .post('http://localhost:8080/usuarios', novoUsuario)
-        .then((response) => {
-          setNome('');
-          setEmail('');
-          setCpf('');
-          setNascimento('');
-          setSenha('');
-          setConfirmarSenha('');
+        setValidacaoBackend(true);
 
-          alert('Conta criada com sucesso!');
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-      handleSignInClick();
+        axios
+          .post('http://localhost:8080/usuarios', novoUsuario)
+          .then((response) => {
+            setNome('');
+            setEmail('');
+            setCpf('');
+            setNascimento('');
+            setSenha('');
+            setConfirmarSenha('');
+
+            alert('Conta criada com sucesso!');
+            handleSignInClick();
+          })
+          .catch((error) => {
+            if (error.response && error.response.data) {
+              setErros(error.response.data);
+            } else {
+              console.error(error);
+            }
+          });
+        } else {
+          setValidacaoBackend(false);
+        }
+    };
+
+    const handleTermosChange = (event) => {
+      setTermosAceitos(event.target.checked);
     };
 
     return (
@@ -91,63 +154,63 @@ const LoginCadastro = () => {
           <input
             type="text"
             value={nome}
-            onChange={(texto) => setNome(texto.target.value)}
+            onChange={(e) => setNome(e.target.value)}
             placeholder="Nome completo:"
           />
-          <div className="error"></div>
         </div>
+        {erros.nome && <div className={style.error}>{erros.nome}</div>}
         <div className={style.input_field2}>
           <input
-            type="email"
+            type="text"
             value={email}
-            onChange={(texto) => setEmail(texto.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="E-mail:"
           />
-          <div className="error"></div>
         </div>
+        {erros.email && <div className={style.error}>{erros.email}</div>}     
         <div className={style.input_field2}>
           <input
             type="num"
             value={cpf}
-            onChange={(texto) => setCpf(texto.target.value)}
+            onChange={(e) => setCpf(e.target.value)}
             placeholder="CPF:"
             ref={cpfInputRef}
           />
-          <div className="error"></div>
         </div>
+        {erros.cpf && <div className={style.error}>{erros.cpf}</div>}
         <div className={style.input_field2}>
           <input
             type="date"
             value={nascimento}
-            onChange={(texto) => setNascimento(texto.target.value)}
+            onChange={(e) => setNascimento(e.target.value)}
             placeholder="Data de Nascimento:"
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
-          <div className="error"></div>
         </div>
+        {erros.nascimento && <div className={style.error}>{erros.nascimento}</div>}
         <div className={style.input_field2}>
           <input
             type="password"
             value={senha}
-            onChange={(texto) => setSenha(texto.target.value)}
+            onChange={(e) => setSenha(e.target.value)}
             placeholder="Senha:"
           />
-          <div className="error"></div>
         </div>
+        {erros.senha && <div className={style.error}>{erros.senha}</div>}
         <div className={style.input_field2}>
           <input
             type="password"
             value={confirmarSenha}
-            onChange={(texto) => setConfirmarSenha(texto.target.value)}
+            onChange={(e) => setConfirmarSenha(e.target.value)}
             placeholder="Confirmar senha:"
           />
-          <div className="error"></div>
         </div>
+        {erros.confirmarSenha && (<div className={style.error}>{erros.confirmarSenha}</div>)}
         <div className={style.support}>
           <div className={style.remember3}>
             <span>
-              <input type="checkbox" name="opcao1" value="sim" />
+              <input type="checkbox" name="opcao1" value="sim" checked={termosAceitos} onChange={handleTermosChange} />
             </span>
             <p>
               Li e concordo com os <span>termos</span> e <span>serviços</span>
