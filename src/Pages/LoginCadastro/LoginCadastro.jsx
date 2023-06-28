@@ -1,9 +1,8 @@
-import style from './LoginCadastro.module.css';
-import axios from 'axios'; // bib de requisições HTTP.
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import VMasker from 'vanilla-masker';
-
+import style from './LoginCadastro.module.css';
 import login_img from '../../Images/login.png';
 import login_user from '../../Images/Login_user.png';
 import login_password from '../../Images/Login_password.png';
@@ -13,7 +12,6 @@ import facebook_login from '../../Images/Facebook_login.png';
 
 const LoginCadastro = () => {
   /* Animação container::before */
-
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const handleSignUpClick = () => {
@@ -25,15 +23,13 @@ const LoginCadastro = () => {
   };
 
   /* Script CPF */
-
   const cpfInputRef = useRef(null);
 
   useEffect(() => {
     VMasker(cpfInputRef.current).maskPattern('999.999.999-99');
   }, []);
 
-  /* Script para ser possível mudar o 'placeholder' do input type="date" */
-
+   /* Script para ser possível mudar o 'placeholder' do input type="date" */
   const handleFocus = (event) => {
     event.target.type = 'date';
   };
@@ -42,32 +38,13 @@ const LoginCadastro = () => {
     event.target.type = 'text';
   };
 
-  /* Handle form submission and create a new user */
-
   const NovaConta = () => {
-    useEffect(() => {
-        axios
-        .get('http://localhost:8080/usuarios')
-        .then(response => {
-            // Manipule a resposta da API aqui
-                console.log(response.data);
-            })
-            .catch((error) => {
-                if (error.response && error.response.data) {
-                    setErroCadastro(error.response.data)
-                }else {
-                    console.error(error);
-                }
-            });
-    }, []);
-
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [cpf, setCpf] = useState('');
     const [nascimento, setNascimento] = useState('');
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
-
     const [erroCadastro, setErroCadastro] = useState('');
 
     const navigate = useNavigate();
@@ -80,7 +57,7 @@ const LoginCadastro = () => {
         alert('Por favor, preencha o campo CPF.');
         return;
       }
-      
+
       const novoUsuario = {
         nome: nome,
         email: email,
@@ -98,30 +75,26 @@ const LoginCadastro = () => {
           setNascimento('');
           setSenha('');
           setConfirmarSenha('');
-          
-          alert("Conta criada com sucesso!");
+
+          alert('Conta criada com sucesso!');
         })
         .catch((error) => {
-            console.error(error);
+          console.error(error);
         });
-        handleSignInClick();
+      handleSignInClick();
     };
 
-    /* Estrutura da página */
     return (
-      <form
-      action="#" 
-      className={style.sign_up_form2}
-      >
+      <form action="#" className={style.sign_up_form2}>
         <h2 className={style.title2}>Cadastro</h2>
         <div className={style.input_field2}>
           <input
             type="text"
             value={nome}
-            onChange={(texto) => setNome(texto.target.value) }
+            onChange={(texto) => setNome(texto.target.value)}
             placeholder="Nome completo:"
           />
-          <div class="error"></div>
+          <div className="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -130,7 +103,7 @@ const LoginCadastro = () => {
             onChange={(texto) => setEmail(texto.target.value)}
             placeholder="E-mail:"
           />
-          <div class="error"></div>
+          <div className="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -140,7 +113,7 @@ const LoginCadastro = () => {
             placeholder="CPF:"
             ref={cpfInputRef}
           />
-          <div class="error"></div>
+          <div className="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -151,7 +124,7 @@ const LoginCadastro = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
-          <div class="error"></div>
+          <div className="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -160,7 +133,7 @@ const LoginCadastro = () => {
             onChange={(texto) => setSenha(texto.target.value)}
             placeholder="Senha:"
           />
-          <div class="error"></div>
+          <div className="error"></div>
         </div>
         <div className={style.input_field2}>
           <input
@@ -169,24 +142,18 @@ const LoginCadastro = () => {
             onChange={(texto) => setConfirmarSenha(texto.target.value)}
             placeholder="Confirmar senha:"
           />
-          <div class="error"></div>
+          <div className="error"></div>
         </div>
         <div className={style.support}>
           <div className={style.remember3}>
             <span>
-              <input 
-              type="checkbox" 
-              name="opcao1" 
-              value="sim"  
-              />
+              <input type="checkbox" name="opcao1" value="sim" />
             </span>
             <p>
               Li e concordo com os <span>termos</span> e <span>serviços</span>
             </p>
           </div>
-          <button 
-          className={style.botao6} 
-          onClick={enviarDados}>
+          <button className={style.botao6} onClick={enviarDados}>
             Cadastre-se
           </button>
         </div>
@@ -203,31 +170,18 @@ const LoginCadastro = () => {
             <h2 className={style.title}>Login</h2>
             <div className={style.input_field}>
               <img src={login_user} alt="Clique para adicionar o seu e-mail" />
-              <input 
-              type="email" 
-              required 
-              placeholder="E-mail:" 
-              />
+              <input type="email" required placeholder="E-mail:" />
             </div>
             <div className={style.input_field}>
               <img src={login_password} alt="Clique para adicionar a sua senha" />
-              <input 
-              type="password" 
-              required 
-              placeholder="Senha:" 
-              />
+              <input type="password" required placeholder="Senha:" />
             </div>
             <div className={style.remember}>
               <span>Esqueceu sua senha?</span>
             </div>
             <div className={style.input_submit}>
               <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
-              <input 
-              type="submit" 
-              id={style.submit} 
-              value="Entrar" 
-              className={style.botao5} 
-              />
+              <input type="submit" id={style.submit} value="Entrar" className={style.botao5} />
             </div>
             <div className={style.remember2}>
               <hr />
