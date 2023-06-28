@@ -10,6 +10,42 @@ function Section1() {
                         <summary>como utilizar os cards?</summary>
                         <p>Hitalo brocha</p>
                     </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Hitalo brocha</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Hitalo brocha</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Hitalo brocha</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Hitalo brocha</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Hitalo brocha</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Hitalo brocha</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Hitalo brocha</p>
+                    </details>
+                    
                  </div>
         </div>
     )
