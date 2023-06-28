@@ -17,9 +17,9 @@ $color1: #000; //Texto e outros
 //Estilizações
 
 
-//Desejos
+//Sentimentos
 
-#desejos {
+#sentimentos {
     width: 90%;
     height: auto;
     margin: auto;
@@ -44,7 +44,7 @@ $color1: #000; //Texto e outros
 //Responsividade
 
 @media only screen and (max-width: 480px) {
-    #desejos {
+    #sentimentos {
         width: 95%;
     }
 }
