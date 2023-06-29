@@ -29,6 +29,20 @@ import assistir_img from './Images/Desejos/Assistir.png';
 import ler_img from './Images/Desejos/Ler.png';
 import descansar_img from './Images/Desejos/Descansar.png';
 
+import trocar_roupa_img from './Images/Desejos/Trocar de Roupa.png';
+import nao_img from './Images/Desejos/Não.png';
+import sim_img from './Images/Desejos/Sim.png';
+import abracar_img from './Images/Desejos/Abracar.png';
+import beijar_img from './Images/Desejos/Beijar.png';
+import ouvir_musica_img from './Images/Desejos/Musica.png';
+
+import escolher_img from './Images/Desejos/Escolher.png';
+import desenhar_img from './Images/Desejos/Desenhar.png';
+import estudar_img from './Images/Desejos/Estudar.png';
+import casa_img from './Images/Desejos/Casa.png';
+import quarto_img from './Images/Desejos/Quarto.png';
+import segurar_img from './Images/Desejos/Segurar.png';
+
 
 //Áudios das Cards
 
@@ -54,6 +68,20 @@ import jogar_audio from './Audios/Desejos/Vozes - Mileny/Jogar.m4a';
 import assistir_audio from './Audios/Desejos/Vozes - Mileny/Assistir.m4a';
 import ler_audio from './Audios/Desejos/Vozes - Mileny/Ler.m4a';
 import descansar_audio from './Audios/Desejos/Vozes - Mileny/Descansar.m4a';
+
+import trocar_roupa_audio from './Audios/Desejos/Vozes - Mileny/Trocar de roupa.m4a';
+import nao_audio from './Audios/Desejos/Vozes - Mileny/Não.m4a';
+import sim_audio from './Audios/Desejos/Vozes - Mileny/Sim.m4a';
+import abracar_audio from './Audios/Desejos/Vozes - Mileny/Abraçar.m4a';
+import beijar_audio from './Audios/Desejos/Vozes - Mileny/Beijar.m4a';
+import ouvir_musica_audio from './Audios/Desejos/Vozes - Mileny/Ouvir música.m4a';
+
+import escolher_audio from './Audios/Desejos/Vozes - Mileny/Escolher.m4a';
+import desenhar_audio from './Audios/Desejos/Vozes - Mileny/Desenhar.m4a';
+import estudar_audio from './Audios/Desejos/Vozes - Mileny/Estudar.m4a';
+import casa_audio from './Audios/Desejos/Vozes - Mileny/Casa.m4a';
+import quarto_audio from './Audios/Desejos/Vozes - Mileny/Quarto.m4a';
+import segurar_audio from './Audios/Desejos/Vozes - Mileny/Segurar.m4a';
 
 
 const Desejos = ({ searchText }) => {
@@ -104,8 +132,22 @@ const Desejos = ({ searchText }) => {
         { card_img: assistir_img, card_alt: 'Assistir', card_text: 'Assistir', card_audio: assistir_audio },
         { card_img: ler_img, card_alt: 'Ler', card_text: 'Ler', card_audio: ler_audio },
         { card_img: descansar_img, card_alt: 'Descansar', card_text: 'Descansar', card_audio: descansar_audio },
+
+        { card_img: trocar_roupa_img, card_alt: 'Trocar de Roupa', card_text: 'Trocar de Roupa', card_audio: trocar_roupa_audio },
+        { card_img: nao_img, card_alt: 'Não', card_text: 'Não', card_audio: nao_audio },
+        { card_img: sim_img, card_alt: 'Sim', card_text: 'Sim', card_audio: sim_audio },
+        { card_img: abracar_img, card_alt: 'Abraçar', card_text: 'Abraçar', card_audio: abracar_audio },
+        { card_img: beijar_img, card_alt: 'Beijar', card_text: 'Beijar', card_audio: beijar_audio },
+        { card_img: ouvir_musica_img, card_alt: 'Ouvir Música', card_text: 'Ouvir Música', card_audio: ouvir_musica_audio },
+
+        { card_img: escolher_img, card_alt: 'Escolher', card_text: 'Escolher', card_audio: escolher_audio },
+        { card_img: desenhar_img, card_alt: 'Desenhar', card_text: 'Desenhar', card_audio: desenhar_audio },
+        { card_img: estudar_img, card_alt: 'Estudar', card_text: 'Estudar', card_audio: estudar_audio },
+        { card_img: casa_img, card_alt: 'Casa', card_text: 'Casa', card_audio: casa_audio },
+        { card_img: quarto_img, card_alt: 'Quarto', card_text: 'Quarto', card_audio: quarto_audio },
+        { card_img: segurar_img, card_alt: 'Segurar', card_text: 'Segurar', card_audio: segurar_audio },
     ]
-    
+
     
     //Buscar cards - Desejos - Página própria
 
