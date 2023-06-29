@@ -24,7 +24,7 @@ const LoginCadastro = () => {
     };
 
     axios  
-        .post('http://localhost:8080/usuarios/login', dadosUsuario)
+        .post('backend-pecto-production.up.railway.app/usuarios/login', dadosUsuario)
         .then(response => {
             if (response.data) {
                 
@@ -146,7 +146,7 @@ const LoginCadastro = () => {
         setValidacaoBackend(true);
 
         axios
-          .post('http://localhost:8080/usuarios', novoUsuario)
+          .post('https://backend-pecto-production.up.railway.app/', novoUsuario)
           .then((response) => {
             setNome('');
             setEmail('');
