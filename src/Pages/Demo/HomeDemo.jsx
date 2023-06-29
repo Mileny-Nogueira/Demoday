@@ -64,7 +64,17 @@ import duvida_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Dúvid
 import calma_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Calma.m4a';
 
 
-const HomeDemo = ({ searchText }) => {
+//Formalidades - Vozes Masculinas (Hitalo)
+
+import boa_noite_audio2 from './Audios/Formalidades/Vozes - Hitalo/Boa Noite.m4a';
+import bom_dia_audio2 from './Audios/Formalidades/Vozes - Hitalo/Bom dia.m4a';
+import boa_tarde_audio2 from './Audios/Formalidades/Vozes - Hitalo/Boa tarde.m4a';
+import desculpa_audio2 from './Audios/Formalidades/Vozes - Hitalo/Desculpa.m4a';
+import obrigado_audio2 from './Audios/Formalidades/Vozes - Hitalo/Obrigado.m4a';
+import por_favor_audio2 from './Audios/Formalidades/Vozes - Hitalo/Por Favor.m4a';
+
+
+const HomeDemo = ({ searchText, audioToggle }) => {
 
     //Variável para as cores de fundo das cards
 
@@ -94,7 +104,7 @@ const HomeDemo = ({ searchText }) => {
     //Formalidade - Home
 
     const cardsFormalidade = [
-        { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: boa_noite_audio },
+        { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: audioToggle ? boa_noite_audio2 : boa_noite_audio },
         { card_img: bom_dia_img, card_alt: 'Bom Dia', card_text: 'Bom Dia', card_audio: bom_dia_audio },
         { card_img: boa_tarde_img, card_alt: 'Boa Tarde', card_text: 'Boa Tarde', card_audio: boa_tarde_audio },
         { card_img: desculpa_img, card_alt: 'Desculpa', card_text: 'Desculpa', card_audio: desculpa_audio },

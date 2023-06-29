@@ -56,6 +56,16 @@ const Demo = () => {
     } else {
         cumprimento = "Boa noite!";
     }
+
+
+    //Constante para a troca de áudios
+
+    const [audioToggle, setAudioToggle] = useState(false);
+
+    const toggleAudio = () => {
+        setAudioToggle(!audioToggle);
+
+    }
     
 
     //Código para trocar de página das Cards
@@ -70,7 +80,7 @@ const Demo = () => {
 
     switch (selectedContainer) {
         case 'HomeDemo':
-            componentToRender = <HomeDemo searchText={searchText} />;
+            componentToRender = <HomeDemo searchText={searchText} audioToggle={audioToggle} />;
             break;
 
         case 'Formalidade':
@@ -111,6 +121,12 @@ const Demo = () => {
                                </li>
                             </Nav.Link>
                         </ul>
+
+                        <div className={style.troca_vozes}>
+                            <p>Mileny</p>
+                            <p>Hitalo</p>
+                            <span></span>
+                        </div>
                     </nav>
                 </div>
 
