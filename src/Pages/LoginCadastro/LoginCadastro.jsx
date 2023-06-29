@@ -11,6 +11,35 @@ import google_login from '../../Images/Google_login.png';
 import facebook_login from '../../Images/Facebook_login.png';
 
 const LoginCadastro = () => {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const navigate = useNavigate();
+
+  // Função para lidar com o login
+  const handleLogin = () => {
+    const dadosUsuario = {
+      email: email,
+      senha: senha,
+    };
+
+    axios  
+        .post('http://localhost:8080/usuarios/login', dadosUsuario)
+        .then(response => {
+            if (response.data) {
+                alert("Login realizado com sucesso!");
+                navigate('/Demo')
+            } else {
+                alert('Email e senha não correspondem. Verifique suas credenciais.');
+            }
+        })
+        .catch (error => {
+            console.error(error);
+            console.log('Dados do usuário para login:', { email, senha });
+            alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.');
+        });
+    }
+
   /* Animação container::before */
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
@@ -50,8 +79,6 @@ const LoginCadastro = () => {
     const [validacaoBackend, setValidacaoBackend] = useState(false);
     /* erros */
     const [erros, setErros] = useState({});
-
-    const navigate = useNavigate();
 
     const enviarDados = (event) => {
       event.preventDefault();
@@ -233,18 +260,30 @@ const LoginCadastro = () => {
             <h2 className={style.title}>Login</h2>
             <div className={style.input_field}>
               <img src={login_user} alt="Clique para adicionar o seu e-mail" />
-              <input type="email" required placeholder="E-mail:" />
+              <input 
+                required 
+                type="email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                placeholder="E-mail:" />
             </div>
             <div className={style.input_field}>
               <img src={login_password} alt="Clique para adicionar a sua senha" />
-              <input type="password" required placeholder="Senha:" />
+              <input 
+                required 
+                type="password" 
+                value={senha} 
+                onChange={(e) => setSenha(e.target.value)} 
+                placeholder="Senha:" />
             </div>
             <div className={style.remember}>
               <span>Esqueceu sua senha?</span>
             </div>
             <div className={style.input_submit}>
               <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
-              <input type="submit" id={style.submit} value="Entrar" className={style.botao5} />
+              <button id={style.submit} className={style.botao5} onClick={handleLogin}>
+                Entrar
+              </button>
             </div>
             <div className={style.remember2}>
               <hr />
