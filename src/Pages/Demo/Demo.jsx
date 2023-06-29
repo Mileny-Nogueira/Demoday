@@ -60,11 +60,10 @@ const Demo = () => {
 
     //Constante para a troca de áudios
 
-    const [audioToggle, setAudioToggle] = useState(false);
+    const [selectedVoice, setSelectedVoice] = useState('Mileny');
 
-    const toggleAudio = () => {
-        setAudioToggle(!audioToggle);
-
+    const toggleVoice = (voice) => {
+        setSelectedVoice(voice);
     }
     
 
@@ -80,11 +79,11 @@ const Demo = () => {
 
     switch (selectedContainer) {
         case 'HomeDemo':
-            componentToRender = <HomeDemo searchText={searchText} audioToggle={audioToggle} />;
+            componentToRender = <HomeDemo searchText={searchText} selectedVoice={selectedVoice} />;
             break;
 
         case 'Formalidade':
-            componentToRender = <Formalidade searchText={searchText} />;
+            componentToRender = <Formalidade searchText={searchText} selectedVoice={selectedVoice} />;
             break;
 
         case 'Desejos':
@@ -123,9 +122,9 @@ const Demo = () => {
                         </ul>
 
                         <div className={style.troca_vozes}>
-                            <p>Mileny</p>
-                            <p>Hitalo</p>
-                            <span></span>
+                            <p onClick={() => {toggleVoice('Mileny')}} style={{ color: `${selectedVoice === 'Mileny' ? '#FFF' : '#000'}` }}>Mileny</p>
+                            <p onClick={() => {toggleVoice('Hitalo')}} style={{ color: `${selectedVoice === 'Hitalo' ? '#FFF' : '#000'}` }}>Hitalo</p>
+                            <span style={{ left: `${selectedVoice === 'Mileny' ? '0%' : '50%'}` }}></span>
                         </div>
                     </nav>
                 </div>

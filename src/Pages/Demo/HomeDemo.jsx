@@ -73,8 +73,12 @@ import desculpa_audio2 from './Audios/Formalidades/Vozes - Hitalo/Desculpa.m4a';
 import obrigado_audio2 from './Audios/Formalidades/Vozes - Hitalo/Obrigado.m4a';
 import por_favor_audio2 from './Audios/Formalidades/Vozes - Hitalo/Por Favor.m4a';
 
+//Desejos - Vozes Masculinas (Hitalo)
 
-const HomeDemo = ({ searchText, audioToggle }) => {
+
+
+
+const HomeDemo = ({ searchText, selectedVoice }) => {
 
     //Variável para as cores de fundo das cards
 
@@ -104,12 +108,12 @@ const HomeDemo = ({ searchText, audioToggle }) => {
     //Formalidade - Home
 
     const cardsFormalidade = [
-        { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: audioToggle ? boa_noite_audio2 : boa_noite_audio },
-        { card_img: bom_dia_img, card_alt: 'Bom Dia', card_text: 'Bom Dia', card_audio: bom_dia_audio },
-        { card_img: boa_tarde_img, card_alt: 'Boa Tarde', card_text: 'Boa Tarde', card_audio: boa_tarde_audio },
-        { card_img: desculpa_img, card_alt: 'Desculpa', card_text: 'Desculpa', card_audio: desculpa_audio },
-        { card_img: obrigada_img, card_alt: 'Obrigado ou Obrigada', card_text: 'Obrigado(a)', card_audio: obrigada_audio },
-        { card_img: por_favor_img, card_alt: 'Por favor', card_text: 'Por Favor', card_audio: por_favor_audio }
+        { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: selectedVoice === 'Mileny' ? boa_noite_audio : boa_noite_audio2 },
+        { card_img: bom_dia_img, card_alt: 'Bom Dia', card_text: 'Bom Dia', card_audio: selectedVoice === 'Mileny' ? bom_dia_audio : bom_dia_audio2 },
+        { card_img: boa_tarde_img, card_alt: 'Boa Tarde', card_text: 'Boa Tarde', card_audio: selectedVoice === 'Mileny' ? boa_tarde_audio : boa_tarde_audio2 },
+        { card_img: desculpa_img, card_alt: 'Desculpa', card_text: 'Desculpa', card_audio: selectedVoice === 'Mileny' ? desculpa_audio : desculpa_audio2 },
+        { card_img: obrigada_img, card_alt: 'Obrigado ou Obrigada', card_text: 'Obrigado(a)', card_audio: selectedVoice === 'Mileny' ? obrigada_audio : obrigado_audio2 },
+        { card_img: por_favor_img, card_alt: 'Por favor', card_text: 'Por Favor', card_audio: selectedVoice === 'Mileny' ? por_favor_audio : por_favor_audio2 }
     ]
 
     //Desejos - Home
