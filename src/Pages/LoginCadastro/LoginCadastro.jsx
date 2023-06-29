@@ -24,18 +24,18 @@ const LoginCadastro = () => {
     };
 
     axios  
-        .post('backend-pecto-production.up.railway.app/usuarios/login', dadosUsuario)
+        .post('http://localhost:8080/usuarios/login', dadosUsuario)
         .then(response => {
             if (response.data) {
-                alert("Login realizado com sucesso!");
+                
                 navigate('/Demo')
+                
             } else {
                 alert('Email e senha não correspondem. Verifique suas credenciais.');
             }
         })
         .catch (error => {
             console.error(error);
-            console.log('Dados do usuário para login:', { email, senha });
             alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.');
         });
     }
@@ -146,7 +146,7 @@ const LoginCadastro = () => {
         setValidacaoBackend(true);
 
         axios
-          .post('backend-pecto-production.up.railway.app/usuarios', novoUsuario)
+          .post('http://localhost:8080/usuarios', novoUsuario)
           .then((response) => {
             setNome('');
             setEmail('');
