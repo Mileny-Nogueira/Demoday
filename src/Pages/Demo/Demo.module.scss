@@ -97,7 +97,7 @@ $color2: #000; //Texto e outros
         width: 80%;
         height: 5%;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;
@@ -107,6 +107,13 @@ $color2: #000; //Texto e outros
         border: 0.5px solid $color2;
         border-radius: 10px;
         cursor: pointer;
+
+        p {
+            width: 50%;
+            z-index: 3;
+            text-align: center;
+            transition: all 0.3s;
+        }
 
         span {
             position: absolute;
