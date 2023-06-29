@@ -314,8 +314,9 @@
 
 .error {
     color: red;
-    font-size: 12px;
-    margin-top: 5px;
+    font-size: 13px;
+    font-family: simply_rounded;
+    text-align: end;
 }
 
 /*Responsivo*/
