@@ -24,12 +24,11 @@ const LoginCadastro = () => {
     };
 
     axios  
-        .post('backend-pecto-production.up.railway.app/usuarios/login', dadosUsuario)
+        .post('https://backend-pecto-production.up.railway.app/usuarios/login', dadosUsuario)
         .then(response => {
             if (response.data) {
-                
+                alert("Login realizado com sucesso!");
                 navigate('/Demo')
-                
             } else {
                 alert('Email e senha não correspondem. Verifique suas credenciais.');
             }
@@ -58,7 +57,7 @@ const LoginCadastro = () => {
     VMasker(cpfInputRef.current).maskPattern('999.999.999-99');
   }, []);
 
-   /* Script para ser possível mudar o 'placeholder' do input type="date" */
+  /* Script para ser possível mudar o 'placeholder' do input type="date" */
   const handleFocus = (event) => {
     event.target.type = 'date';
   };
@@ -144,9 +143,9 @@ const LoginCadastro = () => {
         };
 
         setValidacaoBackend(true);
-
+        console.log(novoUsuario);
         axios
-          .post('https://backend-pecto-production.up.railway.app/', novoUsuario)
+          .post('https://backend-pecto-production.up.railway.app/usuarios', novoUsuario)
           .then((response) => {
             setNome('');
             setEmail('');
@@ -154,7 +153,7 @@ const LoginCadastro = () => {
             setNascimento('');
             setSenha('');
             setConfirmarSenha('');
-
+            console.log(response);
             alert('Conta criada com sucesso!');
             handleSignInClick();
           })
