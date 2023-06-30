@@ -46,5 +46,10 @@ $color1: #000; //Texto e outros
 @media only screen and (max-width: 480px) {
     #sentimentos {
         width: 95%;
+
+        h2 {
+            font-size: 30px;
+        }
     }
+
 }

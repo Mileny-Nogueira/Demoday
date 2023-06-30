@@ -1,13 +1,13 @@
 #section2 {
     position: relative;
-    width: auto;
-    height: auto;
+    width: 350px;
+    height: 260px;
     margin-top: 10%;
 }
 
 .row_element {
-    width: 350px;
-    height: 260px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,8 +17,8 @@
 
 .row_element img {
     position: absolute;
-    width: 100%;
-    height: 260px;
+    width: 100% !important;
+    height: 100% !important;
     filter: brightness(60%);
     transition: all 0.3s;
 }

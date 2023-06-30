@@ -87,13 +87,19 @@ $color2: #000; //Texto e outros
     
             p {
                 @include title_font();
-                font-size: 20px !important;
+                font-size: 20px;
             }
 
             &:hover {
                 transform: scale(1.03, 1.03);
             }
         }
+    }
+
+    h2 {
+        @include title_font();
+        text-align: center;
+        font-size: 22px;
     }
 
     .troca_vozes {
@@ -252,7 +258,7 @@ $color2: #000; //Texto e outros
 
     h2 {
         @include title_font();
-        font-size: 45px !important;
+        font-size: 45px;
         bottom: 35px;
     }
 
@@ -313,6 +319,7 @@ $color2: #000; //Texto e outros
 
     #menu_central {
         width: 90%;
+        height: 400px;
 
         img {
             width: 30%;
@@ -320,7 +327,7 @@ $color2: #000; //Texto e outros
         }
 
         h2 {
-            font-size: 32px !important;
+            font-size: 32px;
             bottom: 25px;
         }
 
@@ -365,7 +372,7 @@ $color2: #000; //Texto e outros
         }
 
         h2 {
-            font-size: 25px !important;
+            font-size: 25px;
             bottom: 10px;
         }
 
@@ -393,11 +400,29 @@ $color2: #000; //Texto e outros
 
 @media only screen and (max-width: 480px) {
 
-     //Menu central
+    //Header
 
-     #menu_central {
+    #header {
+
+        #menu {
+            margin-left: 0;
+        }
+
+        nav {
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        #nav_right {
+            column-gap: 10px;
+        }
+    }
+
+    //Menu central
+
+    #menu_central {
         width: 95%;
-        height: 500px;
+        height: 350px;
         border-radius: 25px;
 
         img {
@@ -408,7 +433,7 @@ $color2: #000; //Texto e outros
         }
 
         h2 {
-            font-size: 6vw !important;
+            font-size: 6vw;
             bottom: 10px;
             text-align: center;
         }
@@ -423,13 +448,13 @@ $color2: #000; //Texto e outros
     //Escolher Menu
 
     #escolher_menu {
-        width: 95%;
+        width: 98%;
     
         div {
 
             .menu_opcoes {
                 width: 25%;
-                font-size: 3.7vw;
+                font-size: 4vw;
             }
         }
     }

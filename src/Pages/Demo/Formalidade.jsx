@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './Formalidade.module.scss';
 
 import Cards from './Cards';
@@ -101,27 +101,11 @@ import sinta_a_vontade_audio2 from './Audios/Formalidades/Vozes - Hitalo/Sinta-s
 import com_licenca_audio2 from './Audios/Formalidades/Vozes - Hitalo/Com licenca.m4a';
 
 
-const Formalidade = ({ searchText, selectedVoice }) => {
+const Formalidade = ({ searchText,  handleCardAudio, selectedVoice }) => {
 
     //Variável para as cores de fundo das cards
 
     let formalidade_color = 'linear-gradient(180deg, #38B1FF 0%, rgba(138.96, 206.69, 250.75, 0) 100%)';
-
-
-    //Função para os audios das cards
-
-    const [currentAudio, setCurrentAudio] = useState(null);
-
-    const handleCardAudio = (audioSrc) => {
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-        }
-
-        const card_audio = new Audio(audioSrc);
-        setCurrentAudio(card_audio);
-        card_audio.play();
-    }
 
 
     //Props das Cards - Informações
@@ -153,9 +137,9 @@ const Formalidade = ({ searchText, selectedVoice }) => {
         { card_img: repete_img, card_alt: 'Repete', card_text: 'Repete', card_audio: selectedVoice === 'Mileny' ? repete_audio : repete_audio2 },
         { card_img: entendido_img, card_alt: 'Entendido', card_text: 'Entendido', card_audio: selectedVoice === 'Mileny' ? entendido_audio : entendido_audio2 },
         { card_img: nao_entendi_img, card_alt: 'Não Entendi', card_text: 'Não Entendi', card_audio: selectedVoice === 'Mileny' ? nao_entendi_audio : nao_entendi_img2 },
-        { card_img: boa_semana_img, card_alt: 'Boa Semana', card_text: 'Boa Semana', card_audio: boa_semana_audio },
-        { card_img: sinta_a_vontade_img, card_alt: 'Sinta-se à Vontade', card_text: 'Sinta-se à Vontade', card_audio: sinta_a_vontade_audio },
-        { card_img: com_licenca_img, card_alt: 'Com Licença', card_text: 'Com Licença', card_audio: com_licenca_audio }
+        { card_img: boa_semana_img, card_alt: 'Boa Semana', card_text: 'Boa Semana', card_audio: selectedVoice === 'Mileny' ? boa_semana_audio : boa_semana_audio2 },
+        { card_img: sinta_a_vontade_img, card_alt: 'Sinta-se à Vontade', card_text: 'Sinta-se à Vontade', card_audio: selectedVoice === 'Mileny' ? sinta_a_vontade_audio : sinta_a_vontade_audio2 },
+        { card_img: com_licenca_img, card_alt: 'Com Licença', card_text: 'Com Licença', card_audio: selectedVoice === 'Mileny' ? com_licenca_audio : com_licenca_audio2 }
     ]
 
      //Buscar cards - Formalidades - Página própria

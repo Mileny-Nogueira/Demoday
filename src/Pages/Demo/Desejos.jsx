@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './Desejos.module.scss';
 
 import Cards from './Cards';
@@ -84,27 +84,49 @@ import quarto_audio from './Audios/Desejos/Vozes - Mileny/Quarto.m4a';
 import segurar_audio from './Audios/Desejos/Vozes - Mileny/Segurar.m4a';
 
 
-const Desejos = ({ searchText }) => {
+//Desejos - Vozes masculinas (Hitalo)
+
+import comer_audio2 from './Audios/Desejos/Vozes - Hitalo/Comer.m4a';
+import beber_audio2 from './Audios/Desejos/Vozes - Hitalo/Beber.m4a';
+import escovar_dentes_audio2 from './Audios/Desejos/Vozes - Hitalo/Escovar os dentes.m4a';
+import banhar_audio2 from './Audios/Desejos/Vozes - Hitalo/Banhar.m4a';
+import banheiro_audio2 from './Audios/Desejos/Vozes - Hitalo/Banheiro.m4a';
+import limpar_audio2 from './Audios/Desejos/Vozes - Hitalo/Limpar.m4a';
+
+import correr_audio2 from './Audios/Desejos/Vozes - Hitalo/Correr.m4a';
+import sair_audio2 from './Audios/Desejos/Vozes - Hitalo/Sair.m4a';
+import entrar_audio2 from './Audios/Desejos/Vozes - Hitalo/Entrar.m4a';
+import dormir_audio2 from './Audios/Desejos/Vozes - Hitalo/Dormir.m4a';
+import sentar_audio2 from './Audios/Desejos/Vozes - Hitalo/Sentar.m4a';
+import andar_audio2 from './Audios/Desejos/Vozes - Hitalo/Andar.m4a';
+
+import jogar_lixo_audio2 from './Audios/Desejos/Vozes - Hitalo/Jogar no Lixo.m4a';
+import brincar_audio2 from './Audios/Desejos/Vozes - Hitalo/Brincar.m4a';
+import jogar_audio2 from './Audios/Desejos/Vozes - Hitalo/Jogar.m4a';
+import assistir_audio2 from './Audios/Desejos/Vozes - Hitalo/Assistir.m4a';
+import ler_audio2 from './Audios/Desejos/Vozes - Hitalo/Ler.m4a';
+import descansar_audio2 from './Audios/Desejos/Vozes - Hitalo/Descansar.m4a';
+
+import trocar_roupa_audio2 from './Audios/Desejos/Vozes - Hitalo/Trocar de roupa.m4a';
+import nao_audio2 from './Audios/Desejos/Vozes - Hitalo/Não.m4a';
+import sim_audio2 from './Audios/Desejos/Vozes - Hitalo/Sim.m4a';
+import abracar_audio2 from './Audios/Desejos/Vozes - Hitalo/Abraçar.m4a';
+import beijar_audio2 from './Audios/Desejos/Vozes - Hitalo/Beijar.m4a';
+import ouvir_musica_audio2 from './Audios/Desejos/Vozes - Hitalo/Ouvir Música.m4a';
+
+import escolher_audio2 from './Audios/Desejos/Vozes - Hitalo/Escolher.m4a';
+import desenhar_audio2 from './Audios/Desejos/Vozes - Hitalo/Desenhar.m4a';
+import estudar_audio2 from './Audios/Desejos/Vozes - Hitalo/Estudar.m4a';
+import casa_audio2 from './Audios/Desejos/Vozes - Hitalo/Casa.m4a';
+import quarto_audio2 from './Audios/Desejos/Vozes - Hitalo/Quarto.m4a';
+import segurar_audio2 from './Audios/Desejos/Vozes - Hitalo/Segurar.m4a';
+
+
+const Desejos = ({ searchText, handleCardAudio, selectedVoice }) => {
 
     //Variável para as cores de fundo das cards
 
     let desejos_color = 'linear-gradient(180deg, #FFFF00 0%, #FFFFFF 100%';
-
-
-    //Função para os audios das cards
-
-    const [currentAudio, setCurrentAudio] = useState(null);
-
-    const handleCardAudio = (audioSrc) => {
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-        }
-
-        const card_audio = new Audio(audioSrc);
-        setCurrentAudio(card_audio);
-        card_audio.play();
-    }
 
     
     //Props das Cards - Informações
@@ -112,40 +134,40 @@ const Desejos = ({ searchText }) => {
     //Desejos - Página própria
 
     const cardsDesejos2 = [
-        { card_img: comer_img, card_alt: 'Comer', card_text: 'Comer', card_audio: comer_audio },
-        { card_img: beber_img, card_alt: 'Beber', card_text: 'Beber', card_audio: beber_audio },
-        { card_img: escovar_dentes_img, card_alt: 'Escovar os Dentes', card_text: 'Escovar os Dentes', card_audio: escovar_dentes_audio },
-        { card_img: banhar_img, card_alt: 'Banhar', card_text: 'Banhar', card_audio: banhar_audio },
-        { card_img: banheiro_img, card_alt: 'Banheiro', card_text: 'Banheiro', card_audio: banheiro_audio },
-        { card_img: limpar_img, card_alt: 'Limpar', card_text: 'Limpar', card_audio: limpar_audio },
+        { card_img: comer_img, card_alt: 'Comer', card_text: 'Comer', card_audio: selectedVoice === 'Mileny' ? comer_audio : comer_audio2 },
+        { card_img: beber_img, card_alt: 'Beber', card_text: 'Beber', card_audio: selectedVoice === 'Mileny' ? beber_audio : beber_audio2 },
+        { card_img: escovar_dentes_img, card_alt: 'Escovar os Dentes', card_text: 'Escovar os Dentes', card_audio: selectedVoice === 'Mileny' ? escovar_dentes_audio : escovar_dentes_audio2 },
+        { card_img: banhar_img, card_alt: 'Banhar', card_text: 'Banhar', card_audio: selectedVoice === 'Mileny' ? banhar_audio : banhar_audio2 },
+        { card_img: banheiro_img, card_alt: 'Banheiro', card_text: 'Banheiro', card_audio: selectedVoice === 'Mileny' ? banheiro_audio : banheiro_audio2 },
+        { card_img: limpar_img, card_alt: 'Limpar', card_text: 'Limpar', card_audio: selectedVoice === 'Mileny' ? limpar_audio : limpar_audio2 },
 
-        { card_img: correr_img, card_alt: 'Correr', card_text: 'Correr', card_audio: correr_audio },
-        { card_img: sair_img, card_alt: 'Sair', card_text: 'Sair', card_audio: sair_audio },
-        { card_img: entrar_img, card_alt: 'Entrar', card_text: 'Entrar', card_audio: entrar_audio },
-        { card_img: dormir_img, card_alt: 'Dormir', card_text: 'Dormir', card_audio: dormir_audio },
-        { card_img: sentar_img, card_alt: 'Sentar', card_text: 'Sentar', card_audio: sentar_audio },
-        { card_img: andar_img, card_alt: 'Andar', card_text: 'Andar', card_audio: andar_audio },
+        { card_img: correr_img, card_alt: 'Correr', card_text: 'Correr', card_audio: selectedVoice === 'Mileny' ? correr_audio : correr_audio2 },
+        { card_img: sair_img, card_alt: 'Sair', card_text: 'Sair', card_audio: selectedVoice === 'Mileny' ? sair_audio : sair_audio2 },
+        { card_img: entrar_img, card_alt: 'Entrar', card_text: 'Entrar', card_audio: selectedVoice === 'Mileny' ? entrar_audio : entrar_audio2 },
+        { card_img: dormir_img, card_alt: 'Dormir', card_text: 'Dormir', card_audio: selectedVoice === 'Mileny' ? dormir_audio : dormir_audio2 },
+        { card_img: sentar_img, card_alt: 'Sentar', card_text: 'Sentar', card_audio: selectedVoice === 'Mileny' ? sentar_audio : sentar_audio2 },
+        { card_img: andar_img, card_alt: 'Andar', card_text: 'Andar', card_audio: selectedVoice === 'Mileny' ? andar_audio : andar_audio2 },
 
-        { card_img: jogar_lixo_img, card_alt: 'Jogar no Lixo', card_text: 'Jogar no Lixo', card_audio: jogar_lixo_audio },
-        { card_img: brincar_img, card_alt: 'Brincar', card_text: 'Brincar', card_audio: brincar_audio },
-        { card_img: jogar_img, card_alt: 'Jogar', card_text: 'Jogar', card_audio: jogar_audio },
-        { card_img: assistir_img, card_alt: 'Assistir', card_text: 'Assistir', card_audio: assistir_audio },
-        { card_img: ler_img, card_alt: 'Ler', card_text: 'Ler', card_audio: ler_audio },
-        { card_img: descansar_img, card_alt: 'Descansar', card_text: 'Descansar', card_audio: descansar_audio },
+        { card_img: jogar_lixo_img, card_alt: 'Jogar no Lixo', card_text: 'Jogar no Lixo', card_audio: selectedVoice === 'Mileny' ? jogar_lixo_audio : jogar_lixo_audio2 },
+        { card_img: brincar_img, card_alt: 'Brincar', card_text: 'Brincar', card_audio: selectedVoice === 'Mileny' ? brincar_audio : brincar_audio2 },
+        { card_img: jogar_img, card_alt: 'Jogar', card_text: 'Jogar', card_audio: selectedVoice === 'Mileny' ? jogar_audio : jogar_audio2 },
+        { card_img: assistir_img, card_alt: 'Assistir', card_text: 'Assistir', card_audio: selectedVoice === 'Mileny' ? assistir_audio : assistir_audio2 },
+        { card_img: ler_img, card_alt: 'Ler', card_text: 'Ler', card_audio: selectedVoice === 'Mileny' ? ler_audio : ler_audio2 },
+        { card_img: descansar_img, card_alt: 'Descansar', card_text: 'Descansar', card_audio: selectedVoice === 'Mileny' ? descansar_audio : descansar_audio2 },
 
-        { card_img: trocar_roupa_img, card_alt: 'Trocar de Roupa', card_text: 'Trocar de Roupa', card_audio: trocar_roupa_audio },
-        { card_img: nao_img, card_alt: 'Não', card_text: 'Não', card_audio: nao_audio },
-        { card_img: sim_img, card_alt: 'Sim', card_text: 'Sim', card_audio: sim_audio },
-        { card_img: abracar_img, card_alt: 'Abraçar', card_text: 'Abraçar', card_audio: abracar_audio },
-        { card_img: beijar_img, card_alt: 'Beijar', card_text: 'Beijar', card_audio: beijar_audio },
-        { card_img: ouvir_musica_img, card_alt: 'Ouvir Música', card_text: 'Ouvir Música', card_audio: ouvir_musica_audio },
+        { card_img: trocar_roupa_img, card_alt: 'Trocar de Roupa', card_text: 'Trocar de Roupa', card_audio: selectedVoice === 'Mileny' ? trocar_roupa_audio : trocar_roupa_audio2 },
+        { card_img: nao_img, card_alt: 'Não', card_text: 'Não', card_audio: selectedVoice === 'Mileny' ? nao_audio : nao_audio2 },
+        { card_img: sim_img, card_alt: 'Sim', card_text: 'Sim', card_audio: selectedVoice === 'Mileny' ? sim_audio : sim_audio2 },
+        { card_img: abracar_img, card_alt: 'Abraçar', card_text: 'Abraçar', card_audio: selectedVoice === 'Mileny' ? abracar_audio : abracar_audio2 },
+        { card_img: beijar_img, card_alt: 'Beijar', card_text: 'Beijar', card_audio: selectedVoice === 'Mileny' ? beijar_audio : beijar_audio2 },
+        { card_img: ouvir_musica_img, card_alt: 'Ouvir Música', card_text: 'Ouvir Música', card_audio: selectedVoice === 'Mileny' ? ouvir_musica_audio : ouvir_musica_audio2 },
 
-        { card_img: escolher_img, card_alt: 'Escolher', card_text: 'Escolher', card_audio: escolher_audio },
-        { card_img: desenhar_img, card_alt: 'Desenhar', card_text: 'Desenhar', card_audio: desenhar_audio },
-        { card_img: estudar_img, card_alt: 'Estudar', card_text: 'Estudar', card_audio: estudar_audio },
-        { card_img: casa_img, card_alt: 'Casa', card_text: 'Casa', card_audio: casa_audio },
-        { card_img: quarto_img, card_alt: 'Quarto', card_text: 'Quarto', card_audio: quarto_audio },
-        { card_img: segurar_img, card_alt: 'Segurar', card_text: 'Segurar', card_audio: segurar_audio },
+        { card_img: escolher_img, card_alt: 'Escolher', card_text: 'Escolher', card_audio: selectedVoice === 'Mileny' ? escolher_audio : escolher_audio2 },
+        { card_img: desenhar_img, card_alt: 'Desenhar', card_text: 'Desenhar', card_audio: selectedVoice === 'Mileny' ? desenhar_audio : desenhar_audio2 },
+        { card_img: estudar_img, card_alt: 'Estudar', card_text: 'Estudar', card_audio: selectedVoice === 'Mileny' ? estudar_audio : estudar_audio2 },
+        { card_img: casa_img, card_alt: 'Casa', card_text: 'Casa', card_audio: selectedVoice === 'Mileny' ? casa_audio : casa_audio2 },
+        { card_img: quarto_img, card_alt: 'Quarto', card_text: 'Quarto', card_audio: selectedVoice === 'Mileny' ? quarto_audio : quarto_audio2 },
+        { card_img: segurar_img, card_alt: 'Segurar', card_text: 'Segurar', card_audio: selectedVoice === 'Mileny' ? segurar_audio : segurar_audio2 },
     ]
 
     

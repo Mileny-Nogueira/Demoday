@@ -58,6 +58,21 @@ const Demo = () => {
     }
 
 
+    //Função para os audios das cards
+
+    const [currentAudio, setCurrentAudio] = useState(null);
+
+    const handleCardAudio = (audioSrc) => {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
+
+        const card_audio = new Audio(audioSrc);
+        setCurrentAudio(card_audio);
+        card_audio.play();
+    }
+
     //Constante para a troca de áudios
 
     const [selectedVoice, setSelectedVoice] = useState('Mileny');
@@ -79,23 +94,23 @@ const Demo = () => {
 
     switch (selectedContainer) {
         case 'HomeDemo':
-            componentToRender = <HomeDemo searchText={searchText} selectedVoice={selectedVoice} />;
+            componentToRender = <HomeDemo searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />;
             break;
 
         case 'Formalidade':
-            componentToRender = <Formalidade searchText={searchText} selectedVoice={selectedVoice} />;
+            componentToRender = <Formalidade searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />;
             break;
 
         case 'Desejos':
-            componentToRender = <Desejos searchText={searchText} />
+            componentToRender = <Desejos searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />
             break;
 
         case 'Sentimentos':
-            componentToRender = <Sentimentos searchText={searchText} />
+            componentToRender = <Sentimentos searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />
             break;
 
         default:
-            componentToRender = <HomeDemo searchText={searchText} />
+            componentToRender = <HomeDemo searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />
     }
 
 
@@ -121,10 +136,13 @@ const Demo = () => {
                             </Nav.Link>
                         </ul>
 
-                        <div className={style.troca_vozes}>
-                            <p onClick={() => {toggleVoice('Mileny')}} style={{ color: `${selectedVoice === 'Mileny' ? '#FFF' : '#000'}` }}>Mileny</p>
-                            <p onClick={() => {toggleVoice('Hitalo')}} style={{ color: `${selectedVoice === 'Hitalo' ? '#FFF' : '#000'}` }}>Hitalo</p>
-                            <span style={{ left: `${selectedVoice === 'Mileny' ? '0%' : '50%'}` }}></span>
+                        <div>
+                            <h2>Trocar de Vozes</h2>
+                            <div className={style.troca_vozes}>
+                                <p onClick={() => {toggleVoice('Mileny')}} style={{ color: `${selectedVoice === 'Mileny' ? '#FFF' : '#000'}` }}>Mileny</p>
+                                <p onClick={() => {toggleVoice('Hitalo')}} style={{ color: `${selectedVoice === 'Hitalo' ? '#FFF' : '#000'}` }}>Hitalo</p>
+                                <span style={{ left: `${selectedVoice === 'Mileny' ? '0%' : '50%'}` }}></span>
+                            </div>
                         </div>
                     </nav>
                 </div>
