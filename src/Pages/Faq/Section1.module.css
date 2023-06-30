@@ -1,9 +1,9 @@
 #opções {
     width: 50%;
-    height: 500px;
+    height: 650px;
     background-color: #F7F7FB;
     margin: auto;
-    
+    padding-top: 100px;
 }
 
 summary {
@@ -22,4 +22,5 @@ details p {
     color: #726F95;
     font-size: 14px;
     background-color: #F7F7FB;
+    
 }
