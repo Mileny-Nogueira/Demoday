@@ -8,42 +8,42 @@ function Section1() {
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     <details>
                         <h3>Duvidas frequentes</h3>
                         <summary>como utilizar os cards?</summary>
-                        <p>Hitalo brocha</p>
+                        <p>Em andamento</p>
                     </details>
                     
                  </div>
