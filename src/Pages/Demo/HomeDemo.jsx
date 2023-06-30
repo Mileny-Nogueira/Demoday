@@ -506,7 +506,6 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
                 </div>
             </section>
 
-
         </main>
     )
 }

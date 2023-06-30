@@ -17,6 +17,7 @@ const HeaderBlog = (props) => {
         }
     }
 
+
     return (
         <header id={style.header_blog} style={{backgroundColor: props.header_color}}>
             <nav>
