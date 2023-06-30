@@ -1,13 +1,14 @@
 #opções {
     width: 50%;
-    height: auto;
+    height: 500px;
     background-color: #F7F7FB;
     margin: auto;
+    
 }
 
 summary {
     margin-left: 20px;
-    color: #BB0045;
+    color: #008AFF;
     font-size: 18px;
     padding-top: 10px;
     font-weight: 100;

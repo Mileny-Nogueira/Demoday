@@ -6,9 +6,46 @@ function Section1() {
         
                  <div id={style.opções}>
                     <details>
-                        <summary>asdasdasdasdasd</summary>
-                        <p>Ah, é a vida</p>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
                     </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
+                    </details>
+                    <details>
+                        <h3>Duvidas frequentes</h3>
+                        <summary>como utilizar os cards?</summary>
+                        <p>Em andamento</p>
+                    </details>
+                    
                  </div>
         </div>
     )

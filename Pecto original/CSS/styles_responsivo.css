@@ -1,0 +1,327 @@
+/*Início do Responsivo*/
+
+
+/*Responsivo Laptop*/
+
+@media only screen and (max-width:1280px) {
+
+    /*Seção de Pagamentos*/
+
+    #planos {
+        width: 80%;
+     }
+
+    .line1 {
+        width: 42%;
+    }
+
+    /*Seção dos Depoimentos*/
+
+    #box {
+        padding: 15px 0;
+    }
+
+    #image_name h3 {
+        font-size: 1.9vw;
+    }
+    
+    #image_name p {
+        font-size: 1.7vw;
+    }
+
+    #image_name div img {
+        width: 15vw;
+        height: auto;
+    }
+
+    /*Footer*/
+    
+    #footer_superior {
+        padding: 15px 0;
+    }
+
+    footer h3 {
+        font-size: 22px;
+    }
+
+    #footer_logo{
+        width: 25%;
+    }
+
+    .secoes {
+        width: 37.5%;
+    }
+
+}
+
+/*Responsivo Tablet*/
+
+@media only screen and (max-width:768px) {
+
+     /*Seção de Pagamentos*/
+
+     #planos {
+        width: 97%;
+     }
+
+     #planos_h1 {
+        font-size: 40px;
+     }
+
+    .line1 {
+        width: 45%;
+    }
+
+    .line1 h2 {
+        font-size: 5vw;
+    }
+
+    .line1 p {
+        font-size: 2.9vw;
+    }
+
+    .part2 h1 {
+        font-size: 5.2vw;
+    }
+
+    .part3 label {
+        font-size: 2.9vw;
+    }
+
+    .part4 a {
+        font-size: 3vw;
+        height: 40px;
+    }
+
+
+    /*Seção dos Depoimentos*/
+
+    #depoimentos h1 {
+        font-size: 35px;
+    }
+
+    #box {
+        padding: 15px 0;
+    }
+
+    #image_name {
+        width: 30%;
+    }
+
+    #image_name h3 {
+        font-size: 2.5vw;
+    }
+    
+    #image_name p {
+        font-size: 2.3vw;
+    }
+
+    #text {
+        width: 60%;
+    }
+
+    #text p {
+        font-size: 3vw;
+    }
+
+    /*Footer*/
+
+    #footer_superior {
+        flex-direction: column;
+    }
+
+    #footer_logo {
+        width: 75%;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+
+    #footer_logo img {
+        width: 35vw;
+    }
+
+    .secoes {
+        width: 90%;
+        margin: auto;
+        justify-content: space-evenly;
+        padding: 15px 0;
+    }
+
+    .topicos {
+        width: 35%;
+    }
+
+    #footer_inferior h4 {
+        font-size: 18px
+    }
+
+}
+
+/*Responsivo Celular*/
+
+@media only screen and (max-width:535px) {
+
+    /*Seção de Pagamentos*/
+
+    #planos {
+        width: 100%;
+     }
+
+    #pagamentos {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .line1 {
+        margin: auto;
+        width: 70%;
+    }
+
+    .line1 h2 {
+        font-size: 8vw;
+    }
+
+    .line1 p {
+        font-size: 4.5vw;
+    }
+
+    .part2 h1 {
+        font-size: 9vw;
+    }
+
+    .part3 label {
+        font-size: 4.5vw;
+    }
+
+    .part4 a {
+        font-size: 5vw;
+    }
+
+    /*Seção dos Depoimentos*/
+
+    #box {
+        width: 90%;
+        padding: 10px 0;
+    }
+
+    #image_name div img {
+        width: 20vw;
+    }
+
+    #image_name h3 {
+        font-size: 3vw;
+    }
+    
+    #image_name p {
+        font-size: 2.8vw;
+    }
+
+    #text p {
+        font-size: 3.4vw;
+    }
+
+    /*Footer*/
+
+    footer h3 {
+        font-size: 29px;
+    }
+
+    footer a {
+        font-size: 25px;
+    }
+
+    
+    footer li {
+        margin: 15px 0 0 0;
+    }
+
+    #footer_logo {
+        width: 80%;
+    }
+
+    #footer_logo img {
+        width: 50vw;
+    }
+
+    .secoes {
+        width: 80%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .topicos {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    #redes_sociais a {
+        margin-right: 15px;
+    }
+
+    #redes_sociais a img {
+        width: 35px;
+    }
+    #sobreFerramenta{
+        justify-content: center;
+    }
+    #imgcelular1{
+        display: none;
+    }
+    #imgcelular2{
+        width: 80%;
+        display: block;
+        margin-top: 20px;
+    }
+    #conteudoFerramenta{
+        align-items: center;
+        margin: 0;
+        height: auto;
+        padding: 10px;
+    }
+    #linha{
+        display: none;
+    }
+    #conteudoFerramenta p{
+        text-align: center;
+        width: 400px;
+        font-size: 25px;
+    }
+    #conteudoFerramenta h1{
+        width: auto;
+        font-size: 35px;
+    }
+    .acessibilidade{
+        display: none;
+    }
+    header > img{
+        margin-right: 50px;
+    }
+}
+
+/*SOBRE FERRAMENTA*/
+@media (min-width: 536px) and (max-width: 1100px){
+    #sobreFerramenta{
+        justify-content: center;
+    }
+    #imgcelular1{
+        display: none;
+    }
+    #imgcelular2{
+        display: block; 
+        margin: 150px 0 0 0;
+    }
+    #conteudoFerramenta{
+        align-items: center;
+        margin: 0;
+        height: auto;
+        padding: 10px;
+        margin-top: 150px;
+    }
+    #conteudoFerramenta p{
+        text-align: center;
+    }
+    #conteudoFerramenta h1{
+        width: auto;
+        font-size: 50px;
+    }
+}

@@ -16,18 +16,21 @@
 #box {
     width: 75%;
     margin: auto;
-    height: auto;
+    min-height: 240px;
     background-color: #008AFF;
     display: flex;
     padding: 20px 0;
+    align-items: center;
     border-radius: 30px;
     box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 #button_left {
     width: 5%;
     margin: auto;
     cursor: pointer;
+    margin-left: 0;
 }
 
 #button_left img {
@@ -37,12 +40,25 @@
     transition: all 0.3s;
 }
 
-#image_name {
-    width: 20%;
-    margin: auto;
+.box2 {
+    position: absolute;
+    display: flex;
+    transition: all 0.5s;
+    left: 5%;
+    right: 5%;
 }
 
-#image_name h3 {
+.content {
+    display: flex;
+}
+
+.image_name {
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+
+.image_name h3 {
     text-align: center;
     margin-top: 15px;
     color: #FBB821;
@@ -51,34 +67,25 @@
     font-size: 22px;
 }
 
-#image_name p {
-    text-align: center;
+.image_name p {
     margin-top: 10px;
     color: #f1f1f1;
     font-family: cocogoose;
     font-size: 20px;
 }
 
-#image_name div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#image_name div img {
+.image_name img {
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    margin: auto;
 }
 
-#text {
+.text {
     width: 70%;
     margin: auto;
 }
 
-#text p {
+.text p {
     font-size: 2.3vw;
     color: #f1f1f1;
     font-family: cocogoose;
@@ -89,6 +96,7 @@
     width: 5%;
     margin: auto;
     cursor: pointer;
+    margin-right: 0;
 }
 
 #button_right img {
@@ -107,19 +115,30 @@
 @media only screen and (max-width:1280px) {
     #box {
         padding: 15px 0;
+        min-height: 240px;
     }
 
-    #image_name h3 {
+    .image_name {
+        width: 30%;
+    }
+
+    .image_name h3 {
         font-size: 1.9vw;
     }
     
-    #image_name p {
+    .image_name p {
         font-size: 1.7vw;
     }
 
-    #image_name div img {
-        width: 15vw;
-        height: auto;
+    .image_name img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #box {
+        min-height: 22vw;
     }
 }
 
@@ -129,49 +148,56 @@
     }
 
     #box {
+        width: 85%;
+        min-height: 25vw;
         padding: 15px 0;
     }
 
-    #image_name {
-        width: 30%;
-    }
-
-    #image_name h3 {
+    .image_name h3 {
         font-size: 2.5vw;
+        margin-top: 5px;
     }
     
-    #image_name p {
+    .image_name p {
         font-size: 2.3vw;
     }
 
-    #text {
-        width: 60%;
-    }
-
-    #text p {
+    .text p {
         font-size: 3vw;
     }
 }
 
 @media only screen and (max-width: 535px) {
     #box {
-        width: 90%;
+        width: 95%;
+        min-height: 28vw;
         padding: 10px 0;
     }
 
-    #image_name div img {
-        width: 20vw;
+    .image_name {
+        width: 35%;
     }
 
-    #image_name h3 {
+    .image_name img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .image_name h3 {
         font-size: 3vw;
     }
     
-    #image_name p {
+    .image_name p {
         font-size: 2.8vw;
     }
 
-    #text p {
+    .text p {
         font-size: 3.4vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #box {
+        min-height: 30vw;
     }
 }

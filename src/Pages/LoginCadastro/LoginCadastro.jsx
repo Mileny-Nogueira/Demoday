@@ -1,9 +1,8 @@
-import style from './LoginCadastro.module.css';
-import axios from 'axios'; // bib de requisições HTTP.
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import VMasker from 'vanilla-masker';
-
+import style from './LoginCadastro.module.css';
 import login_img from '../../Images/login.png';
 import login_user from '../../Images/Login_user.png';
 import login_password from '../../Images/Login_password.png';
@@ -12,8 +11,36 @@ import google_login from '../../Images/Google_login.png';
 import facebook_login from '../../Images/Facebook_login.png';
 
 const LoginCadastro = () => {
-  /* Animação container::before */
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
 
+  const navigate = useNavigate();
+
+  // Função para lidar com o login
+  const handleLogin = () => {
+    const dadosUsuario = {
+      email: email,
+      senha: senha,
+    };
+
+    axios  
+        .post('backend-pecto-production.up.railway.app/usuarios/login', dadosUsuario)
+        .then(response => {
+            if (response.data) {
+                
+                navigate('/Demo')
+                
+            } else {
+                alert('Email e senha não correspondem. Verifique suas credenciais.');
+            }
+        })
+        .catch (error => {
+            console.error(error);
+            alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.');
+        });
+    }
+
+  /* Animação container::before */
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const handleSignUpClick = () => {
@@ -25,15 +52,13 @@ const LoginCadastro = () => {
   };
 
   /* Script CPF */
-
   const cpfInputRef = useRef(null);
 
   useEffect(() => {
     VMasker(cpfInputRef.current).maskPattern('999.999.999-99');
   }, []);
 
-  /* Script para ser possível mudar o 'placeholder' do input type="date" */
-
+   /* Script para ser possível mudar o 'placeholder' do input type="date" */
   const handleFocus = (event) => {
     event.target.type = 'date';
   };
@@ -42,25 +67,7 @@ const LoginCadastro = () => {
     event.target.type = 'text';
   };
 
-  /* Handle form submission and create a new user */
-
   const NovaConta = () => {
-    useEffect(() => {
-        axios
-        .get('http://localhost:8080/usuarios')
-        .then(response => {
-            // Manipule a resposta da API aqui
-                console.log(response.data);
-            })
-            .catch((error) => {
-                if (error.response && error.response.data) {
-                    setErroCadastro(error.response.data)
-                }else {
-                    console.error(error);
-                }
-            });
-    }, []);
-
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [cpf, setCpf] = useState('');
@@ -68,44 +75,105 @@ const LoginCadastro = () => {
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
 
-    const [erroCadastro, setErroCadastro] = useState(null);
+    const [termosAceitos, setTermosAceitos] = useState(false);
+    const [validacaoBackend, setValidacaoBackend] = useState(false);
+    /* erros */
+    const [erros, setErros] = useState({});
 
+    const enviarDados = (event) => {
+      event.preventDefault();
 
-    const navigate = useNavigate();
+      setErros({});
 
-    const enviarDados = () => {
+      if (!nome.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          nome: 'O campo nome é obrigatório.',
+      }))}
+  
+      if (!email.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          email: 'O campo email é obrigatório.',
+      }))}
+  
+      if (!cpf.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          cpf: 'O campo CPF é obrigatório.',
+        }))}
+  
+      if (!nascimento.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          nascimento: 'O campo data de nascimento é obrigatório.',
+        }))}
+  
+      if (!senha.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          senha: 'O campo senha é obrigatório.',
+        }))}
+
+      if (!confirmarSenha.trim()) {
+        setErros((prevErros) => ({
+          ...prevErros,
+          confirmarSenha: 'Confirme sua senha.',
+        }))}
+
       if (senha !== confirmarSenha) {
-        alert('As senhas não correspondem');
-        return;
-      }
+        setErros((prevErros) => ({
+          ...prevErros,
+          confirmarSenha: 'As senhas não correspondem.'
+        }))}
 
-      const novoUsuario = {
-        nome: nome,
-        email: email,
-        cpf: cpf,
-        nascimento: nascimento,
-        senha: senha,
-      };
+      if (
+        nome.trim() &&
+        email.trim() &&
+        cpf.trim() &&
+        nascimento.trim() &&
+        senha.trim() &&
+        senha === confirmarSenha && termosAceitos
+      ) {
+        const novoUsuario = {
+          nome: nome,
+          email: email,
+          cpf: cpf,
+          nascimento: nascimento,
+          senha: senha,
+        };
 
-      axios
-        .post('http://localhost:8080/usuarios', novoUsuario)
-        .then((response) => {
-          setNome('');
-          setEmail('');
-          setCpf('');
-          setNascimento('');
-          setSenha('');
-          setConfirmarSenha('');
-          
-          alert("Conta criada com sucesso!");
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-        handleSignInClick();
+        setValidacaoBackend(true);
+
+        axios
+          .post('https://backend-pecto-production.up.railway.app/', novoUsuario)
+          .then((response) => {
+            setNome('');
+            setEmail('');
+            setCpf('');
+            setNascimento('');
+            setSenha('');
+            setConfirmarSenha('');
+
+            alert('Conta criada com sucesso!');
+            handleSignInClick();
+          })
+          .catch((error) => {
+            if (error.response && error.response.data) {
+              setErros(error.response.data);
+            } else {
+              console.error(error);
+            }
+          });
+        } else {
+          setValidacaoBackend(false);
+        }
     };
 
-    /* Estrutura da página */
+    const handleTermosChange = (event) => {
+      setTermosAceitos(event.target.checked);
+    };
+
     return (
       <form action="#" className={style.sign_up_form2}>
         <h2 className={style.title2}>Cadastro</h2>
@@ -113,67 +181,69 @@ const LoginCadastro = () => {
           <input
             type="text"
             value={nome}
-            onChange={(texto) => setNome(texto.target.value)}
+            onChange={(e) => setNome(e.target.value)}
             placeholder="Nome completo:"
           />
         </div>
-        <div className={style.input_field2}>
-          <input
-            type="email"
-            value={email}
-            onChange={(texto) => setEmail(texto.target.value)}
-            placeholder="E-mail:"
-          />
-        </div>
+        {erros.nome && <div className={style.error}>{erros.nome}</div>}
         <div className={style.input_field2}>
           <input
             type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="E-mail:"
+          />
+        </div>
+        {erros.email && <div className={style.error}>{erros.email}</div>}     
+        <div className={style.input_field2}>
+          <input
+            type="num"
             value={cpf}
-            onChange={(texto) => setCpf(texto.target.value)}
+            onChange={(e) => setCpf(e.target.value)}
             placeholder="CPF:"
             ref={cpfInputRef}
           />
         </div>
+        {erros.cpf && <div className={style.error}>{erros.cpf}</div>}
         <div className={style.input_field2}>
           <input
             type="date"
             value={nascimento}
-            onChange={(texto) => setNascimento(texto.target.value)}
+            onChange={(e) => setNascimento(e.target.value)}
             placeholder="Data de Nascimento:"
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
         </div>
+        {erros.nascimento && <div className={style.error}>{erros.nascimento}</div>}
         <div className={style.input_field2}>
           <input
             type="password"
             value={senha}
-            onChange={(texto) => setSenha(texto.target.value)}
+            onChange={(e) => setSenha(e.target.value)}
             placeholder="Senha:"
           />
         </div>
+        {erros.senha && <div className={style.error}>{erros.senha}</div>}
         <div className={style.input_field2}>
           <input
             type="password"
             value={confirmarSenha}
-            onChange={(texto) => setConfirmarSenha(texto.target.value)}
+            onChange={(e) => setConfirmarSenha(e.target.value)}
             placeholder="Confirmar senha:"
           />
         </div>
+        {erros.confirmarSenha && (<div className={style.error}>{erros.confirmarSenha}</div>)}
         <div className={style.support}>
           <div className={style.remember3}>
             <span>
-              <input 
-              type="checkbox" 
-              name="opcao1" 
-              value="sim"  
-              />
+              <input type="checkbox" name="opcao1" value="sim" checked={termosAceitos} onChange={handleTermosChange} />
             </span>
             <p>
               Li e concordo com os <span>termos</span> e <span>serviços</span>
             </p>
           </div>
-          <button 
-          className={style.botao6} 
-          onClick={enviarDados}>
+          <button className={style.botao6} onClick={enviarDados}>
             Cadastre-se
           </button>
         </div>
@@ -191,30 +261,29 @@ const LoginCadastro = () => {
             <div className={style.input_field}>
               <img src={login_user} alt="Clique para adicionar o seu e-mail" />
               <input 
-              type="email" 
-              required 
-              placeholder="E-mail:" 
-              />
+                required 
+                type="email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                placeholder="E-mail:" />
             </div>
             <div className={style.input_field}>
               <img src={login_password} alt="Clique para adicionar a sua senha" />
               <input 
-              type="password" 
-              required 
-              placeholder="Senha:" 
-              />
+                required 
+                type="password" 
+                value={senha} 
+                onChange={(e) => setSenha(e.target.value)} 
+                placeholder="Senha:" />
             </div>
             <div className={style.remember}>
               <span>Esqueceu sua senha?</span>
             </div>
             <div className={style.input_submit}>
               <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
-              <input 
-              type="submit" 
-              id={style.submit} 
-              value="Entrar" 
-              className={style.botao5} 
-              />
+              <button id={style.submit} className={style.botao5} onClick={handleLogin}>
+                Entrar
+              </button>
             </div>
             <div className={style.remember2}>
               <hr />

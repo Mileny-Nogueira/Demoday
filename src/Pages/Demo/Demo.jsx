@@ -8,166 +8,6 @@ import Desejos from './Desejos';
 import Sentimentos from './Sentimentos';
 
 
-//Imagens das Cards
-
-//Formalidade
-
-import boa_noite_img from './Images/Formalidade/Boa noite.png';
-import bom_dia_img from './Images/Formalidade/bom dia.png';
-import boa_tarde_img from './Images/Formalidade/boa tarde.png';
-import desculpa_img from './Images/Formalidade/Desculpa.png';
-import obrigada_img from './Images/Formalidade/Obrigada.png';
-import por_favor_img from './Images/Formalidade/por favor .png';
-
-import boa_sorte_img from './Images/Formalidade/Boa Sorte.png';
-import bem_vinda_img from './Images/Formalidade/Bem vinda.png';
-import de_nada_img from './Images/Formalidade/De nada.png';
-import maravilhosa_img from './Images/Formalidade/Maravilhosa.png';
-import parabens_img from './Images/Formalidade/Parabéns.png';
-import bonita_img from './Images/Formalidade/bonito.png';
-
-import por_que_img from './Images/Formalidade/Por que.png';
-import aceito_img from './Images/Formalidade/aceito.png';
-import nao_sei_img from './Images/Formalidade/não sei.png';
-import espere_img from './Images/Formalidade/espere.png';
-import concordo_img from './Images/Formalidade/concordo.png';
-import discordo_img from './Images/Formalidade/discordo.png';
-
-import repete_img from './Images/Formalidade/repete.png';
-import entendido_img from './Images/Formalidade/entendido.png';
-import nao_entendi_img from './Images/Formalidade/não entendi.png';
-import boa_semana_img from './Images/Formalidade/boa semana.png';
-import sinta_a_vontade_img from './Images/Formalidade/sinta-se a vontade .png';
-import com_licenca_img from './Images/Formalidade/Com licença.png';
-
-
-//Desejos
-
-import comer_img from './Images/Desejos/Comer.png';
-import beber_img from './Images/Desejos/Beber.png';
-import escovar_dentes_img from './Images/Desejos/Escovar.png';
-import banhar_img from './Images/Desejos/Banhar.png';
-import banheiro_img from './Images/Desejos/Banheiro.png';
-import limpar_img from './Images/Desejos/Limpar.png';
-
-import correr_img from './Images/Desejos/Correr.png';
-import sair_img from './Images/Desejos/Sair.png';
-import entrar_img from './Images/Desejos/Entrar.png';
-import dormir_img from './Images/Desejos/Dormir.png';
-import sentar_img from './Images/Desejos/Sentar.png';
-import andar_img from './Images/Desejos/Andar.png';
-
-import jogar_lixo_img from './Images/Desejos/Lixo fora .png';
-import brincar_img from './Images/Desejos/Brincar.png';
-import jogar_img from './Images/Desejos/Jogar.png';
-import assistir_img from './Images/Desejos/Assistir.png';
-import ler_img from './Images/Desejos/Ler.png';
-import descansar_img from './Images/Desejos/Descansar.png';
-
-//Sentimentos - Emoções
-
-import triste_img from './Images/Sentimentos/Triste.png';
-import nojo_img from './Images/Sentimentos/Nojo.png';
-import curiosa_img from './Images/Sentimentos/Curioso.png';
-import dor_img from './Images/Sentimentos/Dor.png';
-import duvida_img from './Images/Sentimentos/Duvida.png';
-import calma_img from './Images/Sentimentos/Calmo.png';
-
-import ansiosa_img from './Images/Sentimentos/Ansiedade.png';
-import alegre_img from './Images/Sentimentos/alegre.png';
-import gostei_img from './Images/Sentimentos/Gostei.png';
-import quero_img from './Images/Sentimentos/quero.png';
-import satisfeita_img from './Images/Sentimentos/satisfeito.png';
-import confianca_img from './Images/Sentimentos/Confiança.png';
-
-import ciumes_img from './Images/Sentimentos/ciumes.png';
-import empatia_img from './Images/Sentimentos/empatia.png';
-import animada_img from './Images/Sentimentos/animado.png';
-import relaxada_img from './Images/Sentimentos/Relaxado.png';
-import paciencia_img from './Images/Sentimentos/Paciencia.png';
-import nervosa_img from './Images/Sentimentos/nervoso.png';
-
-
-//Áudios das Cards
-
-//Formalidade - Vozes femininas (Mileny)
-
-import boa_noite_audio from './Audios/Formalidades/Boa noite.m4a';
-import bom_dia_audio from './Audios/Formalidades/Bom dia.m4a';
-import boa_tarde_audio from './Audios/Formalidades/Boa tarde.m4a';
-import desculpa_audio from './Audios/Formalidades/Desculpa.m4a';
-import obrigada_audio from './Audios/Formalidades/Obrigada.m4a';
-import por_favor_audio from './Audios/Formalidades/Por favor.m4a';
-
-import boa_sorte_audio from './Audios/Formalidades/Boa sorte.m4a';
-import bem_vinda_audio from './Audios/Formalidades/Bem-vinda.m4a';
-import de_nada_audio from './Audios/Formalidades/De nada.m4a';
-import maravilhosa_audio from './Audios/Formalidades/Maravilhosa.m4a';
-import parabens_audio from './Audios/Formalidades/Parabéns.m4a';
-import bonita_audio from './Audios/Formalidades/Bonita.m4a';
-
-import por_que_audio from './Audios/Formalidades/Por que.m4a';
-import aceito_audio from './Audios/Formalidades/Aceito.m4a';
-import nao_sei_audio from './Audios/Formalidades/Não sei.m4a';
-import espere_audio from './Audios/Formalidades/Espere.m4a';
-import concordo_audio from './Audios/Formalidades/Concordo.m4a';
-import discordo_audio from './Audios/Formalidades/Discordo.m4a';
-
-import repete_audio from './Audios/Formalidades/Repete.m4a';
-import entendido_audio from './Audios/Formalidades/Entendido.m4a';
-import nao_entendi_audio from './Audios/Formalidades/Não entendi.m4a';
-import boa_semana_audio from './Audios/Formalidades/Boa semana.m4a';
-import sinta_a_vontade_audio from './Audios/Formalidades/Sinta-se à vontade.m4a';
-import com_licenca_audio from './Audios/Formalidades/Com licença.m4a';
-
-//Desejos - Vozes femininas (Mileny)
-
-import comer_audio from './Audios/Desejos/Comer.m4a';
-import beber_audio from './Audios/Desejos/Beber.m4a';
-import escovar_dentes_audio from './Audios/Desejos/Escovar os dentes.m4a';
-import banhar_audio from './Audios/Desejos/Banhar.m4a';
-import banheiro_audio from './Audios/Desejos/Banheiro.m4a';
-import limpar_audio from './Audios/Desejos/Limpar.m4a';
-
-import correr_audio from './Audios/Desejos/Correr.m4a';
-import sair_audio from './Audios/Desejos/Sair.m4a';
-import entrar_audio from './Audios/Desejos/Entrar.m4a';
-import dormir_audio from './Audios/Desejos/Dormir.m4a';
-import sentar_audio from './Audios/Desejos/Sentar.m4a';
-import andar_audio from './Audios/Desejos/Andar.m4a';
-
-import jogar_lixo_audio from './Audios/Desejos/Jogar no lixo.m4a';
-import brincar_audio from './Audios/Desejos/Brincar.m4a';
-import jogar_audio from './Audios/Desejos/Jogar.m4a';
-import assistir_audio from './Audios/Desejos/Assistir.m4a';
-import ler_audio from './Audios/Desejos/Ler.m4a';
-import descansar_audio from './Audios/Desejos/Descansar.m4a';
-
-
-//Sentimentos - Emoções
-
-import triste_audio from './Audios/Sentimentos - Emoções/Triste.m4a';
-import nojo_audio from './Audios/Sentimentos - Emoções/Nojo.m4a';
-import curiosa_audio from './Audios/Sentimentos - Emoções/Curiosa.m4a';
-import dor_audio from './Audios/Sentimentos - Emoções/Dor.m4a';
-import duvida_audio from './Audios/Sentimentos - Emoções/Dúvida.m4a';
-import calma_audio from './Audios/Sentimentos - Emoções/Calma.m4a';
-
-import ansiosa_audio from './Audios/Sentimentos - Emoções/Ansiosa.m4a';
-import alegre_audio from './Audios/Sentimentos - Emoções/Alegre.m4a';
-import gostei_audio from './Audios/Sentimentos - Emoções/Gostei.m4a';
-import quero_audio from './Audios/Sentimentos - Emoções/Quero.m4a';
-import satisfeita_audio from './Audios/Sentimentos - Emoções/Satisfeita.m4a';
-import confianca_audio from './Audios/Sentimentos - Emoções/Confiança.m4a';
-
-import ciumes_audio from './Audios/Sentimentos - Emoções/Ciúmes.m4a';
-import empatia_audio from './Audios/Sentimentos - Emoções/Empatia.m4a';
-import animada_audio from './Audios/Sentimentos - Emoções/Animada.m4a';
-import relaxada_audio from './Audios/Sentimentos - Emoções/Relaxada.m4a';
-import paciencia_audio from './Audios/Sentimentos - Emoções/Paciência.m4a';
-import nervosa_audio from './Audios/Sentimentos - Emoções/Nervoso.m4a'; //Mileny, trocar áudio
-
-
 //Imagens gerais da página
 
 import logo from '../../Images/logo.png';
@@ -194,125 +34,6 @@ const Demo = () => {
     }
 
 
-    //Props das Cards - Informações
-
-    //Formalidade - Home
-
-    const cardsFormalidade = [
-        { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: boa_noite_audio },
-        { card_img: bom_dia_img, card_alt: 'Bom Dia', card_text: 'Bom Dia', card_audio: bom_dia_audio },
-        { card_img: boa_tarde_img, card_alt: 'Boa Tarde', card_text: 'Boa Tarde', card_audio: boa_tarde_audio },
-        { card_img: desculpa_img, card_alt: 'Desculpa', card_text: 'Desculpa', card_audio: desculpa_audio },
-        { card_img: obrigada_img, card_alt: 'Obrigado ou Obrigada', card_text: 'Obrigado(a)', card_audio: obrigada_audio },
-        { card_img: por_favor_img, card_alt: 'Por favor', card_text: 'Por Favor', card_audio: por_favor_audio }
-    ]
-
-    //Desejos - Home
-
-    const cardsDesejos = [
-        { card_img: comer_img, card_alt: 'Comer', card_text: 'Comer', card_audio: comer_audio },
-        { card_img: beber_img, card_alt: 'Beber', card_text: 'Beber', card_audio: beber_audio },
-        { card_img: escovar_dentes_img, card_alt: 'Escovar os Dentes', card_text: 'Escovar os Dentes', card_audio: escovar_dentes_audio },
-        { card_img: banhar_img, card_alt: 'Banhar', card_text: 'Banhar', card_audio: banhar_audio },
-        { card_img: banheiro_img, card_alt: 'Banheiro', card_text: 'Banheiro', card_audio: banheiro_audio },
-        { card_img: limpar_img, card_alt: 'Limpar', card_text: 'Limpar', card_audio: limpar_audio }
-    ]
-
-    //Sentimentos - Home
-
-    const cardsSentimentos = [
-        { card_img: triste_img, card_alt: 'Triste', card_text: 'Triste', card_audio: triste_audio },
-        { card_img: nojo_img, card_alt: 'Nojo', card_text: 'Nojo', card_audio: nojo_audio },
-        { card_img: curiosa_img, card_alt: 'Curioso ou Curiosa', card_text: 'Curioso(a)', card_audio: curiosa_audio },
-        { card_img: dor_img, card_alt: 'Dor', card_text: 'Dor', card_audio: dor_audio },
-        { card_img: duvida_img, card_alt: 'Dúvida', card_text: 'Dúvida', card_audio: duvida_audio },
-        { card_img: calma_img, card_alt: 'Calma ou Calmo', card_text: 'Calmo(a)', card_audio: calma_audio }
-    ]
-
-
-    //Formalidade - Página própria
-
-    const cardsFormalidade2 = [
-        { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: boa_noite_audio },
-        { card_img: bom_dia_img, card_alt: 'Bom Dia', card_text: 'Bom Dia', card_audio: bom_dia_audio },
-        { card_img: boa_tarde_img, card_alt: 'Boa Tarde', card_text: 'Boa Tarde', card_audio: boa_tarde_audio },
-        { card_img: desculpa_img, card_alt: 'Desculpa', card_text: 'Desculpa', card_audio: desculpa_audio },
-        { card_img: obrigada_img, card_alt: 'Obrigado ou Obrigada', card_text: 'Obrigado(a)', card_audio: obrigada_audio },
-        { card_img: por_favor_img, card_alt: 'Por favor', card_text: 'Por Favor', card_audio: por_favor_audio },
-
-        { card_img: boa_sorte_img, card_alt: 'Boa Sorte', card_text: 'Boa Sorte', card_audio: boa_sorte_audio },
-        { card_img: bem_vinda_img, card_alt: 'Bem Vindo ou Bem Vinda', card_text: 'Bem Vindo(a)', card_audio: bem_vinda_audio },
-        { card_img: de_nada_img, card_alt: 'De Nada', card_text: 'De Nada', card_audio: de_nada_audio },
-        { card_img: maravilhosa_img, card_alt: 'Maravilhoso ou Maravilhosa', card_text: 'Maravilhoso(a)', card_audio: maravilhosa_audio },
-        { card_img: parabens_img, card_alt: 'Parabéns', card_text: 'Parabéns', card_audio: parabens_audio },
-        { card_img: bonita_img, card_alt: 'Bonito ou Bonita', card_text: 'Bonito(a)', card_audio: bonita_audio },
-
-        { card_img: por_que_img, card_alt: 'Por Que?', card_text: 'Por Que?', card_audio: por_que_audio },
-        { card_img: aceito_img, card_alt: 'Aceito', card_text: 'Aceito', card_audio: aceito_audio },
-        { card_img: nao_sei_img, card_alt: 'Não Sei', card_text: 'Não Sei', card_audio: nao_sei_audio },
-        { card_img: espere_img, card_alt: 'Espere', card_text: 'Espere', card_audio: espere_audio },
-        { card_img: concordo_img, card_alt: 'Concordo', card_text: 'Concordo', card_audio: concordo_audio },
-        { card_img: discordo_img, card_alt: 'Discordo', card_text: 'Discordo', card_audio: discordo_audio },
-
-        { card_img: repete_img, card_alt: 'Repete', card_text: 'Repete', card_audio: repete_audio },
-        { card_img: entendido_img, card_alt: 'Entendido', card_text: 'Entendido', card_audio: entendido_audio },
-        { card_img: nao_entendi_img, card_alt: 'Não Entendi', card_text: 'Não Entendi', card_audio: nao_entendi_audio },
-        { card_img: boa_semana_img, card_alt: 'Boa Semana', card_text: 'Boa Semana', card_audio: boa_semana_audio },
-        { card_img: sinta_a_vontade_img, card_alt: 'Sinta-se à Vontade', card_text: 'Sinta-se à Vontade', card_audio: sinta_a_vontade_audio },
-        { card_img: com_licenca_img, card_alt: 'Com Licença', card_text: 'Com Licença', card_audio: com_licenca_audio }
-    ]
-
-    //Desejos - Página própria
-
-    const cardsDesejos2 = [
-        { card_img: comer_img, card_alt: 'Comer', card_text: 'Comer', card_audio: comer_audio },
-        { card_img: beber_img, card_alt: 'Beber', card_text: 'Beber', card_audio: beber_audio },
-        { card_img: escovar_dentes_img, card_alt: 'Escovar os Dentes', card_text: 'Escovar os Dentes', card_audio: escovar_dentes_audio },
-        { card_img: banhar_img, card_alt: 'Banhar', card_text: 'Banhar', card_audio: banhar_audio },
-        { card_img: banheiro_img, card_alt: 'Banheiro', card_text: 'Banheiro', card_audio: banheiro_audio },
-        { card_img: limpar_img, card_alt: 'Limpar', card_text: 'Limpar', card_audio: limpar_audio },
-
-        { card_img: correr_img, card_alt: 'Correr', card_text: 'Correr', card_audio: correr_audio },
-        { card_img: sair_img, card_alt: 'Sair', card_text: 'Sair', card_audio: sair_audio },
-        { card_img: entrar_img, card_alt: 'Entrar', card_text: 'Entrar', card_audio: entrar_audio },
-        { card_img: dormir_img, card_alt: 'Dormir', card_text: 'Dormir', card_audio: dormir_audio },
-        { card_img: sentar_img, card_alt: 'Sentar', card_text: 'Sentar', card_audio: sentar_audio },
-        { card_img: andar_img, card_alt: 'Andar', card_text: 'Andar', card_audio: andar_audio },
-
-        { card_img: jogar_lixo_img, card_alt: 'Jogar no Lixo', card_text: 'Jogar no Lixo', card_audio: jogar_lixo_audio },
-        { card_img: brincar_img, card_alt: 'Brincar', card_text: 'Brincar', card_audio: brincar_audio },
-        { card_img: jogar_img, card_alt: 'Jogar', card_text: 'Jogar', card_audio: jogar_audio },
-        { card_img: assistir_img, card_alt: 'Assistir', card_text: 'Assistir', card_audio: assistir_audio },
-        { card_img: ler_img, card_alt: 'Ler', card_text: 'Ler', card_audio: ler_audio },
-        { card_img: descansar_img, card_alt: 'Descansar', card_text: 'Descansar', card_audio: descansar_audio },
-    ]
-
-    //Sentimentos - Página própria
-
-    const cardsSentimento2 = [
-        { card_img: triste_img, card_alt: 'Triste', card_text: 'Triste', card_audio: triste_audio },
-        { card_img: nojo_img, card_alt: 'Nojo', card_text: 'Nojo', card_audio: nojo_audio },
-        { card_img: curiosa_img, card_alt: 'Curioso ou Curiosa', card_text: 'Curioso(a)', card_audio: curiosa_audio },
-        { card_img: dor_img, card_alt: 'Dor', card_text: 'Dor', card_audio: dor_audio },
-        { card_img: duvida_img, card_alt: 'Dúvida', card_text: 'Dúvida', card_audio: duvida_audio },
-        { card_img: calma_img, card_alt: 'Calma ou Calmo', card_text: 'Calmo(a)', card_audio: calma_audio },
-
-        { card_img: ansiosa_img, card_alt: 'Ansioso ou Ansiosa', card_text: 'Ansioso (a)', card_audio: ansiosa_audio },
-        { card_img: alegre_img, card_alt: 'Alegre', card_text: 'Alegre', card_audio: alegre_audio },
-        { card_img: gostei_img, card_alt: 'Gostei', card_text: 'Gostei', card_audio: gostei_audio },
-        { card_img: quero_img, card_alt: 'Quero', card_text: 'Quero', card_audio: quero_audio },
-        { card_img: satisfeita_img, card_alt: 'Satisfeito ou Satisfeita', card_text: 'Satisfeito(a)', card_audio: satisfeita_audio },
-        { card_img: confianca_img, card_alt: 'Confiança', card_text: 'Confiança', card_audio: confianca_audio },
-
-        { card_img: ciumes_img, card_alt: 'Ciúmes', card_text: 'Ciúmes', card_audio: ciumes_audio },
-        { card_img: empatia_img, card_alt: 'Empatia', card_text: 'Empatia', card_audio: empatia_audio },
-        { card_img: animada_img, card_alt: 'Animado ou Animada', card_text: 'Animado(a)', card_audio: animada_audio },
-        { card_img: relaxada_img, card_alt: 'Relaxado ou Relaxada', card_text: 'Relaxado(a)', card_audio: relaxada_audio },
-        { card_img: paciencia_img, card_alt: 'Paciência', card_text: 'Paciência', card_audio: paciencia_audio },
-        { card_img: nervosa_img, card_alt: 'Nervoso ou Nervosa', card_text: 'Nervoso(a)', card_audio: nervosa_audio },
-    ]
-
-
     //Código para tornar a barra de busca funcional
 
     const [searchText, setSearchText] = useState('');
@@ -320,44 +41,7 @@ const Demo = () => {
     const handleSearchChange = (event) => {
         setSearchText(event.target.value);
     }
-
-    //Buscar cards - Formalidade - Home
-
-    const filteredCardsFormalidade = cardsFormalidade.filter((card) => 
-        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
-    );
-
-    //Buscar cards - Desejos - Home
-
-    const filteredCardsDesejos = cardsDesejos.filter((card) =>
-        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
-    );
-
-    //Buscar cards - Sentimentos - Emoções - Home
-
-    const filteredCardsSentimentos = cardsSentimentos.filter((card) =>
-        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
-    );
-
-
-    //Buscar cards - Formalidades - Página própria
-
-    const filteredCardsFormalidade2 = cardsFormalidade2.filter((card) =>
-        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
-    );
-
-    //Buscar cards - Desejos - Página própria
-
-    const filteredCardsDesejos2 = cardsDesejos2.filter((card) =>
-        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
-    );
-
-    //Buscar cards - Sentimentos - Emoções - Página própria
-
-    const filteredCardsSentimentos2 = cardsSentimento2.filter((card) =>
-        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
-    );
-
+    
 
     //Mensagem de Bom dia, Boa Tarde ou Boa Noite
 
@@ -371,6 +55,15 @@ const Demo = () => {
         cumprimento = "Boa tarde!";
     } else {
         cumprimento = "Boa noite!";
+    }
+
+
+    //Constante para a troca de áudios
+
+    const [selectedVoice, setSelectedVoice] = useState('Mileny');
+
+    const toggleVoice = (voice) => {
+        setSelectedVoice(voice);
     }
     
 
@@ -386,23 +79,23 @@ const Demo = () => {
 
     switch (selectedContainer) {
         case 'HomeDemo':
-            componentToRender = <HomeDemo filteredCardsFormalidade={filteredCardsFormalidade} filteredCardsDesejos={filteredCardsDesejos} filteredCardsSentimentos={filteredCardsSentimentos} />;
+            componentToRender = <HomeDemo searchText={searchText} selectedVoice={selectedVoice} />;
             break;
 
         case 'Formalidade':
-            componentToRender = <Formalidade filteredCardsFormalidade2={filteredCardsFormalidade2} />;
+            componentToRender = <Formalidade searchText={searchText} selectedVoice={selectedVoice} />;
             break;
 
         case 'Desejos':
-            componentToRender = <Desejos filteredCardsDesejos2={filteredCardsDesejos2} />
+            componentToRender = <Desejos searchText={searchText} />
             break;
 
         case 'Sentimentos':
-            componentToRender = <Sentimentos filteredCardsSentimentos2={filteredCardsSentimentos2} />
+            componentToRender = <Sentimentos searchText={searchText} />
             break;
 
         default:
-            componentToRender = <HomeDemo filteredCardsFormalidade={filteredCardsFormalidade} filteredCardsDesejos={filteredCardsDesejos} filteredCardsSentimentos={filteredCardsSentimentos} />
+            componentToRender = <HomeDemo searchText={searchText} />
     }
 
 
@@ -427,6 +120,12 @@ const Demo = () => {
                                </li>
                             </Nav.Link>
                         </ul>
+
+                        <div className={style.troca_vozes}>
+                            <p onClick={() => {toggleVoice('Mileny')}} style={{ color: `${selectedVoice === 'Mileny' ? '#FFF' : '#000'}` }}>Mileny</p>
+                            <p onClick={() => {toggleVoice('Hitalo')}} style={{ color: `${selectedVoice === 'Hitalo' ? '#FFF' : '#000'}` }}>Hitalo</p>
+                            <span style={{ left: `${selectedVoice === 'Mileny' ? '0%' : '50%'}` }}></span>
+                        </div>
                     </nav>
                 </div>
 
@@ -467,6 +166,8 @@ const Demo = () => {
                         </div>
                     </section>
                 </div>
+
+                {/*Componente a ser Renderizado*/}
 
                 {componentToRender}
                
