@@ -143,7 +143,6 @@ const LoginCadastro = () => {
         };
 
         setValidacaoBackend(true);
-        console.log(novoUsuario);
         axios
           .post('https://backend-pecto-production.up.railway.app/usuarios', novoUsuario)
           .then((response) => {

@@ -176,6 +176,13 @@
     cursor: pointer;
 }
 
+.botao6:hover {
+    background-color: #fff;
+    color: #005BBB;
+    font-weight: 700;
+    transition: .5s;
+}
+
 .botao4:hover {
     background-color: #FF9800;
     transform: scale(0.96);
@@ -189,6 +196,7 @@
 }
 
 .social_icon {
+    cursor: pointer;
     width: 60px;
     height: 60px;
     display: flex;
