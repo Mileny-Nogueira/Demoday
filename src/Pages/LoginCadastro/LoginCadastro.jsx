@@ -59,11 +59,17 @@ const LoginCadastro = () => {
 
   /* Script para ser possível mudar o 'placeholder' do input type="date" */
   const handleFocus = (event) => {
-    event.target.type = 'date';
+    if (event.target.value === '') {
+      event.target.type = 'date';
+      event.target.placeholder = 'dd/mm/yyyy';
+    }
   };
 
   const handleBlur = (event) => {
-    event.target.type = 'text';
+    if (event.target.value === '') {
+      event.target.type = 'text';
+      event.target.placeholder = 'Data de Nascimento:';
+    }
   };
 
   const NovaConta = () => {
@@ -195,7 +201,7 @@ const LoginCadastro = () => {
         {erros.email && <div className={style.error}>{erros.email}</div>}     
         <div className={style.input_field2}>
           <input
-            type="num"
+            type="text"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
             placeholder="CPF:"

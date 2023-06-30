@@ -321,7 +321,8 @@
 }
 
 .error {
-    color: red;
+    text-align: center;
+    color: #FF9800;
     font-size: 13px;
     font-family: simply_rounded;
     text-align: end;
