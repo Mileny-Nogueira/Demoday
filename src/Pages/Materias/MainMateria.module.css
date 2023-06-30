@@ -64,6 +64,7 @@
     display: flex;
     border: 1px solid #333;
     align-items: center;
+
 }
 
 #materia_part2 input[type='search'] {
