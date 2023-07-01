@@ -46,7 +46,7 @@
 .AccountBack {
     align-items: left;
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
     font-size: 60px;
     color: #FF9800;
