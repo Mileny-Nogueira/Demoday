@@ -5,7 +5,7 @@ function Section1() {
         <div id={style.section1} >
 
             <div id={style.opções}>
-                <h3>Duvidas frequentes</h3>
+                <h2>Duvidas frequentes</h2>
                 <details>
                     <summary>como utilizar os cards?</summary>
                     <p>Os cards funcionam de forma a facilitar a comunicação alternativa. <br />Para ajudar </p>
@@ -16,7 +16,7 @@ function Section1() {
                 </details>
                 <details>
                     <summary>Qual a vantagem de assinar o premium da Pecto?</summary>
-                    <p>Em andamento</p>
+                    <p>Vocês podem personalizar os cards de foma ainda mais humanizada. Adicionando palavras de forma a ajudar ainda mais na comunicação dos usuários.</p>
                 </details>
                 <details>
                     <summary>Quem desenvolveu a Pecto?</summary>
