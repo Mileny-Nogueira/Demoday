@@ -42,6 +42,21 @@
     z-index: 5;
 }
 
+
+.AccountBack {
+    align-items: left;
+    position: relative;
+    font-size: 60px;
+    color: #FF9800;
+    cursor: pointer;
+}
+
+.AccountBack:hover {
+    font-size: 70px;
+    transition: .3s;
+    color: #FF9800;
+}
+
 #login_cadastro form {
     width: 40%;
     min-width: 238px;

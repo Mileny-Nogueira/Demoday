@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { TiArrowBackOutline as Back } from 'react-icons/ti';
 import axios from 'axios';
 import VMasker from 'vanilla-masker';
 import style from './LoginCadastro.module.css';
@@ -256,70 +257,77 @@ const LoginCadastro = () => {
   };
 
   return (
-    <section id={style.login_cadastro}>
-      <div className={`${isSignUpMode ? style.sign_up_mode : ''} ${style.container}`}>
-        <div className={style.signin_signup}>
-          <form action="#" className={style.sign_in_form}>
-            <img src={login_img} alt="Imagem de login" />
-            <h2 className={style.title}>Login</h2>
-            <div className={style.input_field}>
-              <img src={login_user} alt="Clique para adicionar o seu e-mail" />
-              <input 
-                required 
-                type="email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-                placeholder="E-mail:" />
-            </div>
-            <div className={style.input_field}>
-              <img src={login_password} alt="Clique para adicionar a sua senha" />
-              <input 
-                required 
-                type="password" 
-                value={senha} 
-                onChange={(e) => setSenha(e.target.value)} 
-                placeholder="Senha:" />
-            </div>
-            <div className={style.remember}>
-              <span>Esqueceu sua senha?</span>
-            </div>
-            <div className={style.input_submit}>
-              <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
-              <button id={style.submit} className={style.botao5} onClick={handleLogin}>
-                Entrar
+    <div className="all">
+      <section id={style.login_cadastro}>
+        <div className={`${isSignUpMode ? style.sign_up_mode : ''} ${style.container}`}>
+          <div className={style.signin_signup}>
+            <form action="#" className={style.sign_in_form}>
+              <img src={login_img} alt="Imagem de login" />
+              <h2 className={style.title}>Login</h2>
+              <div className={style.input_field}>
+                <img src={login_user} alt="Clique para adicionar o seu e-mail" />
+                <input 
+                  required 
+                  type="email" 
+                  value={email} 
+                  onChange={(e) => setEmail(e.target.value)} 
+                  placeholder="E-mail:" />
+              </div>
+              <div className={style.input_field}>
+                <img src={login_password} alt="Clique para adicionar a sua senha" />
+                <input 
+                  required 
+                  type="password" 
+                  value={senha} 
+                  onChange={(e) => setSenha(e.target.value)} 
+                  placeholder="Senha:" />
+              </div>
+              <div className={style.remember}>
+                <span>Esqueceu sua senha?</span>
+              </div>
+              <div className={style.input_submit}>
+                <img src={login_submit} alt="Clique para realizar o login" id={style.icone3} />
+                <button id={style.submit} className={style.botao5} onClick={handleLogin}>
+                  Entrar
+                </button>
+              </div>
+              <div className={style.remember2}>
+                <hr />
+              </div>
+
+              <div className={style.social_media}>
+                <img src={google_login} alt="Clique para fazer login pelo Google" className={style.social_icon} />
+                <img src={facebook_login} alt="Clique para fazer login pelo Facebook" className={style.social_icon} />
+              </div>
+            </form>
+
+            <NovaConta />
+          </div>
+        </div>
+
+        <div className={style.botao}>
+          <div className={style.botao2}>
+            <div className={style.botao3}>
+              <button className={style.botao4} id={style.signin_button} onClick={handleSignInClick}>
+                Login
               </button>
             </div>
-            <div className={style.remember2}>
-              <hr />
+          </div>
+          <div className={`${style.painel} ${style.right_panel}`}>
+            <div className={style.content}>
+              <button className={style.botao4} id={style.signup_button} onClick={handleSignUpClick}>
+                Cadastro
+              </button>
             </div>
-
-            <div className={style.social_media}>
-              <img src={google_login} alt="Clique para fazer login pelo Google" className={style.social_icon} />
-              <img src={facebook_login} alt="Clique para fazer login pelo Facebook" className={style.social_icon} />
-            </div>
-          </form>
-
-          <NovaConta />
-        </div>
-      </div>
-
-      <div className={style.botao}>
-        <div className={style.botao2}>
-          <div className={style.botao3}>
-            <button className={style.botao4} id={style.signin_button} onClick={handleSignInClick}>
-              Login
-            </button>
           </div>
         </div>
-        <div className={`${style.painel} ${style.right_panel}`}>
-          <div className={style.content}>
-            <button className={style.botao4} id={style.signup_button} onClick={handleSignUpClick}>
-              Cadastro
-            </button>
-          </div>
+      </section>
+      <Link to='/'>
+        <div className={style.AccountBack}>
+          <Back />
         </div>
-      </div>
-    </section>
+      </Link>
+    </div>
   );
 };
 
