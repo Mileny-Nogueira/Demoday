@@ -1,6 +1,7 @@
+import { Nav } from 'react-bootstrap'
 import style from './Section1Home.module.css';
 
-import mulher1 from '../../Images/Mulher_Tablet_Home.png';
+import menina1 from '../../Images/Mulher_Tablet_Home.png';
 import balao1 from '../../Images/Balãozinho1_Home.png';
 
 function Section1Home() {
@@ -8,7 +9,7 @@ function Section1Home() {
         <section id={style.section1Home}>
             <div id={style.home_div}>
                 <div className={style.main_div}>
-                    <img src={mulher1} alt="Imagem de uma mulher demostrando a nossa plataforma" />
+                    <img src={menina1} alt="Imagem de uma mulher demostrando a nossa plataforma" />
                 </div>
                 <div className={style.main_div}>
                     <div>
@@ -16,7 +17,7 @@ function Section1Home() {
                         <img src={balao1} alt="balão de comunicação" />
                     </div>
                     <p>Ferramenta que auxilia pessoas com deficiência a se expressarem de forma mais independente. Quem quer falar sabe o que usar: Pecto! </p>
-                    <button>Comece a explorar</button>
+                    <Nav.Link href='/Demo' style={{ textDecoration: 'none', cursor: 'default' }}><button>Comece a explorar</button></Nav.Link>
                 </div>
             </div>
         </section>

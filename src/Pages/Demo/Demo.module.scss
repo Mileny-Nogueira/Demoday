@@ -34,8 +34,8 @@ $color2: #000; //Texto e outros
 
 .menu_lateral {
     backface-visibility: hidden;
-    transform: translateX(-275px);
-    transition: transform 0.5s ease;
+    margin-left: -275px;
+    transition: margin-left 0.5s ease;
     -webkit-overflow-scrolling: touch;
     display: flex;
     left: 0;
@@ -100,6 +100,7 @@ $color2: #000; //Texto e outros
         @include title_font();
         text-align: center;
         font-size: 22px;
+        margin-bottom: 8px;
     }
 
     .troca_vozes {
@@ -112,7 +113,7 @@ $color2: #000; //Texto e outros
         align-items: center;
         transition: all 0.3s;
         border: 0.5px solid $color2;
-        border-radius: 15px;
+        border-radius: 10px;
         cursor: pointer;
 
         p {
@@ -127,7 +128,7 @@ $color2: #000; //Texto e outros
             width: 50%;
             height: 100%;
             background-color: #343434;
-            border-radius: 10px;
+            border-radius: 9px;
             z-index: 2;
             transition: all 0.5s;
         }
@@ -142,8 +143,8 @@ $color2: #000; //Texto e outros
 }
 
 .visible2 {
-    transform: translateX(0px);
-    transition: transform 0.5s ease;
+    margin-left: 0;
+    transition: margin-left 0.5s ease;
 }
 
 //Parte principal
@@ -253,7 +254,9 @@ $color2: #000; //Texto e outros
 
     img {
         width: 25%;
-        top: 15px;
+        top: 5px;
+        left: 22px;
+        margin-right: auto
     }
 
     h2 {

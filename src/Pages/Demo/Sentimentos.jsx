@@ -84,7 +84,7 @@ import quero_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Quero.
 import satisfeito_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Satisfeito.m4a';
 import confianca_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Confiança.m4a';
 
-import ciumes_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Ciúmes.m4a';
+import ciumes_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Ciumes.m4a';
 import empatia_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Empatia.m4a';
 import animado_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Animado.m4a';
 import relaxado_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Relaxado.m4a';

@@ -13,7 +13,8 @@
     height: 100%;
     display: flex;
     margin: auto;
-    padding-top: 2%;
+    padding-top: 4%;
+    padding-bottom: 1%;
 }
 
 .main_div {
@@ -25,8 +26,7 @@
 
 .main_div img {
     width: 92%;
-    border-radius: 50px;
-    border: 10px solid #FF9800;
+    border-radius: 35px;
 }
 
 .main_div div {
@@ -74,6 +74,7 @@
     text-transform: uppercase;
     box-shadow: 5px 10px #005abbc0;
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .main_div button:hover {
@@ -104,19 +105,16 @@
 }
 
 @media only screen and (max-width: 768px) {
-
-    #section1Home {
-        min-height: none;
-    }
     
     #section1Home {
         width: 90%;
         margin: auto;
-        margin-top: 10%;
+        margin-top: 14%;
     }
 
     #home_div {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        padding: 0%;
     }
 
     .main_div {
@@ -151,29 +149,39 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    #section1Home {
+        margin-top: 20%;
+    }
+}
+
 @media only screen and (max-width: 480px) {
+
+    #section1Home {
+        width: 95%;
+        margin-top: 25%;
+    }
 
     .main_div {
         width: 100%;
     }
 
     .main_div h1 {
-        width: 85%;
-        font-size: 35px;
+        width: 100%;
+        font-size: 33px;
         margin: 30px 0 30px 0;
     }
 
     .main_div p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .main_div div img {
-        width: 15%;
-        margin-right: 0;
+        display: none;
     }
 
     .main_div button {
-        width: 85%;
+        width: 300px;
         font-size: 20px;
         padding: 8px 0;
         margin-top: 30px;

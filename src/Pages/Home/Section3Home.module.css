@@ -152,11 +152,16 @@
 
     #section3Home_topo h1 {
         font-size: 40px;
+        text-align: left;
     }
 
     #section3Home_inferior {
         flex-direction: column;
         gap: 25px;
+    }
+
+    #section3Home_topo #balao2 {
+        display: none;
     }
 
     #section3Home_inferior #part1, #section3Home_inferior #part2 {
@@ -191,10 +196,6 @@
     #section3Home_topo h1 {
         font-size: 35px;
         text-align: left;
-    }
-
-    #section3Home_topo #balao2 {
-        display: none;
     }
 
     #section3Home_inferior #part1, #section3Home_inferior #part2 {

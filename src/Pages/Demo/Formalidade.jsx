@@ -112,6 +112,7 @@ const Formalidade = ({ searchText,  handleCardAudio, selectedVoice }) => {
 
     //Formalidade - Página própria
 
+
     const cardsFormalidade2 = [
         { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: selectedVoice === 'Mileny' ? boa_noite_audio : boa_noite_audio2 },
         { card_img: bom_dia_img, card_alt: 'Bom Dia', card_text: 'Bom Dia', card_audio: selectedVoice === 'Mileny' ? bom_dia_audio : bom_dia_audio2 },
@@ -141,8 +142,9 @@ const Formalidade = ({ searchText,  handleCardAudio, selectedVoice }) => {
         { card_img: sinta_a_vontade_img, card_alt: 'Sinta-se à Vontade', card_text: 'Sinta-se à Vontade', card_audio: selectedVoice === 'Mileny' ? sinta_a_vontade_audio : sinta_a_vontade_audio2 },
         { card_img: com_licenca_img, card_alt: 'Com Licença', card_text: 'Com Licença', card_audio: selectedVoice === 'Mileny' ? com_licenca_audio : com_licenca_audio2 }
     ]
+    
 
-     //Buscar cards - Formalidades - Página própria
+    //Buscar cards - Formalidades - Página própria
 
     const filteredCardsFormalidade2 = cardsFormalidade2.filter((card) =>
         card.card_alt.toLowerCase().includes(searchText.toLowerCase())

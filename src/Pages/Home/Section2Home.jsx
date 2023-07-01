@@ -15,11 +15,11 @@ function Section2Home() {
                     <img src={post1} alt="Clique para ver o primeiro post" />
                 </div>
                 <div className={style.posts_img}>
-                    <h3>Tecnologia como uma ferramenta de inclusão para PCD</h3>
+                    <h3>Tecnologia como ferramenta de inclusão para PCDs</h3>
                     <img src={post2} alt="Clique para ver o segundo post" />
                 </div>
                 <div className={style.posts_img}>
-                    <h3>PCDs ainda enfrentam difícil inclusão educação pública</h3>
+                    <h3>PCDs ainda enfrentam difícil inclusão na educação pública</h3>
                     <img src={post3} alt="Clique para ver o terceiro post" />
                 </div>
             </div>

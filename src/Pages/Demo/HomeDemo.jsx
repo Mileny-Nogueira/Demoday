@@ -286,7 +286,7 @@ import quero_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Quero.
 import satisfeito_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Satisfeito.m4a';
 import confianca_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Confiança.m4a';
 
-import ciumes_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Ciúmes.m4a';
+import ciumes_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Ciumes.m4a';
 import empatia_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Empatia.m4a';
 import animado_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Animado.m4a';
 import relaxado_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Relaxado.m4a';
@@ -312,7 +312,6 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
     //Props das Cards - Informações
 
     //Formalidade - Home
-
     const cardsFormalidade = [
         { card_img: boa_noite_img, card_alt: 'Boa Noite', card_text: 'Boa Noite', card_audio: selectedVoice === 'Mileny' ? boa_noite_audio : boa_noite_audio2 },
         { card_img: bom_dia_img, card_alt: 'Bom Dia', card_text: 'Bom Dia', card_audio: selectedVoice === 'Mileny' ? bom_dia_audio : bom_dia_audio2 },
@@ -505,7 +504,6 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
                     )}
                 </div>
             </section>
-
         </main>
     )
 }

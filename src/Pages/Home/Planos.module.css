@@ -288,3 +288,33 @@
         font-size: 5vw;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    #planos_h1 {
+        font-size: 32px;
+     }
+
+    .line1 {
+        width: 80%;
+    }
+
+    .line1 h2 {
+        font-size: 8vw;
+    }
+
+    .line1 p {
+        font-size: 5vw;
+    }
+
+    .part2 h1 {
+        font-size: 9vw;
+    }
+
+    .part3 label {
+        font-size: 5vw;
+    }
+
+    .part4 button {
+        font-size: 5.5vw;
+    }
+}
