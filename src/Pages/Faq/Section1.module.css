@@ -1,7 +1,7 @@
 #opções {
-    width: 50%;
+    width: 70%;
     height: 650px;
-    background-color: #F7F7FB;
+    background-color: #FF9800;
     margin: auto;
     padding-top: 100px;
 }
@@ -11,6 +11,7 @@ summary {
     color: #008AFF;
     font-size: 18px;
     padding-top: 10px;
+    margin-top: 20px;
     font-weight: 100;
     background-color: #F7F7FB;
     border-radius: 20px;
@@ -21,6 +22,5 @@ details p {
     margin-left: 20px;
     color: #726F95;
     font-size: 14px;
-    background-color: #F7F7FB;
-    
+    background-color: #ff99009a;
 }
