@@ -45,15 +45,18 @@
 
 .AccountBack {
     align-items: left;
-    position: relative;
+    position: fixed;
+    top: 0px;
+    left: 0;
     font-size: 60px;
     color: #FF9800;
     cursor: pointer;
+    transition: .3s;
+    z-index: 8;
 }
 
 .AccountBack:hover {
     font-size: 70px;
-    transition: .3s;
     color: #FF9800;
 }
 
