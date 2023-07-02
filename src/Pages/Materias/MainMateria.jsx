@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Nav } from 'react-bootstrap';
 import style from './MainMateria.module.css';
 
 import Comentario from '../Blog/Comentario';
@@ -18,17 +19,17 @@ const MainMateria = (props) => {
     //Informações das Matérias
 
     const articleInformations = [
-        { blog_img: Blog_PCD1, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Inclusão", blog_title: 'PCDs ainda enfrentam difícil inclusão educação pública' },
+        { link: '/Materia1', blog_img: Blog_PCD1, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Inclusão", blog_title: 'PCDs ainda enfrentam difícil inclusão educação pública' },
 
-        {blog_img: Blog_PCD2, blog_alt: 'Tecnologia',  background_color: '#005BBB', text_color: '#FFF', blog_theme: "Tecnologia", blog_title: 'Tecnologia como uma ferramenta de inclusão para PCD'},
+        { link: '/Materia2', blog_img: Blog_PCD2, blog_alt: 'Tecnologia',  background_color: '#005BBB', text_color: '#FFF', blog_theme: "Tecnologia", blog_title: 'Tecnologia como uma ferramenta de inclusão para PCD' },
 
-        { blog_img: Blog_PCD3, blog_alt: 'Comunicação', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Comunicação", blog_title: 'Fala e comunicação' },
+        { link: '/Materia3', blog_img: Blog_PCD3, blog_alt: 'Comunicação', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Comunicação", blog_title: 'Fala e comunicação' },
 
-        { blog_img: Menina_PCD1, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Comportamento", blog_title: 'Dificuldades enfrentadas por pais de crianças com deficiência' },
+        { link: '/Materia4', blog_img: Menina_PCD1, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Comportamento", blog_title: 'Dificuldades enfrentadas por pais de crianças com deficiência' },
 
-        { blog_img: Menina_PCD2, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Dificuldade", blog_title: 'Deficiência e dificuldades de expressão verbal: alternativas para promover a comunicação' },
+        { link: '/Materia5', blog_img: Menina_PCD2, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Dificuldade", blog_title: 'Deficiência e dificuldades de expressão verbal: alternativas para promover a comunicação' },
 
-        { blog_img: criancas, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Acessibidade", blog_title: 'Exclusão e falta de acessibilidade afeta estudantes surdos' }
+        { link: '/Materia6', blog_img: criancas, blog_alt: 'Inclusão', background_color: '#005BBB', text_color: '#FFF', blog_theme: "Acessibidade", blog_title: 'Exclusão e falta de acessibilidade afeta estudantes surdos' }
     ]
 
 
@@ -71,15 +72,16 @@ const MainMateria = (props) => {
                     <div className={style.materias}>
                         {filteredArticles.length > 0 ? (
                             filteredArticles.map((articles, index) => (
-                                <Section2Blog
-                                    key={index}
-                                    blog_img={articles.blog_img}
-                                    blog_alt={articles.blog_alt}
-                                    background_color={articles.background_color}
-                                    text_color={articles.text_color}
-                                    blog_theme={articles.blog_theme}
-                                    blog_title={articles.blog_title}
-                                />
+                                <Nav.Link key={index} href={articles.link} style={{ textDecoration : 'none' }}>
+                                    <Section2Blog
+                                        blog_img={articles.blog_img}
+                                        blog_alt={articles.blog_alt}
+                                        background_color={articles.background_color}
+                                        text_color={articles.text_color}
+                                        blog_theme={articles.blog_theme}
+                                        blog_title={articles.blog_title}
+                                    />
+                                </Nav.Link>
                             ))
                         ) : (
                             <p>Matéria não encontrada</p>
