@@ -12,13 +12,15 @@ import Sentimentos from './Sentimentos';
 
 import logo from '../../Images/logo.png';
 import home from '../../Images/Home_demo.png';
+import cards_demo from '../../Images/Cards_demo.png';
+import seta2 from '../../Images/Seta2_demo.png';
 import seta from '../../Images/Seta_demo.png';
 import lupa from '../../Images/Search_lupa.png';
 import conta from '../../Images/Login_conta_demo.png';
 
 const Demo = () => {
 
-    //Script para tornar a Header e a Main (style.main) funcionais e móveis
+    //Script para tornar o Menu Lateral, a Header e a Main (style.main) funcionais e móveis
 
     const [menuLateralVisible, setMenuLateralVisible] = useState(false);
     const [mainVisible, setMainVisible] = useState(false);
@@ -33,6 +35,13 @@ const Demo = () => {
         setMainVisible(!mainVisible);
     }
 
+    //Toggle das Cards - Menu Lateral
+
+    const [cardsMenu, setCardsMenu] = useState(false);
+
+    const handleCardsMenu = () => {
+        setCardsMenu(!cardsMenu);
+    }
 
     //Código para tornar a barra de busca funcional
 
@@ -123,8 +132,8 @@ const Demo = () => {
 
                 {/*Menu lateral*/}
                 <div className={`${style.menu_lateral} ${menuLateralVisible ? style.visible2 : ''}`}>
+                <img src={logo} alt="logo Pecto" id={style.logo} />
                     <nav>
-                        <img src={logo} alt="logo Pecto" id={style.logo} />
                         <ul>
                             <Nav.Link href='/' style={{textDecoration: 'none', color: '#000'}}>
                                <li>
@@ -134,14 +143,41 @@ const Demo = () => {
                                     </div>
                                </li>
                             </Nav.Link>
+                            <li>
+
+                                {/*Escolher Menu das Cards - Menu Lateral*/}
+
+                                <div onClick={handleCardsMenu}>
+                                    <img src={cards_demo} alt="Clique para ver as Cards" />
+                                    <p>Cards</p>
+                                    <img src={seta2} alt="Exibir temas das Cards" className={style.seta_card} style={{ transform: `${cardsMenu ? 'rotate(0deg)' : ''}` }} />
+                                </div>
+                                <div className={style.barra_card}></div>
+                                <div className={style.cards_opcoes} style={{ display: `${cardsMenu ? 'flex' : ''}` }}>
+                                    <div onClick={() => handleLabelClick('HomeDemo')}>
+                                        <p>Ver Todas</p>
+                                    </div>
+                                    <div onClick={() => handleLabelClick('Formalidade')}>
+                                        <p>Formalidade</p>
+                                    </div>
+                                    <div onClick={() => handleLabelClick('Desejos')}>
+                                        <p>Desejos</p>
+                                    </div>
+                                    <div onClick={() => handleLabelClick('Sentimentos')}>
+                                        <p>Sentimentos</p>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
 
-                        <div>
+                        { /*Trocar de vozes - Menu Lateral*/}
+
+                        <div className={style.troca_vozes}>
                             <h2>Trocar de Vozes</h2>
-                            <div className={style.troca_vozes}>
+                            <div>
                                 <p onClick={() => {toggleVoice('Mileny')}} style={{ color: `${selectedVoice === 'Mileny' ? '#FFF' : '#000'}` }}>Mileny</p>
                                 <p onClick={() => {toggleVoice('Hitalo')}} style={{ color: `${selectedVoice === 'Hitalo' ? '#FFF' : '#000'}` }}>Hitalo</p>
-                                <span style={{ left: `${selectedVoice === 'Mileny' ? '0%' : '50%'}` }}></span>
+                                <span style={{ left: `${selectedVoice === 'Mileny' ? '-0.5%' : '50%'}` }}></span>
                             </div>
                         </div>
                     </nav>

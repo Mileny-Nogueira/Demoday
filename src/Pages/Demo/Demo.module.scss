@@ -38,6 +38,7 @@ $color2: #000; //Texto e outros
     transition: margin-left 0.5s ease;
     -webkit-overflow-scrolling: touch;
     display: flex;
+    flex-direction: column;
     left: 0;
     overflow-y: scroll;
     position: fixed;
@@ -51,6 +52,7 @@ $color2: #000; //Texto e outros
     nav {
         display: flex;
         flex-direction: column;
+        height: 100%;
         justify-content: space-between;
     }
 
@@ -74,7 +76,7 @@ $color2: #000; //Texto e outros
             margin-top: 25px;
             display: flex;
             justify-content: center;
-            column-gap: 20%;
+            column-gap: 15%;
             align-items: center;
             transition: all 0.3s;
             border: 0.5px solid $color2;
@@ -90,47 +92,91 @@ $color2: #000; //Texto e outros
                 font-size: 20px;
             }
 
+            .seta_card {
+                position: absolute;
+                width: 25px !important;
+                right: 5px;
+                transform: rotate(-90deg);
+                transition: rotate 0.3s !important;
+            }
+
             &:hover {
                 transform: scale(1.03, 1.03);
             }
         }
-    }
 
-    h2 {
-        @include title_font();
-        text-align: center;
-        font-size: 22px;
-        margin-bottom: 8px;
+        .barra_card {
+            position: absolute;
+            left: 10%;
+            height: 175px;
+            margin-top: 5px;
+            border-radius: 0;
+            z-index: 1;
+        }
+
+        .cards_opcoes {
+            display: none;
+            border: none !important;
+            flex-direction: column;
+            margin-top: 0px !important;
+
+            div {
+                width: 75%;
+                left: 12%;
+                margin-top: 12px !important;
+                padding: 5px 0;
+
+                &:hover {
+                    transform: none;
+                }
+            }
+
+            &:hover {
+                transform: none !important;
+                cursor: default;
+            }
+        }
     }
 
     .troca_vozes {
-        width: 80%;
-        height: 30px;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        align-items: center;
-        transition: all 0.3s;
-        border: 0.5px solid $color2;
-        border-radius: 10px;
-        cursor: pointer;
+        margin-top: 25px;
 
-        p {
-            width: 50%;
-            z-index: 3;
+        h2 {
+            @include title_font();
             text-align: center;
-            transition: all 0.3s;
+            font-size: 22px;
+            margin-bottom: 8px;
         }
 
-        span {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            background-color: #343434;
-            border-radius: 9px;
-            z-index: 2;
-            transition: all 0.5s;
+        div {
+            width: 80%;
+            height: 30px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            align-items: center;
+            transition: all 0.3s;
+            border: 0.5px solid $color2;
+            border-radius: 10px;
+            cursor: pointer;
+    
+            p {
+                width: 50%;
+                z-index: 3;
+                text-align: center;
+                transition: all 0.3s;
+            }
+    
+            span {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background-color: #343434;
+                border-radius: 10px;
+                z-index: 2;
+                transition: all 0.5s;
+            }
         }
     }
 }

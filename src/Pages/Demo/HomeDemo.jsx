@@ -330,7 +330,7 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
         { card_img: por_que_img, card_alt: 'Por Que?', card_text: 'Por Que?', card_audio: selectedVoice === 'Mileny' ? por_que_audio : por_que_audio2 },
         { card_img: aceito_img, card_alt: 'Aceito', card_text: 'Aceito', card_audio: selectedVoice === 'Mileny' ? aceito_audio : aceito_audio2 },
         { card_img: nao_sei_img, card_alt: 'Não Sei', card_text: 'Não Sei', card_audio: selectedVoice === 'Mileny' ? nao_sei_audio : nao_sei_audio2 },
-        { card_img: espere_img, card_alt: 'Espere', card_text: 'Espere', card_audio: selectedVoice === 'Espere' ? espere_audio : espere_audio2 },
+        { card_img: espere_img, card_alt: 'Espere', card_text: 'Espere', card_audio: selectedVoice === 'Mileny' ? espere_audio : espere_audio2 },
         { card_img: concordo_img, card_alt: 'Concordo', card_text: 'Concordo', card_audio: selectedVoice === 'Mileny' ? concordo_audio : concordo_audio2 },
         { card_img: discordo_img, card_alt: 'Discordo', card_text: 'Discordo', card_audio: selectedVoice === 'Mileny' ? discordo_audio : discordo_audio2 },
 
