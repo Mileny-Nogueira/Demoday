@@ -5,7 +5,10 @@
     margin: auto;
     padding-top: 100px;
 }
-
+#Duvidas{
+    text-align: center;
+    color: #008AFF;
+}
 summary {
     margin-left: 20px;
     color: #008AFF;

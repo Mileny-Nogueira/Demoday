@@ -5,7 +5,12 @@ function Section1() {
         <div id={style.section1} >
 
             <div id={style.opções}>
+                <div>
+                    
+                </div>
+                <div id={style.Duvidas}>
                 <h2>Duvidas frequentes</h2>
+                </div>
                 <details>
                     <summary>como utilizar os cards?</summary>
                     <p>Os cards funcionam de forma a facilitar a comunicação alternativa. <br />Para ajudar </p>
