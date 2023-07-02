@@ -12,7 +12,7 @@ function Section1PeP() {
                 <p><strong>Segurança:</strong> Nosso site utiliza medidas de segurança para proteger as informações coletadas dos usuários, mas não nos responsabilizamos por eventuais violações de segurança que possam ocorrer.</p>
                 <p>Ao utilizar nossos serviços, o usuário concorda em seguir as políticas e privacidade aqui apresentadas. Em caso de dúvidas ou sugestões, por favor, entre em contato conosco.</p>
                 <p>Equipe Pecto</p>
-                <br/>
+                <br/> 
         </div>
     )
 }
