@@ -54,7 +54,6 @@ $color2: #000; //Texto e outros
         flex-direction: column;
         height: 100%;
         justify-content: space-between;
-        background-color: $color1;
     }
 
     #logo {
@@ -62,8 +61,6 @@ $color2: #000; //Texto e outros
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        background-color: $color1;
-        z-index: 3;
     }
 
     &::-webkit-scrollbar {
@@ -72,6 +69,7 @@ $color2: #000; //Texto e outros
 
     ul {
         list-style: none;
+
         div {
             width: 80%;
             margin: auto;
@@ -83,8 +81,6 @@ $color2: #000; //Texto e outros
             transition: all 0.3s;
             border: 0.5px solid $color2;
             border-radius: 10px;
-            z-index: 3;
-            background-color: $color1;
             cursor: pointer;
     
             img {
@@ -110,17 +106,14 @@ $color2: #000; //Texto e outros
         }
 
         .cards_opcoes {
-            position: absolute;
             border: none;
             flex-direction: column;
             margin-top: 0px;
-            top: -141px;
             transition: top 0.5s;
-            z-index: 0;
 
             div {
                 width: 80%;
-                left: 25%;
+                left: 11%;
                 margin-top: 12px !important;
                 padding: 5px 0;
 
@@ -137,9 +130,7 @@ $color2: #000; //Texto e outros
     }
 
     .troca_vozes {
-        background-color: $color1;
         margin-top: 25px;
-        z-index: 2;
 
         h2 {
             @include title_font();
@@ -335,7 +326,7 @@ $color2: #000; //Texto e outros
       
 
         .menu_opcoes {
-            width: 25%;
+            width: 20%;
             font-size: 25px;
             font-family: simply_rounded;
             text-align: center;
@@ -349,7 +340,7 @@ $color2: #000; //Texto e outros
 
         span {
             position: absolute;
-            width: 25%;
+            width: 20%;
             height: 100%;
             background-color: #343434;
             border-radius: 35px;
