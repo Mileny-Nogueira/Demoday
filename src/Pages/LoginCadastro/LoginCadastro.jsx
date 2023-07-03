@@ -151,7 +151,7 @@ const LoginCadastro = () => {
         nascimento.trim() &&
         senha.trim() &&
         senha === confirmarSenha && 
-        termosAceitos && validacaoBackend
+        termosAceitos
       ) {
         const novoUsuario = {
           nome: nome,
