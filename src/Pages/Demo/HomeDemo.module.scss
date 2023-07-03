@@ -18,9 +18,9 @@ $color2: #000; //Texto e outros
 //Estilizações
 
 
-//Formalidade, Desejos e Sentimentos
+//Formalidade, Desejos, Sentimentos e Pessoa
 
-#formalidade, #desejos, #sentimentos {
+#formalidade, #desejos, #sentimentos, #pessoa {
     width: 90%;
     height: auto;
     margin: auto;
@@ -45,7 +45,7 @@ $color2: #000; //Texto e outros
 //Reponsividade
 
 @media only screen and (max-width: 480px) {
-    #formalidade, #desejos, #sentimentos {
+    #formalidade, #desejos, #sentimentos, #pessoa {
         width: 95%;
 
         h2 {
