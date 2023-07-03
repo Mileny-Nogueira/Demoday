@@ -110,6 +110,18 @@ import interesse_img from './Images/Sentimentos/interesse.png';
 import bom_humor_img from './Images/Sentimentos/bom humor.png';
 import mau_humor_img from './Images/Sentimentos/Mal humor.png';
 
+//Pessoa - Pronomes
+
+import eu_img from './Images/Pessoa - Pronomes/Eu.png';
+import voce_img from './Images/Pessoa - Pronomes/Você.png';
+import ele_img from './Images/Pessoa - Pronomes/Ele.png';
+import ela_img from './Images/Pessoa - Pronomes/Ela.png'
+import nos_img from './Images/Pessoa - Pronomes/Nós.png';
+import voces_img from './Images/Pessoa - Pronomes/Vocês.png';
+
+import eles_img from './Images/Pessoa - Pronomes/Eles.png';
+import elas_img from './Images/Pessoa - Pronomes/Elas.png';
+
 
 //Áudios das Cards
 
@@ -218,6 +230,18 @@ import interesse_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Int
 import bom_humor_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Bom humor.m4a';
 import mau_humor_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Mau humor.m4a';
 
+//Pessoa - Pronomes - Vozes femininas (Mileny)
+
+import eu_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Eu.m4a';
+import voce_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Você.m4a';
+import ele_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Ele.m4a';
+import ela_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Ela.m4a';
+import nos_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Nós.m4a';
+import voces_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Vocês.m4a';
+
+import eles_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Eles.m4a';
+import elas_audio from './Audios/Pessoa - Pronomes/Vozes - Mileny/Elas.m4a';
+
 
 //Formalidades - Vozes Masculinas (Hitalo)
 
@@ -323,6 +347,18 @@ import interesse_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/In
 import bom_humor_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Bom Humor.m4a';
 import mau_humor_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Mau Humor.m4a';
 
+//Pessoa - Pronomes - Vozes masculinas (Hitalo)
+
+import eu_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/Eu.m4a';
+import voce_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/você.m4a';
+import ele_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/ele.m4a';
+import ela_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/ela.m4a';
+import nos_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/nós.m4a';
+import voces_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/vocês.m4a';
+
+import eles_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/eles.m4a';
+import elas_audio2 from './Audios/Pessoa - Pronomes/Vozes - Hitalo/elas.m4a';
+
 
 const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
 
@@ -331,6 +367,7 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
     let formalidade_color = 'linear-gradient(180deg, #38B1FF 0%, rgba(138.96, 206.69, 250.75, 0) 100%)';
     let desejos_color = 'linear-gradient(180deg, #FFFF00 0%, #FFFFFF 100%';
     let sentimentos_color = 'linear-gradient(180deg, #FF4646 0%, rgba(255, 172.13, 172.13, 0) 100%)';
+    let pessoa_color = 'linear-gradient(180deg, #FF8100 0%, rgba(255, 129.06, 0, 0) 100%)';
 
 
     //Props das Cards - Informações
@@ -445,6 +482,18 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
 
     ]
 
+    const cardsPessoa = [
+        { card_img: eu_img, card_alt: 'Eu', card_text: 'Eu', card_audio: selectedVoice === 'Mileny' ? eu_audio : eu_audio2 },
+        { card_img: voce_img, card_alt: 'Você', card_text: 'Você', card_audio: selectedVoice === 'Mileny' ? voce_audio : voce_audio2 },
+        { card_img: ele_img, card_alt: 'Ele', card_text: 'Ele', card_audio: selectedVoice === 'Mileny' ? ele_audio : ele_audio2 },
+        { card_img: ela_img, card_alt: 'Ela', card_text: 'Ela', card_audio: selectedVoice === 'Mileny' ? ela_audio : ela_audio2 },
+        { card_img: nos_img, card_alt: 'Nós', card_text: 'Nós', card_audio: selectedVoice === 'Mileny' ? nos_audio : nos_audio2 },
+        { card_img: voces_img, card_alt: 'Vocês', card_text: 'Vocês', card_audio: selectedVoice === 'Mileny' ? voces_audio : voces_audio2 },
+
+        { card_img: eles_img, card_alt: 'Eles', card_text: 'Eles', card_audio: selectedVoice === 'Mileny' ? eles_audio : eles_audio2 },
+        { card_img: elas_img, card_alt: 'Elas', card_text: 'Elas', card_audio: selectedVoice === 'Mileny' ? elas_audio : elas_audio2 }
+    ]
+
 
     //Buscar cards - Formalidade - Home
 
@@ -461,6 +510,12 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
     //Buscar cards - Sentimentos - Emoções - Home
 
     const filteredCardsSentimentos = cardsSentimentos.filter((card) =>
+        card.card_alt.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+    //Buscar cards - Desejos - Página própria
+
+    const filteredCardsPessoa = cardsPessoa.filter((card) =>
         card.card_alt.toLowerCase().includes(searchText.toLowerCase())
     );
     
@@ -525,6 +580,29 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
                             <Cards
                                 key={index}
                                 card_color={sentimentos_color}
+                                card_img={card.card_img}
+                                card_alt={card.card_alt}
+                                card_text={card.card_text}
+                                card_audio={card.card_audio}
+                                handleCardAudio={handleCardAudio}
+                            />
+                        ))
+                    ) : (
+                        <p>Nenhum resultado encontrado :(</p>
+                    )}
+                </div>
+            </section>
+
+             {/*Cards de Pessoa*/}
+                
+             <section id={style.pessoa}>
+                <h2>Pessoa - Pronomes: </h2>
+                <div>
+                    {filteredCardsPessoa.length > 0 ? (
+                        filteredCardsPessoa.map((card, index) => (
+                            <Cards
+                                key={index}
+                                card_color={pessoa_color}
                                 card_img={card.card_img}
                                 card_alt={card.card_alt}
                                 card_text={card.card_text}

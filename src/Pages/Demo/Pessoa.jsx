@@ -51,14 +51,14 @@ const Pessoa = ({ searchText, handleCardAudio, selectedVoice }) => {
 
     //Variável para as cores de fundo das cards
 
-    let desejos_color = 'linear-gradient(180deg, #FF8100 0%, rgba(255, 129.06, 0, 0) 100%)';
+    let pessoa_color = 'linear-gradient(180deg, #FF8100 0%, rgba(255, 129.06, 0, 0) 100%)';
 
     
     //Props das Cards - Informações
 
-    //Desejos - Página própria
+    //Pessoa - Pronomes - Página própria
 
-    const cardsDesejos2 = [
+    const cardsPessoa2 = [
         { card_img: eu_img, card_alt: 'Eu', card_text: 'Eu', card_audio: selectedVoice === 'Mileny' ? eu_audio : eu_audio2 },
         { card_img: voce_img, card_alt: 'Você', card_text: 'Você', card_audio: selectedVoice === 'Mileny' ? voce_audio : voce_audio2 },
         { card_img: ele_img, card_alt: 'Ele', card_text: 'Ele', card_audio: selectedVoice === 'Mileny' ? ele_audio : ele_audio2 },
@@ -73,7 +73,7 @@ const Pessoa = ({ searchText, handleCardAudio, selectedVoice }) => {
     
     //Buscar cards - Desejos - Página própria
 
-    const filteredCardsDesejos2 = cardsDesejos2.filter((card) =>
+    const filteredCardsPessoa2 = cardsPessoa2.filter((card) =>
         card.card_alt.toLowerCase().includes(searchText.toLowerCase())
     );
 
@@ -82,16 +82,16 @@ const Pessoa = ({ searchText, handleCardAudio, selectedVoice }) => {
 
     return (
         <main>
-            {/*Cards de Desejos*/}
+            {/*Cards de Pessoa*/}
                 
             <section id={style.pessoa}>
                 <h2>Pessoa - Pronomes: </h2>
                 <div>
-                    {filteredCardsDesejos2.length > 0 ? (
-                        filteredCardsDesejos2.map((card, index) => (
+                    {filteredCardsPessoa2.length > 0 ? (
+                        filteredCardsPessoa2.map((card, index) => (
                             <Cards
                                 key={index}
-                                card_color={desejos_color}
+                                card_color={pessoa_color}
                                 card_img={card.card_img}
                                 card_alt={card.card_alt}
                                 card_text={card.card_text}

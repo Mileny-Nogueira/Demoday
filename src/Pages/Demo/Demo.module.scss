@@ -349,8 +349,16 @@ $color2: #000; //Texto e outros
     }
 }
 
-
 //Responsividade
+
+@media only screen and (max-width: 1000px) {
+    
+    //Menu central
+
+    #escolher_menu {
+        width: 85%;
+    }
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -378,6 +386,7 @@ $color2: #000; //Texto e outros
     //Escolher Menu
 
     #escolher_menu {
+        width: 95%;
     
         div {
 
@@ -425,7 +434,7 @@ $color2: #000; //Texto e outros
     //Escolher Menu
 
     #escolher_menu {
-        width: 90%;
+        width: 98%;
 
         div {
 
@@ -487,7 +496,7 @@ $color2: #000; //Texto e outros
     //Escolher Menu
 
     #escolher_menu {
-        width: 98%;
+        width: 99%;
     
         div {
 
