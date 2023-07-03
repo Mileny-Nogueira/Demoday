@@ -194,7 +194,7 @@ import empatia_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Empat
 import animada_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Animada.m4a';
 import relaxada_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Relaxada.m4a';
 import paciencia_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Paciência.m4a';
-import nervosa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Nervoso.m4a'; //Mileny, trocar áudio
+import nervosa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Nervosa.m4a';
 
 import saudade_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Saudade.m4a';
 import respeito_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Respeito.m4a';
@@ -321,7 +321,7 @@ const HomeDemo = ({ searchText, handleCardAudio, selectedVoice }) => {
         { card_img: por_favor_img, card_alt: 'Por favor', card_text: 'Por Favor', card_audio: selectedVoice === 'Mileny' ? por_favor_audio : por_favor_audio2 },
 
         { card_img: boa_sorte_img, card_alt: 'Boa Sorte', card_text: 'Boa Sorte', card_audio: selectedVoice === 'Mileny' ? boa_sorte_audio : boa_sorte_audio2 },
-        { card_img: bem_vinda_img, card_alt: 'Bem Vindo ou Bem Vinda', card_text: selectedVoice === 'Mileny' ? 'Bem Vinda' : 'Bem Vindo', card_audio: selectedVoice === 'Mileny' ? bem_vinda_audio : bem_vindo_audio2 },
+        { card_img: bem_vinda_img, card_alt: 'Bem-Vindo ou Bem-Vinda', card_text: selectedVoice === 'Mileny' ? 'Bem-Vinda' : 'Bem-Vindo', card_audio: selectedVoice === 'Mileny' ? bem_vinda_audio : bem_vindo_audio2 },
         { card_img: de_nada_img, card_alt: 'De Nada', card_text: 'De Nada', card_audio: selectedVoice === 'Mileny' ? de_nada_audio : de_nada_audio2 },
         { card_img: maravilhosa_img, card_alt: 'Maravilhoso ou Maravilhosa', card_text: selectedVoice === 'Mileny' ? 'Maravilhosa' : 'Maravilhoso', card_audio: selectedVoice === 'Mileny' ? maravilhosa_audio : maravilhoso_audio2 },
         { card_img: parabens_img, card_alt: 'Parabéns', card_text: 'Parabéns', card_audio: selectedVoice === 'Mileny' ? parabens_audio : parabens_audio2 },
