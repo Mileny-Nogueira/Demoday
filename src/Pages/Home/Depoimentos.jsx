@@ -16,11 +16,11 @@ function Depoimentos() {
     const [posicao, setPosicao] = useState(0);
 
     const handleClickLeft = () => {
-        setPosicao((posicao - 1 + 4) % 4);
+        setPosicao((posicao - 1 + 2) % 2);
     }
 
     const handleClickRight = () => {
-        setPosicao((posicao + 1) % 4);
+        setPosicao((posicao + 1) % 2);
     }
 
     //Props dos Depoimentos
@@ -38,22 +38,6 @@ function Depoimentos() {
             image: holly, 
             name: 'Holly Greenhow', 
             text: 'Escrevo por aqui pela ajuda de meus pais. Sou profundamente grata pela iniciativa da Pecto, é tão importante conseguir me comunicar com a minha família e amigos sem depender do outro.'
-        },
-    ]
-
-    const depoimentos3 = [
-        {
-            image: eleanor, 
-            name: 'Eleanor Marques', 
-            text: 'Excelente! Graças ao Pecto, a minha filha, que tem dificuldades para falar, está conseguindo interagir-se melhor com outras pessoas! Estou bastante feliz por ela.'
-        },
-    ]
-
-    const depoimentos4 = [
-        {
-            image: eleanor, 
-            name: 'Eleanor Marques', 
-            text: 'Excelente! Graças ao Pecto, a minha filha, que tem dificuldades para falar, está conseguindo interagir-se melhor com outras pessoas! Estou bastante feliz por ela.'
         },
     ]
 
@@ -92,38 +76,6 @@ function Depoimentos() {
                 <div className={style.box2} style={{ transform: `translateX(${posicao * -110}%)`}}>
                     {depoimentos2.map((depoimento, index) => (
                         <div key={index} className={style.content} style={{transform: 'translateX(110%)'}}>
-                            <div className={style.image_name}>
-                                <img src={depoimento.image} alt={depoimento.name} />
-                                <h3>{depoimento.name}</h3>
-                            </div>
-                            <div className={style.text}>
-                                <p>{depoimento.text}</p>
-                            </div>
-                        </div> 
-                    ))}
-                </div>
-
-                {/*Depoimento 3*/}
-
-                <div className={style.box2} style={{ transform: `translateX(${posicao * -110}%)`}}>
-                    {depoimentos3.map((depoimento, index) => (
-                        <div key={index} className={style.content} style={{transform: 'translateX(220%)'}}>
-                            <div className={style.image_name}>
-                                <img src={depoimento.image} alt={depoimento.name} />
-                                <h3>{depoimento.name}</h3>
-                            </div>
-                            <div className={style.text}>
-                                <p>{depoimento.text}</p>
-                            </div>
-                        </div> 
-                    ))}
-                </div>
-
-                {/*Depoimento 4*/}
-
-                <div className={style.box2} style={{ transform: `translateX(${posicao * -110}%)`}}>
-                    {depoimentos4.map((depoimento, index) => (
-                        <div key={index} className={style.content} style={{transform: 'translateX(330%)'}}>
                             <div className={style.image_name}>
                                 <img src={depoimento.image} alt={depoimento.name} />
                                 <h3>{depoimento.name}</h3>
