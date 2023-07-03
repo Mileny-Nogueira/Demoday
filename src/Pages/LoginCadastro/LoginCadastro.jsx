@@ -51,6 +51,16 @@ const LoginCadastro = () => {
     setIsSignUpMode(false);
   };
 
+  const scanURL = () => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const value = urlParams.get('cadastro');
+    
+    if(value === 'true'){
+      handleSignUpClick();
+    }
+  }
+
   /* Script CPF */
   const cpfInputRef = useRef(null);
 
@@ -212,7 +222,7 @@ const LoginCadastro = () => {
         {erros.cpf && <div className={style.error}>{erros.cpf}</div>}
         <div className={style.input_field2}>
           <input
-            type="date"
+            type="text"
             value={nascimento}
             onChange={(e) => setNascimento(e.target.value)}
             placeholder="Data de Nascimento:"
@@ -257,7 +267,7 @@ const LoginCadastro = () => {
   };
 
   return (
-    <div className="all">
+    <div className="all" onLoad={scanURL}>
       <section id={style.login_cadastro}>
         <div className={`${isSignUpMode ? style.sign_up_mode : ''} ${style.container}`}>
           <div className={style.signin_signup}>
