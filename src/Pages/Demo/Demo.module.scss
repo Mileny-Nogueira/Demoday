@@ -107,18 +107,26 @@ $color2: #000; //Texto e outros
 
         .barra_card {
             position: absolute;
+            background-color: #ffffff;
             left: 10%;
-            height: 175px;
-            margin-top: 5px;
+            height: 180px;
+            margin-top: 10px;
             border-radius: 0;
+            border: 0 none;
+            transition: height 0.5s, margin-top 0.5s;
             z-index: 1;
+            cursor: default;
+
+            &:hover {
+                transform: none;
+            }
         }
 
         .cards_opcoes {
-            display: none;
-            border: none !important;
+            position: absolute;
+            border: none;
             flex-direction: column;
-            margin-top: 0px !important;
+            margin-top: 0px;
 
             div {
                 width: 75%;
@@ -140,6 +148,7 @@ $color2: #000; //Texto e outros
 
     .troca_vozes {
         margin-top: 25px;
+        z-index: 2;
 
         h2 {
             @include title_font();

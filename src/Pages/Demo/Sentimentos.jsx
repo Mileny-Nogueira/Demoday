@@ -9,26 +9,27 @@ import Cards from './Cards';
 //Sentimentos - Emoções
 
 import triste_img from './Images/Sentimentos/Triste.png';
+
 import nojo_img from './Images/Sentimentos/Nojo.png';
 import curiosa_img from './Images/Sentimentos/Curioso.png';
 import dor_img from './Images/Sentimentos/Dor.png';
 import duvida_img from './Images/Sentimentos/Duvida.png';
 import calma_img from './Images/Sentimentos/Calmo.png';
-
 import ansiosa_img from './Images/Sentimentos/Ansiedade.png';
+
 import alegre_img from './Images/Sentimentos/alegre.png';
 import gostei_img from './Images/Sentimentos/Gostei.png';
 import quero_img from './Images/Sentimentos/quero.png';
 import satisfeita_img from './Images/Sentimentos/satisfeito.png';
-import confianca_img from './Images/Sentimentos/Confiança.png';
 
+import confianca_img from './Images/Sentimentos/Confiança.png';
 import ciumes_img from './Images/Sentimentos/ciumes.png';
 import empatia_img from './Images/Sentimentos/empatia.png';
 import animada_img from './Images/Sentimentos/animado.png';
 import relaxada_img from './Images/Sentimentos/Relaxado.png';
 import paciencia_img from './Images/Sentimentos/Paciencia.png';
-import nervosa_img from './Images/Sentimentos/nervoso.png';
 
+import nervosa_img from './Images/Sentimentos/nervoso.png';
 import saudade_img from './Images/Sentimentos/saudade.png';
 import respeito_img from './Images/Sentimentos/respeito.png';
 import interesse_img from './Images/Sentimentos/interesse.png';
@@ -41,26 +42,27 @@ import mau_humor_img from './Images/Sentimentos/Mal humor.png';
 //Sentimentos - Emoções - Vozes Femininas (Mileny)
 
 import triste_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Triste.m4a';
+
 import nojo_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Nojo.m4a';
 import curiosa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Curiosa.m4a';
 import dor_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Dor.m4a';
 import duvida_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Dúvida.m4a';
 import calma_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Calma.m4a';
-
 import ansiosa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Ansiosa.m4a';
+
 import alegre_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Alegre.m4a';
 import gostei_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Gostei.m4a';
 import quero_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Quero.m4a';
 import satisfeita_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Satisfeita.m4a';
-import confianca_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Confiança.m4a';
 
+import confianca_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Confiança.m4a';
 import ciumes_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Ciúmes.m4a';
 import empatia_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Empatia.m4a';
 import animada_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Animada.m4a';
 import relaxada_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Relaxada.m4a';
 import paciencia_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Paciência.m4a';
-import nervosa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Nervoso.m4a'; //Mileny, trocar áudio
 
+import nervosa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Nervosa.m4a';
 import saudade_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Saudade.m4a';
 import respeito_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Respeito.m4a';
 import interesse_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Interesse.m4a';
@@ -71,26 +73,27 @@ import mau_humor_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Mau
 //Sentimentos - Emoções - Vozes Masculinas (Hitalo)
 
 import triste_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Triste.m4a';
+
 import nojo_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Nojo.m4a';
 import curioso_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Curioso.m4a';
 import dor_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Dor.m4a';
 import duvida_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Dúvida.m4a';
 import calmo_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Calmo.m4a';
-
 import ansioso_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Ansioso.m4a';
+
 import alegre_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Alegre.m4a';
 import gostei_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Gostei.m4a';
 import quero_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Quero.m4a';
 import satisfeito_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Satisfeito.m4a';
-import confianca_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Confiança.m4a';
 
+import confianca_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Confiança.m4a';
 import ciumes_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Ciumes.m4a';
 import empatia_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Empatia.m4a';
 import animado_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Animado.m4a';
 import relaxado_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Relaxado.m4a';
 import paciencia_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Paciência.m4a';
-import nervoso_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Nervoso.m4a';
 
+import nervoso_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Nervoso.m4a';
 import saudade_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Saudade.m4a';
 import respeito_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Respeito.m4a';
 import interesse_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Interesse.m4a';

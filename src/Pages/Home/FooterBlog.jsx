@@ -45,9 +45,15 @@ function FooterBlog(props) {
                     </ul>
                 </div>
                 <div className={style.footer_options}>
-                    <h5>Certificados</h5>
+                    <h5>Como Doar?</h5>
                     <ul>
-                        <li>Colocar os certificados</li>
+                        <li>
+                            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                <input type="hidden" name="hosted_button_id" value="Y4XDTXH95JZWL" />
+                                <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faça doações com o botão do PayPal" />
+                                <img alt="Doar" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+                            </form>
+                        </li>
                         <div>
                             <img src={instagram} alt="Clique para acessar o nosso Instagram" title='Instagram' onClick={() => OpenInNewTab('https://www.instagram.com/pectooficial/')} />
                             <img src={whatsapp} alt="Clique para acessar o nosso Whatsapp" title='Whatsapp' />
