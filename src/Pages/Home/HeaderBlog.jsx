@@ -17,7 +17,6 @@ const HeaderBlog = (props) => {
         }
     }
 
-
     return (
         <header id={style.header_blog} style={{backgroundColor: props.header_color}}>
             <nav>
@@ -32,8 +31,8 @@ const HeaderBlog = (props) => {
                         <img src={props.header_img} alt="logo" id={style.logo_blog1} />
                         <Nav.Link href='/' style={{textDecoration: 'none'}}><li>Home</li></Nav.Link>
                         <Nav.Link href='/Blog' style={{textDecoration: 'none'}}><li>Blog</li></Nav.Link>
-                        <Nav.Link href='/LoginCadastro?cadastro=true' style={{textDecoration: 'none'}}> <li>Cadastro</li></Nav.Link>
-                        <Nav.Link href='/LoginCadastro?#' style={{textDecoration: 'none'}}><li>Login</li></Nav.Link>
+                        <Nav.Link href='/LoginCadastro?cadastro' style={{textDecoration: 'none'}}> <li>Cadastro</li></Nav.Link>
+                        <Nav.Link href='/LoginCadastro' style={{textDecoration: 'none'}}><li>Login</li></Nav.Link>
                         <Nav.Link href='/Demo' style={{textDecoration: 'none'}}><li>Demo</li></Nav.Link>
                     </div>
                 </ul>

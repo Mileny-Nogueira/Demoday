@@ -18,7 +18,8 @@ const LoginCadastro = () => {
   const navigate = useNavigate();
 
   // Função para lidar com o login
-  const handleLogin = () => {
+  const handleLogin = (event) => {
+    event.preventDefault() // Evita o carregamento da página após o envio de dados
     const dadosUsuario = {
       email: email,
       senha: senha,
@@ -56,7 +57,7 @@ const LoginCadastro = () => {
     const urlParams = new URLSearchParams(queryString);
     const value = urlParams.get('cadastro');
     
-    if(value === 'true'){
+    if(value === ''){
       handleSignUpClick();
     }
   }
