@@ -273,7 +273,7 @@ const LoginCadastro = () => {
         <div className={`${isSignUpMode ? style.sign_up_mode : ''} ${style.container}`}>
           <div className={style.signin_signup}>
             <form action="#" className={style.sign_in_form}>
-              <img src={login_img} alt="Imagem de login" />
+              <img src={login_img} alt="Imagem de login" className={style.login_img} />
               <h2 className={style.title}>Login</h2>
               <div className={style.input_field}>
                 <img src={login_user} alt="Clique para adicionar o seu e-mail" />
