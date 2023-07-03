@@ -150,7 +150,8 @@ const LoginCadastro = () => {
         cpf.trim() &&
         nascimento.trim() &&
         senha.trim() &&
-        senha === confirmarSenha && termosAceitos
+        senha === confirmarSenha && 
+        termosAceitos && validacaoBackend
       ) {
         const novoUsuario = {
           nome: nome,
