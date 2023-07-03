@@ -210,7 +210,7 @@ const Demo = () => {
 
                     {/*Menu Central*/}
 
-                    <section id={style.menu_central}>
+                    <section id={style.menu_central} style={{ backgroundImage: `${selectedVoice === 'Mileny' ? '' : ''}` }}>
                         <img src={logo} alt="logo da Pecto" />
                         <h2>Se comunique com quem quiser</h2>
                         <h3>{ cumprimento }</h3>

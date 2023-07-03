@@ -279,7 +279,7 @@ $color2: #000; //Texto e outros
     height: 500px;
     margin: auto;
     border-radius: 25px;
-    background: url('../../Images/Menina\ PCD_demo.png');
+    background-image: url('../../Images/Menina\ PCD_demo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -324,7 +324,6 @@ $color2: #000; //Texto e outros
         display: flex;
         padding: 0;
       
-
         .menu_opcoes {
             width: 20%;
             font-size: 25px;
