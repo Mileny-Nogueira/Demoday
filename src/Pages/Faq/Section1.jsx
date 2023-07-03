@@ -40,14 +40,8 @@ function Section1() {
                     <summary>Onde posso utilizar a Pecto?</summary>
                     <p>Em qualquer lugar. Desde o começo, queriamos desenvolver uma plataforma versátil que pudesse acompanhar nossos usuários em qualquer situação do seu dia, seja em um encontro casual entre amigos, quanto em um ambiente de trabalho que requer uma postura mais profissional.</p>
                 </details>
-                <details>
-                    <summary></summary>
-                    <p></p>
-                </details>
-                <details>
-                    <summary></summary>
-                    <p></p>
-                </details>
+                
+                    
 
             </div>
         </div>

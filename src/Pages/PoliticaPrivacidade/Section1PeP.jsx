@@ -3,7 +3,7 @@ import style from './Section1PeP.module.css';
 function Section1PeP() {
     return (
         <div id={style.section1} >
-            <h3>ATENÇÃO!</h3>
+            <h3>Política e Privacidade</h3>
             <p> <strong>Coleta de informações:</strong> Em algumas situações, podemos coletar 
                 informações pessoais dos usuários, como nome, endereço de e-mail, país e 
                 data de nascimento. Essas informações são coletadas com o objetivo de melhorar nossos serviços e garantir uma experiência mais personalizada para cada usuário.</p>
