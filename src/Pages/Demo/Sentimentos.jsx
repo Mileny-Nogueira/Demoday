@@ -8,6 +8,11 @@ import Cards from './Cards';
 
 //Sentimentos - Emoções
 
+import amor_img from './Images/Sentimentos/Amor.png';
+import feliz_img from './Images/Sentimentos/Feliz.png';
+import medo_img from './Images/Sentimentos/Medo.png';
+import raiva_img from './Images/Sentimentos/Raiva.png';
+import surpresa_img from './Images/Sentimentos/Surpreso.png';
 import triste_img from './Images/Sentimentos/Triste.png';
 
 import nojo_img from './Images/Sentimentos/Nojo.png';
@@ -19,7 +24,9 @@ import ansiosa_img from './Images/Sentimentos/Ansiedade.png';
 
 import alegre_img from './Images/Sentimentos/alegre.png';
 import gostei_img from './Images/Sentimentos/Gostei.png';
+import nao_gostei_img from './Images/Sentimentos/Não gostei.png';
 import quero_img from './Images/Sentimentos/quero.png';
+import nao_quero_img from './Images/Sentimentos/Não quero.png';
 import satisfeita_img from './Images/Sentimentos/satisfeito.png';
 
 import confianca_img from './Images/Sentimentos/Confiança.png';
@@ -41,6 +48,11 @@ import mau_humor_img from './Images/Sentimentos/Mal humor.png';
 
 //Sentimentos - Emoções - Vozes Femininas (Mileny)
 
+import amor_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Amor.m4a';
+import feliz_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Feliz.m4a';
+import medo_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Medo.m4a';
+import raiva_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Raiva.m4a';
+import surpresa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Surpresa.m4a';
 import triste_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Triste.m4a';
 
 import nojo_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Nojo.m4a';
@@ -52,7 +64,9 @@ import ansiosa_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Ansio
 
 import alegre_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Alegre.m4a';
 import gostei_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Gostei.m4a';
+import nao_gostei_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Não gostei.m4a';
 import quero_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Quero.m4a';
+import nao_quero_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Não quero.m4a';
 import satisfeita_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Satisfeita.m4a';
 
 import confianca_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Confiança.m4a';
@@ -72,6 +86,11 @@ import mau_humor_audio from './Audios/Sentimentos - Emoções/Vozes - Mileny/Mau
 
 //Sentimentos - Emoções - Vozes Masculinas (Hitalo)
 
+import amor_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Amor.m4a';
+import feliz_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Feliz.m4a';
+import medo_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Medo.m4a';
+import raiva_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Raiva.m4a';
+import surpreso_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Surpreso.m4a';
 import triste_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Triste.m4a';
 
 import nojo_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Nojo.m4a';
@@ -83,7 +102,9 @@ import ansioso_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Ansi
 
 import alegre_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Alegre.m4a';
 import gostei_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Gostei.m4a';
+import nao_gostei_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Não Gostei.m4a';
 import quero_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Quero.m4a';
+import nao_quero_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Não quero.m4a';
 import satisfeito_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Satisfeito.m4a';
 
 import confianca_audio2 from './Audios/Sentimentos - Emoções/Vozes - Hitalo/Confiança.m4a';
@@ -111,27 +132,35 @@ const Sentimentos = ({ searchText, handleCardAudio, selectedVoice }) => {
     //Sentimentos - Página própria
 
     const cardsSentimento2 = [
+        { card_img: amor_img, card_alt: 'Amor', card_text: 'Amor', card_audio: selectedVoice === 'Mileny' ? amor_audio : amor_audio2 },
+        { card_img: feliz_img, card_alt: 'Feliz', card_text: 'Feliz', card_audio: selectedVoice === 'Mileny' ? feliz_audio : feliz_audio2 },
+        { card_img: medo_img, card_alt: 'Medo', card_text: 'Medo', card_audio: selectedVoice === 'Mileny' ? medo_audio : medo_audio2 },
+        { card_img: raiva_img, card_alt: 'Raiva', card_text: 'Raiva', card_audio: selectedVoice === 'Mileny' ? raiva_audio : raiva_audio2 },
+        { card_img: surpresa_img, card_alt: 'Surpreso ou Surpresa', card_text: selectedVoice === 'Mileny' ? 'Surpresa' : 'Surpreso', card_audio: selectedVoice === 'Mileny' ? surpresa_audio : surpreso_audio2 },
         { card_img: triste_img, card_alt: 'Triste', card_text: 'Triste', card_audio: selectedVoice === 'Mileny' ? triste_audio : triste_audio2 },
+
         { card_img: nojo_img, card_alt: 'Nojo', card_text: 'Nojo', card_audio: selectedVoice === 'Mileny' ? nojo_audio : nojo_audio2 },
         { card_img: curiosa_img, card_alt: 'Curioso ou Curiosa', card_text: selectedVoice === 'Mileny' ? 'Curiosa' : 'Curioso', card_audio: selectedVoice === 'Mileny' ? curiosa_audio : curioso_audio2 },
         { card_img: dor_img, card_alt: 'Dor', card_text: 'Dor', card_audio: selectedVoice === 'Mileny' ? dor_audio : dor_audio2 },
         { card_img: duvida_img, card_alt: 'Dúvida', card_text: 'Dúvida', card_audio: selectedVoice === 'Mileny' ? duvida_audio : duvida_audio2 },
         { card_img: calma_img, card_alt: 'Calma ou Calmo', card_text: selectedVoice === 'Mileny' ? 'Calma' : 'Calmo', card_audio: selectedVoice === 'Mileny' ? calma_audio : calmo_audio2 },
-
         { card_img: ansiosa_img, card_alt: 'Ansioso ou Ansiosa', card_text: selectedVoice === 'Mileny' ? 'Ansiosa' : 'Ansioso', card_audio: selectedVoice === 'Mileny' ? ansiosa_audio : ansioso_audio2 },
+
         { card_img: alegre_img, card_alt: 'Alegre', card_text: 'Alegre', card_audio: selectedVoice === 'Mileny' ? alegre_audio : alegre_audio2 },
         { card_img: gostei_img, card_alt: 'Gostei', card_text: 'Gostei', card_audio: selectedVoice === 'Mileny' ? gostei_audio : gostei_audio2 },
+        { card_img: nao_gostei_img, card_alt: 'Não Gostei', card_text: 'Não Gostei', card_audio: selectedVoice === 'Mileny' ? nao_gostei_audio : nao_gostei_audio2 },
         { card_img: quero_img, card_alt: 'Quero', card_text: 'Quero', card_audio: selectedVoice === 'Mileny' ? quero_audio : quero_audio2 },
+        { card_img: nao_quero_img, card_alt: 'Não Quero', card_text: 'Não Quero', card_audio: selectedVoice === 'Mileny' ? nao_quero_audio : nao_quero_audio2 },
         { card_img: satisfeita_img, card_alt: 'Satisfeito ou Satisfeita', card_text: selectedVoice === 'Mileny' ? 'Satisfeita' : 'Satisfeito', card_audio: selectedVoice === 'Mileny' ? satisfeita_audio : satisfeito_audio2 },
-        { card_img: confianca_img, card_alt: 'Confiança', card_text: 'Confiança', card_audio: selectedVoice === 'Mileny' ? confianca_audio : confianca_audio2 },
 
+        { card_img: confianca_img, card_alt: 'Confiança', card_text: 'Confiança', card_audio: selectedVoice === 'Mileny' ? confianca_audio : confianca_audio2 },
         { card_img: ciumes_img, card_alt: 'Ciúmes', card_text: 'Ciúmes', card_audio: selectedVoice === 'Mileny' ? ciumes_audio : ciumes_audio2 },
         { card_img: empatia_img, card_alt: 'Empatia', card_text: 'Empatia', card_audio: selectedVoice === 'Mileny' ? empatia_audio : empatia_audio2 },
         { card_img: animada_img, card_alt: 'Animado ou Animada', card_text: selectedVoice === 'Mileny' ? 'Animada' : 'Animado', card_audio: selectedVoice === 'Mileny' ? animada_audio : animado_audio2 },
         { card_img: relaxada_img, card_alt: 'Relaxado ou Relaxada', card_text: selectedVoice === 'Mileny' ? 'Relaxada' : 'Relaxado', card_audio: selectedVoice === 'Mileny' ? relaxada_audio : relaxado_audio2 },
         { card_img: paciencia_img, card_alt: 'Paciência', card_text: 'Paciência', card_audio: selectedVoice === 'Mileny' ? paciencia_audio : paciencia_audio2 },
-        { card_img: nervosa_img, card_alt: 'Nervoso ou Nervosa', card_text: selectedVoice === 'Mileny' ? 'Nervosa' : 'Nervoso', card_audio: selectedVoice === 'Mileny' ? nervosa_audio : nervoso_audio2 },
 
+        { card_img: nervosa_img, card_alt: 'Nervoso ou Nervosa', card_text: selectedVoice === 'Mileny' ? 'Nervosa' : 'Nervoso', card_audio: selectedVoice === 'Mileny' ? nervosa_audio : nervoso_audio2 },
         { card_img: saudade_img, card_alt: 'Saudade', card_text: 'Saudade', card_audio: selectedVoice === 'Mileny' ? saudade_audio : saudade_audio2 },
         { card_img: respeito_img, card_alt: 'Respeito', card_text: 'Respeito', card_audio: selectedVoice === 'Mileny' ? respeito_audio : respeito_audio2 },
         { card_img: interesse_img, card_alt: 'Interesse', card_text: 'Interesse', card_audio: selectedVoice === 'Mileny' ? interesse_audio : interesse_audio2 },

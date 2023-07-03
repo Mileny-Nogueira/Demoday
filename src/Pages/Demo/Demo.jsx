@@ -6,6 +6,7 @@ import HomeDemo from './HomeDemo';
 import Formalidade from './Formalidade';
 import Desejos from './Desejos';
 import Sentimentos from './Sentimentos';
+import Pessoa from './Pessoa';
 
 
 //Imagens gerais da página
@@ -118,6 +119,10 @@ const Demo = () => {
             componentToRender = <Sentimentos searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />
             break;
 
+        case 'Pessoa':
+            componentToRender = <Pessoa searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />
+            break;
+
         default:
             componentToRender = <HomeDemo searchText={searchText} handleCardAudio={handleCardAudio} selectedVoice={selectedVoice} />
     }
@@ -153,7 +158,7 @@ const Demo = () => {
                                     <img src={seta2} alt="Exibir temas das Cards" className={style.seta_card} style={{ transform: `${cardsMenu ? 'rotate(0deg)' : ''}` }} />
                                 </div>
 
-                                <div className={style.cards_opcoes} style={{ top: `${cardsMenu ? '50px' : ''}` }}>
+                                <div className={style.cards_opcoes} style={{ display: `${cardsMenu ? 'flex' : 'none'}`}}>
                                     <div onClick={() => handleLabelClick('HomeDemo')}>
                                         <p>Ver Todas</p>
                                     </div>
@@ -165,6 +170,9 @@ const Demo = () => {
                                     </div>
                                     <div onClick={() => handleLabelClick('Sentimentos')}>
                                         <p>Sentimentos</p>
+                                    </div>
+                                    <div onClick={() => handleLabelClick('Pessoa')}>
+                                        <p>Pessoa</p>
                                     </div>
                                 </div>
                             </li>
@@ -216,7 +224,8 @@ const Demo = () => {
                             <p className={style.menu_opcoes} onClick={() => {handleLabelClick('Formalidade')}} style={{ color: `${selectedContainer === 'Formalidade' ? '#FFF' : ''}` }}>Formalidade</p>
                             <p className={style.menu_opcoes} onClick={() => {handleLabelClick('Desejos')}} style={{ color: `${selectedContainer === 'Desejos' ? '#FFF' : ''}` }}>Desejos</p>
                             <p className={style.menu_opcoes} onClick={() => {handleLabelClick('Sentimentos')}} style={{ color: `${selectedContainer === 'Sentimentos' ? '#FFF' : ''}` }}>Sentimentos</p>
-                            <span style={{ left: `${selectedContainer === 'HomeDemo' ? '0' : selectedContainer === 'Formalidade' ? '25%' : selectedContainer === 'Desejos' ? '50%' : '75%'}` }}></span>
+                            <p className={style.menu_opcoes} onClick={() => {handleLabelClick('Pessoa')}} style={{ color: `${selectedContainer === 'Pessoa' ? '#FFF' : ''}` }}>Pessoa</p>
+                            <span style={{ left: `${selectedContainer === 'HomeDemo' ? '0' : selectedContainer === 'Formalidade' ? '20%' : selectedContainer === 'Desejos' ? '40%' : selectedContainer === 'Sentimentos' ? '60%' : '80%'}` }}></span>
                         </div>
                     </section>
                 </div>
