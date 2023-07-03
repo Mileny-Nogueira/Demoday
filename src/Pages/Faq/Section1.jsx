@@ -30,7 +30,7 @@ function Section1() {
                     Frontend: <a href="https://www.linkedin.com/in/igor-alves-silva-goes/">Igor Alves</a> , <a href="https://www.linkedin.com/in/matheus-j%C3%BAnior/">Matheus Junior</a>, <a href="https://www.linkedin.com/in/ketelyn-sousa/">Ketelyn Sousa</a> e <a href="https://www.linkedin.com/in/milenynogueira/"> Mileny Nogueira</a>;
                     Backend: <a href="https://www.linkedin.com/in/cassia-santos42/">Cássia Santos</a>, <a href="https://www.linkedin.com/in/gabscl/ ">Gabriel Souza</a> ,  <a href="https://www.linkedin.com/in/hitalojacome/">Hitalo Jacome</a> e <a href="https://www.linkedin.com/in/jonatas-anjos/">Jonatas dos Anjos</a></p>
 
-                    <p>Nós Devs e donos da Pecto tivemos a chance de construir nosso projeto graçãs ao instituto Proa. Projeto que ajuda jovens a ingressar no mercado de trabalho. La toda a <a href="http://localhost:3000/Institucional">equipe pecto</a> se conheceu e começamos a desenvolver nosso trabalho </p>
+                    <p>Nós Devs e donos da Pecto tivemos a chance de construir nosso projeto graçãs ao instituto Proa. Projeto que ajuda jovens a ingressar no mercado de trabalho. Onde toda a <a href="http://localhost:3000/Institucional">equipe pecto</a> se conheceu e começamos a desenvolver nosso trabalho </p>
                 </details>
                 <details>
                     <summary>Qual o publico alvo da Pecto?</summary>

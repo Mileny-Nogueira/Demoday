@@ -1,20 +1,36 @@
+@font-face {
+    font-family: simply_rounded;
+    src: url(../../Fonts/simply_rounded/Simply\ Rounded.ttf);
+  }
+
+  @font-face {
+    font-family: cocogoose;
+    src: url(../../Fonts/cocogoose_classic/Cocogoose-Classic-Medium-trial.ttf);
+  }
+  
 #opções {
     width: 90%;
     height: auto;
     margin: auto;
     padding-top: 100px;
     padding-bottom: 100px;
+    color: #726F95;
+    text-decoration: none;
 }
+
+
 
 #Duvidas{
     text-align: center;
     color: #008AFF;
+    font-size: 1.5rem;
 }
 summary {
     color: #008AFF;
     font-size: 2rem;
     font-style: bold;
     padding: 10px;
+    font-family: simply_rounded;
     margin-top: 20px;
     font-weight: 100; 
     background-color: #e2e2e2f4;
@@ -36,4 +52,12 @@ details p {
     color: #726F95;
     font-size: 1.5rem;
     text-overflow: clip;
+    text-decoration: none;
+    color: #726F95;
+   /* font-family: cocogoose;*/
+}
+a{
+    text-decoration: none;
+    color: #008AFF;
+    text-decoration: underline;
 }
