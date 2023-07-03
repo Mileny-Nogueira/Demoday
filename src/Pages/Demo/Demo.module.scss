@@ -123,7 +123,7 @@ $color2: #000; //Texto e outros
         }
 
         .cards_opcoes {
-            display: flex;
+            position: absolute;
             border: none;
             flex-direction: column;
             margin-top: 0px;

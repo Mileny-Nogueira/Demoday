@@ -152,8 +152,8 @@ const Demo = () => {
                                     <p>Cards</p>
                                     <img src={seta2} alt="Exibir temas das Cards" className={style.seta_card} style={{ transform: `${cardsMenu ? 'rotate(0deg)' : ''}` }} />
                                 </div>
-                                <div className={style.barra_card} style={{ height: `${cardsMenu ? '0px' : ''}` }}></div>
-                                <div className={style.cards_opcoes}>
+
+                                <div className={style.cards_opcoes} style={{ display: `${cardsMenu ? 'flex' : 'none'}` }}>
                                     <div onClick={() => handleLabelClick('HomeDemo')}>
                                         <p>Ver Todas</p>
                                     </div>
