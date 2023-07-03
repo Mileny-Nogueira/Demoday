@@ -210,7 +210,7 @@ const Demo = () => {
 
                     {/*Menu Central*/}
 
-                    <section id={style.menu_central} style={{ backgroundImage: `${selectedVoice === 'Mileny' ? '' : `url('/static/media/Menino%20PCD_demo.0226535d7885090fe053.png')`}` }}>
+                    <section id={style.menu_central} className={`${selectedVoice === 'Mileny' ? '' : style.imagemMenino}`}>
                         <img src={logo} alt="logo da Pecto" />
                         <h2>Se comunique com quem quiser</h2>
                         <h3>{ cumprimento }</h3>
