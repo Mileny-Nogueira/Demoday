@@ -1,12 +1,7 @@
-@font-face {
-    font-family: simply_rounded;
-    src: url(../../Fonts/simply_rounded/Simply\ Rounded.ttf);
-  }
 
-  @font-face {
-    font-family: cocogoose;
-    src: url(../../Fonts/cocogoose_classic/Cocogoose-Classic-Medium-trial.ttf);
-  }
+#section1 {
+    min-height: 100vh;
+}
   
 #opções {
     width: 90%;
@@ -24,6 +19,11 @@
     text-align: center;
     color: #008AFF;
     font-size: 1.5rem;
+    font-family: simply_rounded;
+}
+
+#Duvidas h2 {
+    font-weight: normal;
 }
 summary {
     color: #008AFF;
